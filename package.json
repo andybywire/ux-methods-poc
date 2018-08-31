@@ -1,0 +1,35 @@
+{
+    "name": "content-development",
+    "version": "1.0.0",
+    "description": "Basic template for a new Jekyll & Foundation project.",
+    "main": "gulpfile.js",
+    "scripts": {
+        "start": "gulp"
+    },
+    "dependencies": {
+        "foundation-sites": "~6.4.0",
+        "jquery": ">=3.0.0",
+        "what-input": "^4.1.3",
+        "motion-ui": "~1.2.2"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.11.1",
+        "gulp": "^3.9.0",
+        "gulp-connect-php": "^1.0.3",
+        "gulp-sass": "^2.1.0",
+        "gulp-autoprefixer": "^3.1.0",
+        "gulp-sourcemaps": "^1.6.0",
+        "gulp-load-plugins": "^1.1.0",
+        "gulp-sequence": "^0.4.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "keywords": [
+        "content-development"
+    ],
+    "author": "Andy Fitzgerald <http://www.andyfitzgerald.org>",
+    "license": "ISC",
+    "private": true
+}
