@@ -1,0 +1,16 @@
+---
+layout: default
+rdf_prefix_path: "_data/prefixes.sparql"
+---
+<h1>{{ page.rdf }}</h1>
+<h2>Family Members</h2>
+<ul>
+{% assign members = page.rdf | rdf_property: "fam:hasFamilyMember", nil, true %}
+{% for member in members %}
+  <li><a href="{{ member.page_url }}.html">{{ member | rdf_property: "foaf:name" }}</a>; {{ member | page_url }}</li>
+  {% endfor %}
+</ul>
+
+{% assign resource = "sim:Patty" | rdf_get %}
+{{ resource }}
+{{ resource | rdf_property: "fam:hasSister" }}

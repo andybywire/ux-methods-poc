@@ -1,0 +1,76 @@
+---
+layout: default
+rdf_prefix_path: "_data/prefixes.sparql"
+---
+<h1>Method</h1>
+
+<h2>Elements on which this page's resource focus</h2>
+<ul>
+{% assign members = page.rdf | rdf_property: ':focusesOn', nil, true %}
+{% for member in members %}
+  <li><a href="{{ member.render_path }}">{{ member | rdf_property: 'rdfs:label' }}</a>: {{ member | rdf_property: 'dc:description' }}</li>
+  {% endfor %}
+</ul>
+<p><a href="https://github.com/AKSW/jekyll-rdf#single-objects">Accessing single objects</a></p>
+
+<h2>Accessing the attributes of a returned resource</h2>
+<ul>
+{% assign members = page.rdf | rdf_property: ':focusesOn', nil, true %}
+{% for member in members %}
+  <li>{{ member.statements_as_object[1].subject | rdf_property: 'rdfs:label' }}</li>
+  {% endfor %}
+</ul>
+<p><a href="https://github.com/AKSW/jekyll-rdf#resource-attributes">Resource attributes</a></p>
+
+<h2>SPARQL query based on page RDF Resource</h2>
+{% assign query = '
+SELECT ?pre ?obj WHERE { ?resourceUri ?pre ?obj }' %}
+{% assign resultset = page.rdf | sparql_query: query %}
+<table>
+    <tr>
+    <td>Predicate</td>
+    <td>Object</td>
+  </tr>
+{% for result in resultset %}
+  <tr>
+    <td>{{ result.pre }}</td>
+    <td>{{ result.obj }}</td>
+  </tr>
+{% endfor %}
+</table>
+
+<h2>Non-page based SPARQL query</h2>
+{% assign query = '
+SELECT ?disciplineLabel ?description (GROUP_CONCAT(DISTINCT ?methodLabel; SEPARATOR=", ") AS ?methods)
+
+WHERE {
+  ?discipline :focusesOn ?outcome ;
+              dc:description ?description ;
+              rdfs:label ?disciplineLabel .
+  ?method :produces ?outcome ;
+          rdfs:label ?methodLabel .  
+}
+GROUP BY ?disciplineLabel ?description
+' %}
+{% assign resultset = query | sparql_query %}
+<table>
+    <tr>
+    <td>Discipline Label</td>
+    <td>Description</td>
+    <td>Methods</td>
+  </tr>
+{% for result in resultset %}
+  <tr>
+    <td>{{ result.disciplineLabel }}</td>
+    <td>{{ result.description }}</td>
+    <td>{{ result.methods }}</td>
+  </tr>
+{% endfor %}
+</table>
+
+<p><a href="https://github.com/AKSW/jekyll-rdf#resource-attributes">SPARQL query parameters</a></p>
+
+<hr>
+
+<h2>Page Data</h2> 
+<p>{{ page }}</p>

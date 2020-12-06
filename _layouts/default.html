@@ -1,35 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-  {%- include head.html -%}
-
-  <body>
-
-  <header class="global">
-    <div class="grid-container">
-      <div class="grid-x grid-padding-x">
-        <ul>
-          <li><a href="/" class="title">{{ site.title }}</a></li>
-          <li><a href="/foundation.html">Foundation</a></li>
-          <li><a href="/jekyll.html">Jekyll</a></li> 
-        </ul>
-      </div>
-    </div>  
+<html lang="en-US">
+{%- include head.html -%}
+<body>
+  <header>
+    <h1><a href="/" class="title">{{ site.title }}</a></h1>
   </header>
-
-  <div class="grid-container">
-    <div class="grid-x grid-padding-x">
-      <div class="large-12 cell">
-          {{ content }}
-      </div>
-    </div>
-  </div>
-
-  <script src="/js/jquery.js"></script>
-  <script src="/js/what-input.js"></script>
-  <script src="/js/foundation.js"></script>
-  <script src="/js/app.js"></script>
-
-  </body>
-
+  <main>
+    {{ content }}
+  </main>
+</body>
 </html>

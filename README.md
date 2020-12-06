@@ -1,3 +1,5 @@
+# TO REVISE
+
 # Jekyll + Foundation 6 Starter Site
 This is a starter repository for Jekyll sites styled with Zurb Foundation 6. This repo includes a gulpfile with SASS sourcemaps, PHP support (for that occasional need), and serves everything up with Browsersync + live reloading.
 

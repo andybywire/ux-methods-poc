@@ -1,74 +1,86 @@
-var gulp = require('gulp'),
-    browserSync = require('browser-sync'),
-    sourcemaps = require('gulp-sourcemaps'),
-    sequence = require('gulp-sequence'),
-    connect = require('gulp-connect-php'),
-    sass = require('gulp-sass');
+"use strict";
+// Load plugins
+const gulp = require('gulp');
+const connect = require('gulp-connect-php');
+const gulpSass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync');
 
-var $    = require('gulp-load-plugins')();
+// Load paths
+// var sassPaths = [
+//   'node_modules/foundation-sites/scss',
+//   'node_modules/motion-ui/src'
+// ];
 
-var sassPaths = [
-  'node_modules/foundation-sites/scss',
-  'node_modules/motion-ui/src'
-];
-
-gulp.task('jekyll', function (gulpCallBack){  //builds jekyll site (but does not compile css)
+// Build Jekyll site (but do not compile CSS)
+function jekyll (gulpCallBack){
     var spawn = require('child_process').spawn;
     var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
-
     jekyll.on('exit', function(code) {
         gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
     });
-});
+}
 
-gulp.task('sass', function() {
-  return gulp.src('_sass/*.scss')
-    .pipe(sourcemaps.init()) 
-    .pipe(sass({
-      includePaths: sassPaths
-    })
-      .on('error', sass.logError))
-    .pipe(sourcemaps.write()) 
-    .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'ie >= 9']
-    }))
-    .pipe(gulp.dest('_site/css'))
-    .pipe(browserSync.stream());
-});
+// SASS
+ function sass() {
+   return gulp.src('_sass/style.scss')
+     .pipe(sourcemaps.init()) 
+     .pipe(gulpSass({
+       outputStyle: 'compressed' // compressed, expanded
+     })
+       .on('error', gulpSass.logError))
+     .pipe(sourcemaps.write('./'))
+     .pipe(gulp.dest('_site/css'))
+     .pipe(browserSync.stream());
+ }
 
-gulp.task('jquery', function(){
-  return gulp.src('node_modules/jquery/dist/jquery.js')
-    .pipe(gulp.dest('_site/js'))
-});
+// Foundation dependancies – to do: concatenate, minify, and sourcemap these
+// function jquery (){
+//   return gulp.src('node_modules/jquery/dist/jquery.min.js')
+//     .pipe(gulp.dest('_site/js'))
+// }
+// 
+// function foundationSites(){
+//   return gulp.src('node_modules/foundation-sites/dist/js/foundation.min.js')
+//     .pipe(gulp.dest('_site/js'))
+// }
 
-gulp.task('what-input', function(){
-  return gulp.src('node_modules/what-input/dist/what-input.js')
-    .pipe(gulp.dest('_site/js'))
-});
-
-gulp.task('foundation-sites', function(){
-  return gulp.src('node_modules/foundation-sites/dist/js/foundation.js')
-    .pipe(gulp.dest('_site/js'))
-});
-
-gulp.task('connect-sync', function() {
+// Start Browsersync with PHP
+function php() {
   connect.server({
     base: './_site'
     },function (){
       browserSync({
         proxy: '127.0.0.1:8000',
-        notify: false
+        notify: false,
+        port: 3333
       });
   }); 
-});
+}
 
-gulp.task('reload', ['jekyll'], function() {
-    browserSync.reload({
-    });
-});
+// BrowserSync reload
+function reload (done) {
+  browserSync.reload({
+  });
+  done();
+}
 
-gulp.task('default', function(done) {
-    sequence('sass', 'jekyll', 'jquery', 'what-input', 'foundation-sites', 'connect-sync', done);
-    gulp.watch(['**/*.html', '!_site/**/*.html', 'js/*.js', '*.md', '_posts/*.md', '_config.yml', 'img/*'], ['reload']);
-    gulp.watch(['_sass/*.scss'], ['sass']);
-});
+// Watch files
+function watch() {
+  gulp.watch("_sass/*.scss", sass);
+  gulp.watch(
+    [
+      "**/*.html",
+      "!_site/**/*.html",
+      "js/*.js",
+      "serviceworker.js",
+      "**/*.md",
+      "_config.yml",
+      "_data/*"
+    ],
+    gulp.series(jekyll, reload)
+  );
+}
+
+// Export tasks
+exports.default = gulp.series(jekyll, sass, gulp.parallel(watch, php));
