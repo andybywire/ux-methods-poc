@@ -5,3 +5,23 @@ rdf_prefix_path: "_data/prefixes.sparql"
 <h1>{{ page.rdf | rdf_property: 'rdfs:label' }}</h1>
 
 <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
+
+{% assign query = '
+  SELECT DISTINCT ?methodLabel ?methodDescription
+  WHERE {
+    ?resourceUri :focusesOn ?outcome .            
+    ?method :produces ?outcome ;
+            rdfs:label ?methodLabel ;
+            dc:description ?methodDescription.  
+  }
+' %}
+
+
+<h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Methods</h2>
+{% assign resultset = page.rdf | sparql_query: query %}
+<ul>
+{% for method in resultset %}
+<li><p><a href="/{{ method.methodLabel | replace: ' ','' }}.html">{{ method.methodLabel }}</a><br />
+{{ method.methodDescription | truncate: 100 }}</p></li>
+{% endfor %}
+</ul>

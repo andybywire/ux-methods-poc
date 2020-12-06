@@ -472,10 +472,10 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserBehavior"/>
         <providesInputFor rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/NavigationDesign"/>
         <dc:description>Card sorting is a method used to help design or evaluate the information architecture of a site. In a card sorting session, participants organize topics into categories that make sense to them and they may also help you label these groups. To conduct a card sort, you can use actual cards, pieces of paper, or one of several online card-sorting software tools.</dc:description>
-        <steps>1. Give users a collection of content represented on cards.
-2. Ask users to separate the cards into whatever categories make sense to them.
-3. Ask users to label those categories.
-4. Ask users to tell you why they grouped the cards and labeled the categories as they did.</steps>
+        <steps>Give users a collection of content represented on cards.
+Ask users to separate the cards into whatever categories make sense to them.
+Ask users to label those categories.
+Ask users to tell you why they grouped the cards and labeled the categories as they did.</steps>
         <rdfs:label>Card Sorting</rdfs:label>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -540,25 +540,11 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <rdf:type rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/Method"/>
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/ContentInsight"/>
         <dc:description>A content audit is a listing and analysis of all the content on an existing website (including pages, files, videos, audio or other data) that your users might reasonably encounter. Content audits identify content that needs to be revised in new versions of a website. Content audits can also help you identify who is responsible for content, how often it should be updated, and what role a particular piece of content plays for users.</dc:description>
-        <steps>1. Identify a specific user need or user question that you’d like to address.
-
-2. Create an inventory of content on your website. Navigate through the site from the home page and note the following about every piece of content: 
-
-- Title used in the site’s navigation for that page
-- Title displayed on the page or item itself
-- URL
-- Parent page
-
-3. Identify the main entry points for the user need you’re addressing. This could be external marketing, the homepage, a microsite, or another page.
-
-4. From each entry point, trace the pages and tasks a user moves through until they address their need.
-
-5. For every piece of content they might come across on that task flow, note:
-
-- Author(s): who wrote or created the page
-- Content owner(s): who ensures its credibility
-- How often or when it was last updated
-- Comments: qualitative assessment of what to change to better address your identified user need</steps>
+        <steps>Identify a specific user need or user question that you’d like to address.
+Create an inventory of content on your website. Navigate through the site from the home page and make notes about every piece of content. Common elemnts include: title used in the site’s navigation for that page, title displayed on the page or item itself, URL, and parent page.
+Identify the main entry points for the user need you’re addressing. This could be external marketing, the homepage, a microsite, or another page.
+From each entry point, trace the pages and tasks a user moves through until they address their need.
+For every piece of content they might come across on that task flow, note who wrote or created the page (&quot;Author&quot;), who ensures its credibility (&quot;Content owner&quot;), how often or when it was last updated, and qualitative assessment comments of what to change to better address your identified user need.</steps>
         <rdfs:label>Content Auditing</rdfs:label>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -570,25 +556,11 @@ Web Resources are named with a code-based scheme due to the high variability of 
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/ContentAuditing"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/steps"/>
-        <owl:annotatedTarget>1. Identify a specific user need or user question that you’d like to address.
-
-2. Create an inventory of content on your website. Navigate through the site from the home page and note the following about every piece of content: 
-
-- Title used in the site’s navigation for that page
-- Title displayed on the page or item itself
-- URL
-- Parent page
-
-3. Identify the main entry points for the user need you’re addressing. This could be external marketing, the homepage, a microsite, or another page.
-
-4. From each entry point, trace the pages and tasks a user moves through until they address their need.
-
-5. For every piece of content they might come across on that task flow, note:
-
-- Author(s): who wrote or created the page
-- Content owner(s): who ensures its credibility
-- How often or when it was last updated
-- Comments: qualitative assessment of what to change to better address your identified user need</owl:annotatedTarget>
+        <owl:annotatedTarget>Identify a specific user need or user question that you’d like to address.
+Create an inventory of content on your website. Navigate through the site from the home page and make notes about every piece of content. Common elemnts include: title used in the site’s navigation for that page, title displayed on the page or item itself, URL, and parent page.
+Identify the main entry points for the user need you’re addressing. This could be external marketing, the homepage, a microsite, or another page.
+From each entry point, trace the pages and tasks a user moves through until they address their need.
+For every piece of content they might come across on that task flow, note who wrote or created the page (&quot;Author&quot;), who ensures its credibility (&quot;Content owner&quot;), how often or when it was last updated, and qualitative assessment comments of what to change to better address your identified user need.</owl:annotatedTarget>
         <dc:source>https://methods.18f.gov/decide/content-audit/</dc:source>
     </owl:Axiom>
     
@@ -613,7 +585,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/ContentStructure"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/MetadataScheme"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserGoals"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Content strategy focuses on the planning, creation, delivery, and governance of content.&quot;</dc:description>
+        <dc:description xml:lang="en">Content strategy focuses on the planning, creation, delivery, and governance of content.</dc:description>
         <rdfs:label>Content Strategy</rdfs:label>
     </owl:NamedIndividual>
     
@@ -636,7 +608,6 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserBehavior"/>
         <specializes rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/Interviewing"/>
         <dc:description>During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don’t use tasks or scripts.
-
 In a contextual interview, you watch and listen as the user works. You don&apos;t usually give the user tasks or scenarios. To understand what a user is doing or thinking you can ask questions as the user navigates the site. The results are usually qualitative, observed data, rather than quantitative, measured data.</dc:description>
         <rdfs:label>Contextual Interviewing</rdfs:label>
     </owl:NamedIndividual>
@@ -644,7 +615,6 @@ In a contextual interview, you watch and listen as the user works. You don&apos;
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/ContextualInterviewing"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <owl:annotatedTarget>During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don’t use tasks or scripts.
-
 In a contextual interview, you watch and listen as the user works. You don&apos;t usually give the user tasks or scenarios. To understand what a user is doing or thinking you can ask questions as the user navigates the site. The results are usually qualitative, observed data, rather than quantitative, measured data.</owl:annotatedTarget>
         <dc:source>https://www.usability.gov/how-to-and-tools/methods/contextual-interview.html</dc:source>
     </owl:Axiom>
@@ -683,7 +653,7 @@ In a contextual interview, you watch and listen as the user works. You don&apos;
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/NavigationModel"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/SiteMap"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserGoals"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Information architecture (IA) focuses on organizing, structuring, and labeling content in an effective and sustainable way in order to help users find information and complete tasks. Update.&quot;</dc:description>
+        <dc:description xml:lang="en">Information architecture (IA) focuses on organizing, structuring, and labeling content in an effective and sustainable way in order to help users find information and complete tasks. Update.</dc:description>
         <rdfs:label>Information Architecture</rdfs:label>
     </owl:NamedIndividual>
     
@@ -707,7 +677,7 @@ In a contextual interview, you watch and listen as the user works. You don&apos;
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/InteractionPattern"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserBehavior"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserGoals"/>
-        <dc:description>Interaction design focuses on creating engaging interfaces with well thought out behaviors.</dc:description>
+        <dc:description xml:lang="en">Interaction design focuses on creating engaging interfaces with well thought out behaviors.</dc:description>
         <rdfs:label>Interaction Design</rdfs:label>
     </owl:NamedIndividual>
     
@@ -729,13 +699,10 @@ In a contextual interview, you watch and listen as the user works. You don&apos;
         <rdf:type rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/Method"/>
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserGoals"/>
         <dc:description>In individual interviews, an interviewer talks with one user for 30 minutes to an hour. Individual interviews allow you to probe their attitudes, beliefs, desires, and experiences to get a deeper understanding of the users who come to your site. You can also ask them to rate or rank choices for site content.  These interviews can take place face-to-face, by phone or video conference, or via instant messaging system.</dc:description>
-        <steps>1. Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a back up. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
-
-2. Sit down one-on-one with the participant, or two-on-one with a note-taker or joint interviewer, in a focused environment. Introduce yourself. Explain the premise for the interview as far as you can without biasing their responses.
-
-3. Follow the conversation where the participant takes it. They will focus on their priorities and interests. Be comfortable with silences, which allow the participant to elaborate. To keep from getting entirely off course, use your interview guide to make sure you cover what you need to. Ask lots of “why is that” and “how do you do that” questions.
-
-4. If there are other products they use or your product doesn’t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</steps>
+        <steps>Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a back up. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
+Sit down one-on-one with the participant, or two-on-one with a note-taker or joint interviewer, in a focused environment. Introduce yourself. Explain the premise for the interview as far as you can without biasing their responses.
+Follow the conversation where the participant takes it. They will focus on their priorities and interests. Be comfortable with silences, which allow the participant to elaborate. To keep from getting entirely off course, use your interview guide to make sure you cover what you need to. Ask lots of “why is that” and “how do you do that” questions.
+If there are other products they use or your product doesn’t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</steps>
         <rdfs:label>Interviewing</rdfs:label>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -747,13 +714,10 @@ In a contextual interview, you watch and listen as the user works. You don&apos;
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/Interviewing"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/steps"/>
-        <owl:annotatedTarget>1. Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a back up. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
-
-2. Sit down one-on-one with the participant, or two-on-one with a note-taker or joint interviewer, in a focused environment. Introduce yourself. Explain the premise for the interview as far as you can without biasing their responses.
-
-3. Follow the conversation where the participant takes it. They will focus on their priorities and interests. Be comfortable with silences, which allow the participant to elaborate. To keep from getting entirely off course, use your interview guide to make sure you cover what you need to. Ask lots of “why is that” and “how do you do that” questions.
-
-4. If there are other products they use or your product doesn’t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</owl:annotatedTarget>
+        <owl:annotatedTarget>Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a back up. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
+Sit down one-on-one with the participant, or two-on-one with a note-taker or joint interviewer, in a focused environment. Introduce yourself. Explain the premise for the interview as far as you can without biasing their responses.
+Follow the conversation where the participant takes it. They will focus on their priorities and interests. Be comfortable with silences, which allow the participant to elaborate. To keep from getting entirely off course, use your interview guide to make sure you cover what you need to. Ask lots of “why is that” and “how do you do that” questions.
+If there are other products they use or your product doesn’t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</owl:annotatedTarget>
         <dc:source>https://methods.18f.gov/discover/stakeholder-and-user-interviews/</dc:source>
     </owl:Axiom>
     
@@ -797,9 +761,9 @@ In a contextual interview, you watch and listen as the user works. You don&apos;
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/NavigationModel"/>
         <providesInputFor rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/Wireframing"/>
         <dc:description>Creating the system of hyperlinks that allows users to navigate between pages of a website.</dc:description>
-        <steps>1. Organize structure
-2. Assign labels
-3. Test and iterate</steps>
+        <steps>Organize structure
+Assign labels
+Test and iterate</steps>
         <rdfs:label>Navigation Design</rdfs:label>
     </owl:NamedIndividual>
     
@@ -912,8 +876,7 @@ https://methods.18f.gov/discover/stakeholder-and-user-interviews/</dc:source>
         <rdf:type rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/Method"/>
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/ColorPalette"/>
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/Typography"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A Style Tile is a design deliverable consisting of fonts</dc:description>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colors and interface elements that communicates the evolution of a visual brand for the web.&quot;^^xsd:string</dc:description>
+        <dc:description xml:lang="en">A Style Tile is a design deliverable consisting of fonts colors and interface elements that communicates the evolution of a visual brand for the web.</dc:description>
         <rdfs:label>Style Tile Creation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -957,7 +920,7 @@ https://methods.18f.gov/discover/stakeholder-and-user-interviews/</dc:source>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/TaskCompletionInsight"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserBehavior"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserSatisfaction"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Usability Evaluation focuses on how well users can learn and use a product to achieve their goals. It also refers to how satisfied users are with that process. To gather this information, practitioners use a variety of methods that gather feedback from users about an existing site or plans related to a new site.</dc:description>
+        <dc:description xml:lang="en">Usability Evaluation focuses on how well users can learn and use a product to achieve their goals. It also refers to how satisfied users are with that process. To gather this information, practitioners use a variety of methods that gather feedback from users about an existing site or plans related to a new site.</dc:description>
         <rdfs:label>Usability Evaluation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -970,19 +933,19 @@ https://methods.18f.gov/discover/stakeholder-and-user-interviews/</dc:source>
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/NavigationEffectiveness"/>
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/TaskCompletionInsight"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In a heuristic evaluation, usability experts review your site’s interface and compare it against accepted usability principles. The analysis results in a list of potential usability issues.</dc:description>
-        <steps rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1. Recruit a group of three to five people familiar with evaluation methods. These people are not necessarily designers, but are familiar with common usability best practices. They are usually not users.
-2. Ask each person to individually create a list of “heuristics” or general usability best practices. 
-3. Ask each person to evaluate the website against their list and write down possible problems.
-4. After individual evaluations, gather people to discuss what they found and prioritize potential problems.</steps>
+        <steps rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recruit a group of three to five people familiar with evaluation methods. These people are not necessarily designers, but are familiar with common usability best practices. They are usually not users.
+Ask each person to individually create a list of “heuristics” or general usability best practices. 
+Ask each person to evaluate the website against their list and write down possible problems.
+After individual evaluations, gather people to discuss what they found and prioritize potential problems.</steps>
         <rdfs:label>Heuristic Evaluation</rdfs:label>
     </owl:NamedIndividual>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UsabilityTesting"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/steps"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1. Recruit a group of three to five people familiar with evaluation methods. These people are not necessarily designers, but are familiar with common usability best practices. They are usually not users.
-2. Ask each person to individually create a list of “heuristics” or general usability best practices. 
-3. Ask each person to evaluate the website against their list and write down possible problems.
-4. After individual evaluations, gather people to discuss what they found and prioritize potential problems.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recruit a group of three to five people familiar with evaluation methods. These people are not necessarily designers, but are familiar with common usability best practices. They are usually not users.
+Ask each person to individually create a list of “heuristics” or general usability best practices. 
+Ask each person to evaluate the website against their list and write down possible problems.
+After individual evaluations, gather people to discuss what they found and prioritize potential problems.</owl:annotatedTarget>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://methods.18f.gov/discover/heuristic-evaluation/</dc:source>
     </owl:Axiom>
     
@@ -1016,7 +979,7 @@ https://methods.18f.gov/discover/stakeholder-and-user-interviews/</dc:source>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/MentalModel"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserBehavior"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/UserGoals"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies&quot;</dc:description>
+        <dc:description xml:lang="en">User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies.</dc:description>
         <rdfs:label>User Research</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1039,7 +1002,7 @@ https://methods.18f.gov/discover/stakeholder-and-user-interviews/</dc:source>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/ColorPalette"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/InformationHierarchy"/>
         <focusesOn rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/Typography"/>
-        <dc:description>Visual design focuses on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements.  A successful visual design does not take away from the content on the page or function. Instead, it enhances it by engaging users and helping to build trust and interest in the brand.</dc:description>
+        <dc:description xml:lang="en">Visual design focuses on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements.  A successful visual design does not take away from the content on the page or function. Instead, it enhances it by engaging users and helping to build trust and interest in the brand.</dc:description>
         <rdfs:label>Visual Design</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1052,10 +1015,10 @@ https://methods.18f.gov/discover/stakeholder-and-user-interviews/</dc:source>
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/InformationHierarchy"/>
         <produces rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/InteractionPattern"/>
         <dc:description>A wireframe is a two-dimensional illustration of a page’s interface that specifically focuses on space allocation and prioritization of content, functionalities available, and intended behaviors.</dc:description>
-        <steps>1. Build preliminary blueprints that show structure, placement, and hierarchy for your product. Steer clear of font choices, color, or other elements that would distract both the researcher and the reviewer. 
-2. Use this opportunity to start listing what UX/UI patterns you will need.
-3. Review your wireframes with specific user scenarios and personas in mind. Can users accomplish their task with the wireframe you are sketching out?
-4. Use the wireframes to get the team’s feedback on feasibility and structure.</steps>
+        <steps>Build preliminary blueprints that show structure, placement, and hierarchy for your product. Steer clear of font choices, color, or other elements that would distract both the researcher and the reviewer. 
+Use this opportunity to start listing what UX/UI patterns you will need.
+Review your wireframes with specific user scenarios and personas in mind. Can users accomplish their task with the wireframe you are sketching out?
+Use the wireframes to get the team’s feedback on feasibility and structure.</steps>
         <rdfs:label>Wireframing</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
