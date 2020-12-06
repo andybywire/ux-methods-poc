@@ -23,7 +23,7 @@ plugins:
 permalink: /:title/
 
 jekyll_rdf:
-    path: "_data/ux-methods.ttl"
+    path: "_data/UXMethods.owl"
     baseiri: "http://www.semanticweb.org/andyfitzgerald/uxmethods/"  # the KG IRI used to generate pages
     default_template: "default-rdf.html"
     restriction: "
