@@ -1,0 +1,61 @@
+---
+title: UX Methods
+rdf_prefix_path: "_data/prefixes.sparql"
+---
+{% assign uxm-discipline = site.pages | where: "template", "discipline" | sort: 'name' %}
+{% assign uxm-method = site.pages | where: "template", "method" | sort: 'name' %}
+
+<form action="/" method="get">
+  <label for="search-box">Search</label>
+  <input type="text" id="search-box" name="query">
+  <input type="submit" value="search">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  window.store = {
+    {% assign query = '
+      SELECT ?iri ?label ?description
+      WHERE {
+        {?iri rdf:type :Discipline ;
+                  rdfs:label ?label;
+                  dc:description ?description. }
+        UNION
+        {?iri rdf:type :Method ;
+                  rdfs:label ?label;
+                  dc:description ?description. }
+      }            
+    ' %}
+    {% assign index = query | sparql_query %}
+
+    {% for resource in index %}
+      "{{ resource.iri }}": {
+        "title": "{{ resource.label | xml_escape }}",
+        "description": {{ resource.description | strip_html | strip_newlines | jsonify }}, 
+        "url": "{{ resource.label | replace: " ","" }}.html"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>
+<script src="/js/lunr.min.js"></script>
+<script src="/js/search.js"></script>
+
+
+
+
+<h2>Disciplines</h2>
+<ul>
+{% for page in uxm-discipline %}
+  <li><a href="/{{ page.rdf.page_url }}.html">{{ page.rdf.page_url }}</a></li>
+{% endfor %}
+</ul>
+
+<h2>Methods</h2>
+<ul>
+{% for page in uxm-method %}
+  <li><p><a href="/{{ page.rdf.page_url }}.html">{{ page.rdf.page_url }}</a> <br /> 
+  {{ page.rdf | rdf_property: 'dc:description' | truncate: 100 }}</p></li>
+{% endfor %}
+</ul>
