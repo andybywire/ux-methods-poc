@@ -6,7 +6,7 @@ const gulpSass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync');
 
-// Load paths
+// Load paths — remove once SASS is set up if I don't need these as a template
 // var sassPaths = [
 //   'node_modules/foundation-sites/scss',
 //   'node_modules/motion-ui/src'
@@ -33,17 +33,6 @@ function jekyll (gulpCallBack){
      .pipe(gulp.dest('_site/css'))
      .pipe(browserSync.stream());
  }
-
-// Foundation dependancies – to do: concatenate, minify, and sourcemap these
-// function jquery (){
-//   return gulp.src('node_modules/jquery/dist/jquery.min.js')
-//     .pipe(gulp.dest('_site/js'))
-// }
-// 
-// function foundationSites(){
-//   return gulp.src('node_modules/foundation-sites/dist/js/foundation.min.js')
-//     .pipe(gulp.dest('_site/js'))
-// }
 
 // Start Browsersync with PHP
 function php() {

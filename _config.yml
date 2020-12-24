@@ -4,8 +4,8 @@ email: andy@andyfitzgeraldconsulting.com
 description: >-
   Proof of concept project for the UX Methods ontology and knowledge graph. 
 baseurl: "/"
-url: "http://uxmethods.org"
-github_username: #
+url: "http://uxmethods.app"
+github_username: andybywire
 
 defaults:
   -
@@ -16,9 +16,6 @@ defaults:
 
 # Build settings
 markdown: kramdown
-
-plugins:
-    - jekyll-rdf
 
 permalink: /:title/
 
