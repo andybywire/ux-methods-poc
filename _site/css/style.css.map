@@ -1,1 +1,0 @@
-{"version":3,"file":"style.css","sources":["style.scss"],"sourcesContent":["body {}\ntable, th, td {\n  border: 1px solid black;\n}"],"names":[],"mappings":"AACA,AAAA,KAAK,CAAE,EAAE,CAAE,EAAE,AAAC,CACZ,MAAM,CAAE,eAAe,CACxB"}
