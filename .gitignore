@@ -2,3 +2,4 @@
 .sass-cache
 .jekyll-cache
 node_modules
+_site
