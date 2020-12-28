@@ -5,7 +5,6 @@
 body {
   background-color: $background;
 }
-
 nav {
   background-color: $dark-background;
   position: fixed;
@@ -97,7 +96,12 @@ nav {
     }
   }
 }
-
 main {
   padding-top: 60px;
+}
+article {
+  padding: 1.5rem 1rem;
+}
+section {
+  padding-bottom: 3rem;
 }

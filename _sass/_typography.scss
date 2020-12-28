@@ -3,17 +3,44 @@
 body {
   font-family: $body;
   font-size: 16px;
-  line-height: 1.5;
 }
-
 h1, h2, h3, h4, h4 {
   font-family: $header;
+  font-weight: bold;
+  margin: 0;
   a {
     text-decoration: none;
   }
 }
-
+h1 {
+  font-size: 40px;
+  line-height: 48px;  
+}
+h2 {
+  font-size: 28px;
+  line-height: 32px;  
+}
+h3 {
+  font-size: 20px;
+  line-height: 40px;  
+  margin-bottom: -8px;
+}
+p {
+  font-family: $body;
+  font-size: 16px;
+  line-height: 1.5;  
+  margin-top: 8px;
+}
 a, a:visited {
   color: $text;
 }
-
+.resource-type {
+  font-family: $header;
+  color: $card-background;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+}
+li, ol {
+  line-height: 1.5;
+}
