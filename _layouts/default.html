@@ -2,11 +2,59 @@
 <html lang="en-US">
 {%- include head.html -%}
 <body>
-  <header>
-    <h1><a href="/" class="title">{{ site.title }}</a></h1>
-  </header>
+  <nav>
+    <a href="/" class="title">{{ site.title }}</a>
+    <button id="openMenu" type="button" >&plus;</button>
+    <!-- look into ARIA for these buttons/toggles -->
+    <!-- aria-label="Open site menu" aria-expanded="false" aria-controls="offCanvas" -->
+    <div id="globalNav" class="sidenav"> 
+      <button id="closeMenu" class="closebtn" type="button">&times;</button>
+      <ul id="navint">
+        <li class="search"><a href="#">Search</a></li>
+        <li id="disciplines" class="dropdown-toggle">UX Disciplines<span>&plus;</span></li>
+        <ul class="submenu">
+          <li><a href="#">Information Architecture</a></li>
+          <li><a href="#">Content Strategy</a></li>
+          <li><a href="#">User Research</a></li>
+          <li><a href="#">Interaction Design</a></li>
+          <li><a href="#">Usability Testing</a></li>
+        </ul>
+        <li id="methods" class="dropdown-toggle">Top Methods<span>&plus;</span></li>
+        <ul class="submenu">
+          <li><a href="#">Information Architecture</a></li>
+          <li><a href="#">Content Strategy</a></li>
+          <li><a href="#">User Research</a></li>
+          <li><a href="#">Interaction Design</a></li>
+          <li><a href="#">Usability Testing</a></li>
+        </ul>
+        <li id="outcomes" class="dropdown-toggle">Top Goals & Outcomes<span>&plus;</span></li>
+        <ul class="submenu">
+          <li><a href="#">Information Architecture</a></li>
+          <li><a href="#">Content Strategy</a></li>
+          <li><a href="#">User Research</a></li>
+          <li><a href="#">Interaction Design</a></li>
+          <li><a href="#">Usability Testing</a></li>
+        </ul>
+        <li id="recent" class="dropdown-toggle">Recently Viewed<span>&plus;</span></li>
+        <ul class="submenu">
+          <li><a href="#">Information Architecture</a></li>
+          <li><a href="#">Content Strategy</a></li>
+          <li><a href="#">User Research</a></li>
+          <li><a href="#">Interaction Design</a></li>
+          <li><a href="#">Usability Testing</a></li>
+        </ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Stats</a></li>
+        <li><a href="#">Contribute</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main>
     {{ content }}
   </main>
 </body>
+<script src="/js/app.js"></script>
 </html>
+
+

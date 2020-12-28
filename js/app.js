@@ -1,4 +1,5 @@
-$(window).scroll(function() {    
+// No jQuery! Refactor for vanilla js
+/*$(window).scroll(function() {    
   var scroll = $(window).scrollTop();
 
   if (scroll >= 45) {
@@ -15,4 +16,21 @@ $(window).scroll(function() {
     $("span.full").removeClass("compact");   
     $("nav.top-wrap").removeClass("compact");    
   }
+});*/
+
+// Mobile Nav
+// Open and close mobile menu
+document.getElementById("openMenu").addEventListener("click", function () {
+  document.getElementById("globalNav").style.width = "100%"
+  document.getElementById("navint").classList.add("open")
 });
+document.getElementById("closeMenu").addEventListener("click", function () {
+  document.getElementById("globalNav").style.width = "0"
+  document.getElementById("navint").classList.remove("open")
+});
+
+// Mobile Nav Dropdowns
+document.getElementById("disciplines").addEventListener("click", function () {this.classList.toggle("show")});
+document.getElementById("methods").addEventListener("click", function () {this.classList.toggle("show")});
+document.getElementById("outcomes").addEventListener("click", function () {this.classList.toggle("show")});
+document.getElementById("recent").addEventListener("click", function () {this.classList.toggle("show")});
