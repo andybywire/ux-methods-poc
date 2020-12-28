@@ -1,0 +1,77 @@
+---
+layout: default
+rdf_prefix_path: "_data/prefixes.sparql"
+---
+<h1>{{ page.rdf | rdf_property: 'rdfs:label' }} Method</h1>
+
+<p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
+
+{% assign steps = page.rdf | rdf_property: ':steps' | newline_to_br | strip_newlines | split: '<br />' %}
+
+<ol>
+{% for step in steps %}
+<li>{{ step }}</li>
+{% endfor %}
+</ol>
+
+{% assign inputs = page.rdf | rdf_property: ':inputProvidedBy', nil, true %}
+{% if inputs != nil %}
+  <h2>Inputs</h2>
+  <p>To use this method, it’s usually helpful if you have information about:</p>
+  <ul>
+  {% for input in inputs %}
+      <li>{{ input | rdf_property: 'rdfs:label' }}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
+{% assign outcomes = page.rdf | rdf_property: ':produces', nil, true %}
+{% if outcomes != nil %}
+  <h2>Outcomes</h2>
+  <p>{{ page.rdf | rdf_property: 'rdfs:label' }} typically produces insight and solutions related to:</p>
+  <ul>
+  {% for outcome in outcomes %}
+      <li>{{ outcome | rdf_property: 'rdfs:label' }}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
+{% assign query = '
+  SELECT DISTINCT ?discipline_label
+  WHERE {
+    ?resourceUri :produces ?outcome .
+     ?discipline :focusesOn ?outcome ;
+             rdfs:label ?discipline_label .      
+  }
+' %}
+
+{% assign disciplines = page.rdf | sparql_query: query %}
+
+  <h2>Disciplines</h2>
+  <p>The {{ page.rdf | rdf_property: 'rdfs:label' }} method is often used to accomplish the user experience goals and outputs associated with these disciplines:</p>
+
+  <ul>
+  {% for discipline in disciplines %}
+      <li>{{ discipline.discipline_label }}</li>
+  {% endfor %}
+  </ul>
+
+{% assign next_steps = page.rdf | rdf_property: ':providesInputFor', nil, true %}
+{% if next_steps != nil %}
+  <h2>Next Steps</h2>
+  <ul>
+  {% for next_step in next_steps %}
+      <li>{{ next_step | rdf_property: 'rdfs:label' }}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
+{% assign resources = page.rdf | rdf_property: ':describedBy', nil, true %}
+{% if resources != nil %}
+  <h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Web Resources</h2>
+  <ul>
+  {% for resource in resources %}
+      <li>{{ resource | rdf_property: 'dc:title' }}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
