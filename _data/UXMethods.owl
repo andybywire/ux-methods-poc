@@ -152,6 +152,14 @@ Project Goals
     
 
 
+    <!-- http://www.semanticweb.org/andyfitzgerald/uxmethods/inputProvidedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andyfitzgerald/uxmethods/inputProvidedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andyfitzgerald/uxmethods/providesInputFor"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andyfitzgerald/uxmethods/produces -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andyfitzgerald/uxmethods/produces">

@@ -13,3 +13,12 @@ rdf_prefix_path: "_data/prefixes.sparql"
 <li>{{ step }}</li>
 {% endfor %}
 </ol>
+
+<h2>Inputs</h2>
+<p>To use this method, it’s usually helpful if you have information about:</p>
+{% assign inputs = page.rdf | rdf_property: ':inputProvidedBy', nil, true %}
+<ul>
+{% for input in inputs %}
+    <li>{{ input }}</li>
+{% endfor %}
+</ul>
