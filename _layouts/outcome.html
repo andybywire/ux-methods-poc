@@ -1,0 +1,33 @@
+---
+layout: default
+rdf_prefix_path: "_data/prefixes.sparql"
+---
+<article>
+  <section>
+    <span class="resource-type">Outcome</span>
+    <h1>{{ page.rdf | rdf_property: 'rdfs:label' }}</h1>
+    <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
+  </section>
+  <section>
+    <!-- Outcome methods -->
+    {% assign card_content = page.rdf | rdf_inverse_property: ':produces', true %}
+    {% if card_content != nil %}
+    <h2>Methods</h2>
+    <p>UX Methods that target this {{ page.rdf | rdf_property: 'rdfs:label' }}s include:</p>
+    <ul class="method-cards">
+      {%- include method-card.html -%}
+    </ul>
+    {% endif %}
+  </section>
+  <section>
+    {% assign resources = page.rdf | rdf_property: ':describedBy', nil, true %}
+    {% if resources != nil %}
+    <h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Web Resources</h2>
+    <ul>
+    {% for resource in resources %}
+        <li>{{ resource | rdf_property: 'dc:title' }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+</article>

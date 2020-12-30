@@ -31,6 +31,9 @@ p {
   line-height: 1.5;  
   margin-top: 8px;
 }
+li, ol {
+  line-height: 1.5;
+}
 a, a:visited {
   color: $text;
 }
@@ -41,6 +44,36 @@ a, a:visited {
   font-weight: bold;
   font-size: 13px;
 }
-li, ol {
-  line-height: 1.5;
+.method-card .tag {
+  font-family: $header;
+  color: $gray-text;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+}
+ol.steps {
+  padding-left: 1rem;
+  li {
+    margin-bottom: .5rem;
+  }
+}
+ul.detail-links {
+  padding: 0;
+  li {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    list-style: none;
+    width: 49%;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+}
+ul.discipline-links {
+  padding: 0;
+  li {
+    list-style: none;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
 }

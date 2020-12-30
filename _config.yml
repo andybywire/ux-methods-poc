@@ -32,11 +32,14 @@ jekyll_rdf:
         {?resourceUri rdf:type :Discipline . }
         UNION
         {?resourceUri rdf:type :Method . }
+        UNION
+        {?resourceUri rdf:type :Outcome . }
       }
     "
     class_template_mappings:
       "https://www.ontology.uxmethods.org/Discipline": "discipline.html"
       "https://www.ontology.uxmethods.org/Method": "method.html"
+      "https://www.ontology.uxmethods.org/Outcome": "outcome.html"
     #instance_template_mappings:
 
 keep_files: 

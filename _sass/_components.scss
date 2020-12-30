@@ -1,3 +1,34 @@
 // UX Methods UI Components 
-// anything reusable such as buttons, navbars, cards etc.
-// all of your styles for buttons, carousels, sliders, and similar page components (think widgets). Your project will typically contain a lot of component files — as the whole site/app should be mostly composed of small modules.
+
+// Method cards
+ul.method-cards {
+  padding: 0;
+  max-width: 24rem; // eventually: use CSS grid to manage this
+  h3 {
+    line-height: 24px;
+    margin: 0;
+  }
+  p {
+    margin: 8px 0;
+  }
+  li.method-card {
+    list-style: none;
+    margin: 16px 0;
+    padding: 8px;
+    background-color: $light-text;
+    border-radius: 5px;
+    border-left: 8px $primary solid;  
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    li {
+      list-style: none;
+      width: calc(100% / 2);
+    }
+  }
+}

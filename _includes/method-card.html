@@ -1,0 +1,14 @@
+{% for resource in card_content %}
+    <li class="method-card">
+      <a href="/{{ resource.render_path }}">
+        <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
+        <p>{{ resource | rdf_property: 'dc:description' | truncate: 90 }}</p>
+        {% assign produces = resource | rdf_property: ':produces', nil, true %}
+        <ul>
+        {% for outcome in produces limit: 2 %}
+          <li class="tag">{{ outcome | rdf_property: 'rdfs:label' }}</li>
+        {% endfor %}
+      </ul>
+      </a>
+    </li>
+{% endfor %}
