@@ -1,0 +1,23 @@
+<!-- I can remove "describedBy" from the ontology and rdf_inverse_property for this instead — see outcome.html -->
+{% assign resources = page.rdf | rdf_inverse_property: ':describes', true %}
+{% if resources != nil %}
+<h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Web Resources</h2>
+<ul class="web-resource-links">
+{% for resource in resources %}
+  <li>
+    <a href=""><span>{{ resource | rdf_property: 'dc:title' }}</span>
+    <span>{% include svg/external_link.svg %}</span></a>
+    <ul>
+      {% assign creator = resource | rdf_property: 'dc:creator' %}
+      {% if creator != nil %}
+      <li>{{ creator }} | </li>
+      {% endif %}
+      {% assign publisher = resource | rdf_property: 'dc:publisher' %}
+      {% if publisher != nil %}
+      <li>{{ publisher }}</li>
+      {% endif %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
+{% endif %}

@@ -4,8 +4,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
 ---
 <article>
   <section>
-    <span class="resource-type">Method</span>
-    <h1>{{ page.rdf | rdf_property: 'rdfs:label' }}</h1>
+    <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Method</span></h1>
     <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
 
     <!-- Method steps -->
@@ -64,26 +63,22 @@ rdf_prefix_path: "_data/prefixes.sparql"
     {% endfor %}
     </ul>
   </section>
-  <section>
-    <!-- Next steps -->
-    {% assign card_content = page.rdf | rdf_property: ':providesInputFor', nil, true %}
-    {% if card_content != nil %}
+
+  <!-- Next steps -->
+  {% assign card_content = page.rdf | rdf_property: ':providesInputFor', nil, true %}
+  {% if card_content != nil %}
+  <section>    
     <h2>Next Steps</h2>
-    <ul class="method-cards">
-      {%- include method-card.html -%}
-    </ul>
-    {% endif %}
-  </section>
+    {%- include method-card.html -%}
+  </section>    
+  {% endif %}
+
   <section>
-    <!-- I can remove "describedBy" from the ontology and rdf_inverse_property for this instead — see outcome.html -->
-    {% assign resources = page.rdf | rdf_property: ':describedBy', nil, true %}
-    {% if resources != nil %}
-    <h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Web Resources</h2>
-    <ul>
-    {% for resource in resources %}
-        <li>{{ resource | rdf_property: 'dc:title' }}</li>
-    {% endfor %}
-    </ul>
-    {% endif %}
+    {%- include web-resource-links.html -%}
   </section>
 </article>
+<section class="contribute">
+  <h2>See Something Missing?</h2>
+  <p>UX Methods is a collaborative effort and is designed to grow with the UX community.</p>
+  <button>Improve This Method</button>
+</section>

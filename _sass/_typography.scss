@@ -15,6 +15,17 @@ h1, h2, h3, h4, h4 {
 h1 {
   font-size: 40px;
   line-height: 48px;  
+  display: flex;
+  flex-direction: column-reverse;
+  span:nth-child(2) {
+    font-family: $header;
+    color: $card-background;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1;
+    padding-bottom: .5rem;
+  } 
 }
 h2 {
   font-size: 28px;
@@ -36,13 +47,6 @@ li, ol {
 }
 a, a:visited {
   color: $text;
-}
-.resource-type {
-  font-family: $header;
-  color: $card-background;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 13px;
 }
 .method-card .tag {
   font-family: $header;
@@ -69,11 +73,23 @@ ul.detail-links {
     margin-bottom: 1rem;
   }
 }
-ul.discipline-links {
+ul.discipline-links, ul.web-resource-links {
   padding: 0;
   li {
     list-style: none;
     font-weight: 500;
     margin-bottom: 1rem;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  ul {
+    padding-left: 0;
+    li {
+      font-weight: 400;
+      display: inline-block;
+    }
   }
 }

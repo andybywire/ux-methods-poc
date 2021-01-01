@@ -2,26 +2,56 @@
 layout: default
 rdf_prefix_path: "_data/prefixes.sparql"
 ---
-<h1>{{ page.rdf | rdf_property: 'rdfs:label' }}</h1>
-
-<p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
-
-{% assign query = '
-  SELECT DISTINCT ?methodLabel ?methodDescription
-  WHERE {
-    ?resourceUri :focusesOn ?outcome .            
-    ?method :produces ?outcome ;
-            rdfs:label ?methodLabel ;
-            dc:description ?methodDescription.  
-  }
-' %}
-
-
-<h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Methods</h2>
-{% assign resultset = page.rdf | sparql_query: query %}
-<ul>
-{% for method in resultset %}
-<li><p><a href="/{{ method.methodLabel | replace: ' ','' }}.html">{{ method.methodLabel }}</a><br />
-{{ method.methodDescription | truncate: 100 }}</p></li>
-{% endfor %}
-</ul>
+<article>
+  {% assign resource = page.rdf | rdf_property: 'rdfs:label' | downcase | slugify %}
+  <picture>
+  <source type="image/jpeg" 
+          srcset="/img/{{ resource }}_215.jpg 215w, 
+                  /img/{{ resource }}_375.jpg 375w,
+                  /img/{{ resource }}_750.jpg 750w"
+          sizes="(min-width: 100px) 375px, 100vw">
+    <img src="/img/{{ resource }}_375.jpg" alt="">
+  </picture>
+  <section>
+    <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Discipline</span></h1>
+    <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
+  </section>
+  <section>
+    <h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Methods</h2>
+    {% assign query = '
+      SELECT DISTINCT ?method ?methodLabel ?methodDescription
+      WHERE {
+        ?resourceUri :focusesOn ?outcome .            
+        ?method :produces ?outcome ;
+                rdfs:label ?methodLabel ;
+                dc:description ?methodDescription.  
+      }
+      ORDER BY ?methodLabel
+    '%}
+    {% assign resultset = page.rdf | sparql_query: query %}
+    <ul class="method-cards">
+    {% for resource in resultset %}
+      <li class="method-card">
+        <a href="{{ resource.methodLabel | replace: ' ','' }}.html">
+          <h3>{{ resource.methodLabel }}</h3>
+          <p>{{ resource.methodDescription | truncate: 90 }}</p>
+          {% assign produces = resource.method | rdf_property: ':produces', nil, true %}
+          <ul>
+          {% for outcome in produces limit: 2 %}
+            <li class="tag">{{ outcome | rdf_property: 'rdfs:label' }}</li>
+          {% endfor %}
+        </ul>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  <section>
+    {%- include web-resource-links.html -%}
+  </section>
+</article>
+<section class="contribute">
+  <h2>See Something Missing?</h2>
+  <p>UX Methods is a collaborative effort and is designed to grow with the UX community.</p>
+  <button>Add A Method</button>
+</section>

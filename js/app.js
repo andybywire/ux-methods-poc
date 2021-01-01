@@ -34,3 +34,8 @@ document.getElementById("disciplines").addEventListener("click", function () {th
 document.getElementById("methods").addEventListener("click", function () {this.classList.toggle("show")});
 document.getElementById("outcomes").addEventListener("click", function () {this.classList.toggle("show")});
 document.getElementById("recent").addEventListener("click", function () {this.classList.toggle("show")});
+
+// Home Page Nav Dropdowns
+document.getElementById("home-disciplines").addEventListener("click", 
+  function () {this.classList.toggle("show")});
+document.getElementById("home-methods").addEventListener("click", function () {this.classList.toggle("show")});

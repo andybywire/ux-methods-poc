@@ -4,8 +4,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
 ---
 <article>
   <section>
-    <span class="resource-type">Outcome</span>
-    <h1>{{ page.rdf | rdf_property: 'rdfs:label' }}</h1>
+    <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Outcome</span></h1>
     <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
   </section>
   <section>
@@ -14,20 +13,15 @@ rdf_prefix_path: "_data/prefixes.sparql"
     {% if card_content != nil %}
     <h2>Methods</h2>
     <p>UX Methods that target this {{ page.rdf | rdf_property: 'rdfs:label' }}s include:</p>
-    <ul class="method-cards">
-      {%- include method-card.html -%}
-    </ul>
+    {%- include method-card.html -%}
     {% endif %}
   </section>
   <section>
-    {% assign resources = page.rdf | rdf_property: ':describedBy', nil, true %}
-    {% if resources != nil %}
-    <h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Web Resources</h2>
-    <ul>
-    {% for resource in resources %}
-        <li>{{ resource | rdf_property: 'dc:title' }}</li>
-    {% endfor %}
-    </ul>
-    {% endif %}
+    {%- include web-resource-links.html -%}
   </section>
 </article>
+<section class="contribute">
+  <h2>See Something Missing?</h2>
+  <p>UX Methods is a collaborative effort and is designed to grow with the UX community.</p>
+  <button>Add A Method</button>
+</section>

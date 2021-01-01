@@ -12,6 +12,7 @@ nav {
   display: flex;
   justify-content: space-between;
   height: 60px;
+  z-index: 1;
   .title {
     color: $light-text;
     font-family: $header;
@@ -99,9 +100,20 @@ nav {
 main {
   padding-top: 60px;
 }
-article {
-  padding: 1.5rem 1rem;
-}
 section {
-  padding-bottom: 3rem;
+  padding:0 1rem 3rem;
+  &:first-of-type {
+    padding-top: 1.5rem;
+  }
+}
+footer {
+  background-color: $dark-background;
+  color: $light-text;
+  padding: 24px 16px;
+  h2 {
+    margin-top: 2rem;
+  }
+  .licensing {
+    color: $gray-text-dark-bg;
+  }
 }

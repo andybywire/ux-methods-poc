@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-US">
 {%- include head.html -%}
@@ -50,8 +52,9 @@
     </div>
   </nav>
 
-  <main>
+  <main {% if page.page_class %}class="{{ page.page_class }}"{% endif %}>
     {{ content }}
+    {%- include footer.html -%}
   </main>
 </body>
 <script src="/js/app.js"></script>

@@ -11,14 +11,37 @@ ul.method-cards {
   p {
     margin: 8px 0;
   }
-  li.method-card {
+  li.method-card:not(.see-all) {
     list-style: none;
-    margin: 16px 0;
+    margin: 24px 0;
     padding: 8px;
     background-color: $light-text;
     border-radius: 5px;
     border-left: 8px $primary solid;  
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+    &.dark {
+      background-color: $card-background;
+      border-left: 8px $primary-dark-bg solid;
+      h3, p {
+        color: $light-text;
+      }
+      h3 {
+        //font-size: 1.2rem;
+      }
+      .tag {
+        color: $gray-text-dark-bg;
+      }
+    }
+  }
+  .see-all {
+    text-decoration: underline;
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: right;
+    margin-top: 2rem;
+    a, a:visited {
+      color: $light-text;
+    }
   }
   a {
     text-decoration: none;
@@ -30,5 +53,68 @@ ul.method-cards {
       list-style: none;
       width: calc(100% / 2);
     }
+  }
+}
+// Discipline Cards
+ul.discipline-cards {
+  padding: 0;
+  h3, p {
+    color: $light-text;
+  }
+  h3 {
+    font-size: 1.2rem;
+    line-height: 24px;
+    margin: 0;
+  }
+  p {
+    margin: 8px 0 0;
+    //line-height: 20px;
+  }
+  a {
+    display: flex;
+  }
+  .discipline-img {
+    flex: 1;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .discipline-lede {
+    flex: 2;
+    padding: 8px;
+  }
+  li {
+    list-style: none;
+    margin: 24px 0;
+    background-color: $card-background;
+    border-radius: 5px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Contribute CTA
+section.contribute {
+  background-color: $card-background;
+  color: $light-text;
+  text-align: center;
+  padding: 3rem 16px;
+  h2 {
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+  button {
+    background-color: $primary;
+    color: $light-text;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    font-family: $header;
+    font-weight: 600;
+    font-size: 1.25rem;
   }
 }

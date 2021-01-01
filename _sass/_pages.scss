@@ -1,2 +1,110 @@
 // UX Methods Page Styes
 // Styles that only crop up on particular pages — e.g. home page
+
+main.home {
+  background-color: $dark-background;
+  color: $light-text;
+  h1 {
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+  // Search
+  input[type=text] {
+    border: none;
+    border-bottom: 2px solid $primary;
+    background-color: $dark-background;
+    color: $light-text;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+    margin: 0;
+    &::placeholder {
+      color: $light-gray-text;
+    } 
+    &:focus {
+      outline: none; //rework this for accessibility; cf. answerthepublic
+      &::placeholder {
+        opacity: 0;
+        transition: opacity 0.3s;
+        -webkit-transition: opacity 0.3s; 
+      } 
+    }
+  }
+  label {
+    display: inline-block;
+    color: $light-gray-text;
+    padding: 8px 0 24px;
+  }
+  input[type=submit] {       // DRY this styling out
+    background-color: $primary-dark-bg;
+    color: $light-text;
+    padding: 14px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-family: $header;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  ul#search-results {
+    padding-inline-start: 0;
+    padding: 0 16px;
+    background-color: $card-background;
+    margin: 1rem -16px;
+    li {
+      list-style: none;
+      &:first-child {
+        padding-top: 2rem;
+      }
+    }
+    h3 {
+      color: $light-text;
+      text-decoration: underline;
+    }
+    .close-icon {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 0 3rem;
+      a {
+        display: inline-block;
+        line-height: 0;
+        background:  $primary-dark-bg;
+        padding: 1.5rem;
+        border-radius: 100px;
+      }
+    }
+  }
+  // Homepage menu
+  .home-page-nav{
+    h2 {
+      font-size: 1.375rem;
+      font-weight: 600;
+      padding: 1rem 0;
+      border-bottom: 1px solid $light-text;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      .chevron {
+        padding-right: .5rem;
+      }
+    }
+    ul.menu {
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease-out;
+    }
+    .show + ul {
+      max-height: 1200px; // 75 rem?
+      padding-bottom: 1rem;
+      transition: max-height 0.25s ease-in;
+    }
+    // height: 840, disciplines (6); 1026, methods (6 + see all)
+  }
+}
