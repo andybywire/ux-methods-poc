@@ -59,8 +59,11 @@ main.home {
     margin: 1rem -16px;
     li {
       list-style: none;
-      &:first-child {
-        padding-top: 2rem;
+      &.results-count {
+        padding: 1.5rem 0 1rem;
+      }
+      &.no-results {
+        padding: 1.5rem 0;
       }
     }
     h3 {
