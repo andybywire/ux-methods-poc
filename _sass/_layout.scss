@@ -25,7 +25,9 @@ nav {
   // Mobile navigation menu
   #openMenu {
     align-self: center;
-    margin-right: 16px;
+    margin-right: 5px;
+    background-color: inherit;
+    border: none;
   }
   .sidenav {
     height: 100%;
@@ -77,8 +79,16 @@ nav {
     }
     .closebtn {
       position: absolute;
-      top: 18px;
-      right: 16px;
+      background-color: inherit;
+      border: none;
+      color: $light-text;
+      top: 17px;
+      right: 5px;
+    }
+    .search {
+      svg {
+        padding-right: .5rem;
+      }
     }
     .dropdown-toggle + ul.submenu {
       max-height: 0px;
@@ -97,11 +107,24 @@ nav {
     }
   }
 }
+// Dropdown animations
+.dropdown-toggle span svg {
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-out;
+}
+.dropdown-toggle.show span svg {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease-in;
+}
 main {
   padding-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 section {
   padding:0 1rem 3rem;
+  align-self: center;
   &:first-of-type {
     padding-top: 1.5rem;
   }
@@ -114,6 +137,6 @@ footer {
     margin-top: 2rem;
   }
   .licensing {
-    color: $gray-text-dark-bg;
+    // color: $gray-text-dark-bg;
   }
 }

@@ -5,7 +5,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
 <article>
   {% assign resource = page.rdf | rdf_property: 'rdfs:label' | downcase | slugify %}
   <picture>
-  <source type="image/jpeg" 
+    <source type="image/jpeg" 
           srcset="/img/{{ resource }}_215.jpg 215w, 
                   /img/{{ resource }}_375.jpg 375w,
                   /img/{{ resource }}_750.jpg 750w"
@@ -50,8 +50,9 @@ rdf_prefix_path: "_data/prefixes.sparql"
     {%- include web-resource-links.html -%}
   </section>
 </article>
+<!-- Probalby properly a <section>; could also be an <aside> -->
 <section class="contribute">
   <h2>See Something Missing?</h2>
-  <p>UX Methods is a collaborative effort and is designed to grow with the UX community.</p>
-  <button>Add A Method</button>
+  <p class="large">UX Methods is a collaborative effort and is designed to grow with the UX community.</p>
+  <a class="button" href="/submit-method/index.html">Submit a Method</a>
 </section>

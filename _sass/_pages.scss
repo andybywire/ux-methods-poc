@@ -85,6 +85,7 @@ main.home {
   }
   // Homepage menu
   .home-page-nav{
+    padding-bottom: 6rem;
     h2 {
       font-size: 1.375rem;
       font-weight: 600;
@@ -102,6 +103,19 @@ main.home {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.25s ease-out;
+      @include breakpoint(medium) {
+        max-height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+      }
+      @include breakpoint(large) {
+        max-height: 100%;
+        max-width: $max-width;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+      }
     }
     .show + ul {
       max-height: 1200px; // 75 rem?
@@ -109,5 +123,20 @@ main.home {
       transition: max-height 0.25s ease-in;
     }
     // height: 840, disciplines (6); 1026, methods (6 + see all)
+  }
+  .home-page-about {
+    background-color: $card-background;
+    padding-top: 2rem;
+    a {
+      color: $light-text;
+      text-decoration: none;
+    }
+    h3 {
+      font-size: 1.375rem;
+      margin-top: 1.5rem;
+    }
+    .chevron {
+      padding-left: 1rem;
+    }
   }
 }

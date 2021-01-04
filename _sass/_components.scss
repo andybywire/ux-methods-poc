@@ -4,6 +4,9 @@
 ul.method-cards {
   padding: 0;
   max-width: 24rem; // eventually: use CSS grid to manage this
+  @include breakpoint(medium) {
+    //max-width: 100%;
+  }
   h3 {
     line-height: 24px;
     margin: 0;
@@ -19,6 +22,9 @@ ul.method-cards {
     border-radius: 5px;
     border-left: 8px $primary solid;  
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+    &.outcome {
+      border-left: 8px $secondary solid;  
+      }
     &.dark {
       background-color: $card-background;
       border-left: 8px $primary-dark-bg solid;
@@ -30,6 +36,9 @@ ul.method-cards {
       }
       .tag {
         color: $gray-text-dark-bg;
+      }
+      &.outcome {
+        border-left: 8px $secondary-dark-bg solid;  
       }
     }
   }
@@ -100,21 +109,28 @@ section.contribute {
   h2 {
     margin-bottom: 1rem;
   }
-  p {
+  p.large {
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 2rem;
   }
-  button {
+  button, a.button {    // this can be cleaned up to eliminate button sytles, once buttons have all been removed.
     background-color: $primary;
     color: $light-text;
-    padding: 10px;
-    margin-bottom: 1.5rem;
+    padding: 12px;
+    margin-bottom: 2rem;
     width: 80%;
     border-radius: 5px;
     border: none;
     font-family: $header;
     font-weight: 600;
     font-size: 1.25rem;
+  }
+  a.button {
+    text-decoration: none;
+    display: inline-block;
+  }
+  a {
+    color: $light-text;
   }
 }

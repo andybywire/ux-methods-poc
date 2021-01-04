@@ -1,6 +1,5 @@
 ---
 title: UX Methods
-rdf_prefix_path: "_data/prefixes.sparql"
 page_class: home
 ---
 <section> <!-- Title & Header -->
@@ -49,7 +48,7 @@ page_class: home
 <section class="home-page-nav"> <!-- Home page nav -->
   <!-- Disciplines -->
   {% assign uxm-discipline = site.pages | where: "template", "discipline" | sort: 'name' %}
-  <h2 id="home-disciplines"><span>UX Disciplines</span><span class="chevron">{% include svg/chevron_down.svg %}</span></h2>
+  <h2 class="dropdown-toggle"><span>UX Disciplines</span><span class="chevron">{% include svg/chevron_down.svg %}</span></h2>
   <ul class="menu discipline-cards">
   {% for resource in uxm-discipline %}
     <li>
@@ -66,7 +65,7 @@ page_class: home
   </ul>
 
   <!-- Top Methods -->
-  <h2 id="home-methods"><span>Top Methods</span><span class="chevron">{% include svg/chevron_down.svg %}</span></h2>
+  <h2 class="dropdown-toggle"><span>Top Methods</span><span class="chevron">{% include svg/chevron_down.svg %}</span></h2>
   {% assign query = '
     SELECT DISTINCT ?method ?label ?description (COUNT(?output) AS ?outputs)
     WHERE {
@@ -94,15 +93,48 @@ page_class: home
       </a>
     </li>
   {% endfor %}
-  <li class="see-all"><a href="#">See All Methods A-Z</a></li>
+  <li class="see-all"><a href="/methods">See All Methods A-Z</a></li>
   </ul>
 
   <!-- Top Outcomes -->
-  <h2 id="home-outcome"><span>Top Goals & Outcomes</span><span class="chevron">{% include svg/chevron_down.svg %}</span></h2>
-  <!-- TBD -->
+  <h2 class="dropdown-toggle"><span>Top Goals & Outcomes</span><span class="chevron">{% include svg/chevron_down.svg %}</span></h2>
+  {% assign query = '
+    SELECT DISTINCT ?outcome ?label ?description (COUNT(?methods) AS ?method_count)
+    WHERE {
+      ?outcome rdf:type :Outcome ;
+        rdfs:label ?label ;
+        dc:description ?description;
+        :focusOf ?methods .
+    }
+    GROUP BY ?outcome ?label ?description
+    ORDER BY DESC(?method_count) ?outcome
+  '%}
+  {% assign topOutcomes = query | sparql_query %}
+  <ul class="menu method-cards">
+  {% for resource in topOutcomes limit: 6 %}
+    <li class="method-card dark outcome">
+      <a href="{{ resource.label | replace: ' ','' }}.html">
+        <h3>{{ resource.label }}</h3>
+        <p>{{ resource.description | truncate: 90 }}</p>
+      </a>
+    </li>
+  {% endfor %}
+  <li class="see-all"><a href="/outcomes">See All Outcomes A-Z</a></li>
+  </ul>
 </section>
-<section> <!-- Home page about content -->
-  
+<section class="home-page-about">
+  <a href="/about">
+    <h3><span>About</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
+    <p>UX Methods is a linked data driven knowledge graph for documenting and interconnecting the techinques and tools of user experience design.</p> 
+  </a>
+  <a href="">
+    <h3><span>How It Works</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
+    <p>The UX Methods knowledge graph is growing and evolving all the time as methods are added and improved.</p>
+  </a>
+  <a href="">
+    <h3><span>Contribute</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
+    <p>The UX Methods knowledge graph is growing and evolving all the time as methods are added and improved.</p>
+  </a>
 </section>
 
 

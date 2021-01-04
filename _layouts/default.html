@@ -1,4 +1,5 @@
 ---
+rdf_prefix_path: "_data/prefixes.sparql"
 ---
 <!DOCTYPE html>
 <html lang="en-US">
@@ -6,46 +7,73 @@
 <body>
   <nav>
     <a href="/" class="title">{{ site.title }}</a>
-    <button id="openMenu" type="button" >&plus;</button>
+    <button id="openMenu" type="button" >{% include svg/menu.svg %}</button>
     <!-- look into ARIA for these buttons/toggles -->
     <!-- aria-label="Open site menu" aria-expanded="false" aria-controls="offCanvas" -->
     <div id="globalNav" class="sidenav"> 
-      <button id="closeMenu" class="closebtn" type="button">&times;</button>
+      <button id="closeMenu" class="closebtn" type="button">{% include svg/close.svg %}</button>
       <ul id="navint">
-        <li class="search"><a href="#">Search</a></li>
-        <li id="disciplines" class="dropdown-toggle">UX Disciplines<span>&plus;</span></li>
+        <li class="search"><a href="/">{% include svg/search.svg %}Search</a></li>
+        <li class="dropdown-toggle">UX Disciplines<span>{% include svg/chevron_down.svg %}</span></li>
+          <ul class="submenu">
+            {% assign uxm-discipline = site.pages | where: "template", "discipline" | sort: 'name' %}
+            {% for resource in uxm-discipline %}
+              <li>
+                <a href="/{{ resource.rdf.page_url }}.html">{{ resource | rdf_property: 'rdfs:label' }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        <li class="dropdown-toggle">Top Methods<span>{% include svg/chevron_down.svg %}</span></li>
+          <ul class="submenu">
+          {% assign query = '
+            SELECT DISTINCT ?method ?label (COUNT(?output) AS ?outputs)
+            WHERE {
+              ?method rdf:type :Method ;
+                rdfs:label ?label ;
+                :produces ?output .
+            }
+            GROUP BY ?method ?label
+            ORDER BY DESC(?outputs) ?method
+          '%}
+          {% assign topMethods = query | sparql_query %}
+          {% for resource in topMethods limit: 6 %}
+            <li>
+              <a href="{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
+            </li>
+          {% endfor %}
+          <li><a href="/methods">See All Methods A-Z</a></li>
+          </ul>
+        <li class="dropdown-toggle">Top Goals & Outcomes<span>{% include svg/chevron_down.svg %}</span></li>
+        <ul class="submenu">
+
+
+          {% assign query = '
+            SELECT DISTINCT ?outcome ?label (COUNT(?methods) AS ?method_count)
+            WHERE {
+              ?outcome rdf:type :Outcome ;
+                rdfs:label ?label ;
+                :focusOf ?methods .
+            }
+            GROUP BY ?outcome ?label
+            ORDER BY DESC(?method_count) ?outcome
+          '%}
+          {% assign topOutcomes = query | sparql_query %}
+          {% for resource in topOutcomes limit: 6 %}
+            <li>
+              <a href="{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
+            </li>
+          {% endfor %}
+            <li><a href="/outcomes">See All Outcomes A-Z</a></li>
+        </ul>
+<!--         <li class="dropdown-toggle">Recently Viewed<span>&plus;</span></li>
         <ul class="submenu">
           <li><a href="#">Information Architecture</a></li>
           <li><a href="#">Content Strategy</a></li>
           <li><a href="#">User Research</a></li>
           <li><a href="#">Interaction Design</a></li>
           <li><a href="#">Usability Testing</a></li>
-        </ul>
-        <li id="methods" class="dropdown-toggle">Top Methods<span>&plus;</span></li>
-        <ul class="submenu">
-          <li><a href="#">Information Architecture</a></li>
-          <li><a href="#">Content Strategy</a></li>
-          <li><a href="#">User Research</a></li>
-          <li><a href="#">Interaction Design</a></li>
-          <li><a href="#">Usability Testing</a></li>
-        </ul>
-        <li id="outcomes" class="dropdown-toggle">Top Goals & Outcomes<span>&plus;</span></li>
-        <ul class="submenu">
-          <li><a href="#">Information Architecture</a></li>
-          <li><a href="#">Content Strategy</a></li>
-          <li><a href="#">User Research</a></li>
-          <li><a href="#">Interaction Design</a></li>
-          <li><a href="#">Usability Testing</a></li>
-        </ul>
-        <li id="recent" class="dropdown-toggle">Recently Viewed<span>&plus;</span></li>
-        <ul class="submenu">
-          <li><a href="#">Information Architecture</a></li>
-          <li><a href="#">Content Strategy</a></li>
-          <li><a href="#">User Research</a></li>
-          <li><a href="#">Interaction Design</a></li>
-          <li><a href="#">Usability Testing</a></li>
-        </ul>
-        <li><a href="#">About</a></li>
+        </ul> -->
+        <li><a href="/about">About</a></li>
         <li><a href="#">Stats</a></li>
         <li><a href="#">Contribute</a></li>
       </ul>

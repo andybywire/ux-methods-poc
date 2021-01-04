@@ -1,0 +1,24 @@
+---
+title: UX Method Outcomes A-Z
+rdf_prefix_path: "_data/prefixes.sparql"
+---
+<section>
+<h1 class="no-eyebrow">UX Method Outcomes A-Z</h1>
+{% assign outcomes = site.pages | where: "template", "outcome" | sort: 'name' %}
+<ul class="method-cards">
+{% for resource in outcomes %}
+  <li class="method-card outcome">
+    <a href="/{{ resource.rdf.page_url }}.html">
+      <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
+      <p>{{ resource | rdf_property: 'dc:description' | truncate: 90 }}</p>
+    </a>
+  </li>
+{% endfor %}
+</ul>
+</section>
+<section class="contribute">
+  <h2>See Something Missing?</h2>
+  <p class="large">UX Methods is a collaborative effort and is designed to grow with the UX community.</p>
+  <a class="button" href="/submit-method/index.html">Submit a Method</a>
+  <p>To recommmend the revision or addition of a new goal or outcome to the knowledge graph, please <a href="">submit a pull request on the UX Methods GitHub repository</a>. </p>
+</section>

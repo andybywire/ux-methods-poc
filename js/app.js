@@ -30,12 +30,9 @@ document.getElementById("closeMenu").addEventListener("click", function () {
 });
 
 // Mobile Nav Dropdowns
-document.getElementById("disciplines").addEventListener("click", function () {this.classList.toggle("show")});
-document.getElementById("methods").addEventListener("click", function () {this.classList.toggle("show")});
-document.getElementById("outcomes").addEventListener("click", function () {this.classList.toggle("show")});
-document.getElementById("recent").addEventListener("click", function () {this.classList.toggle("show")});
-
-// Home Page Nav Dropdowns
-document.getElementById("home-disciplines").addEventListener("click", 
-  function () {this.classList.toggle("show")});
-document.getElementById("home-methods").addEventListener("click", function () {this.classList.toggle("show")});
+(()=> {
+  var dropdowns = document.getElementsByClassName("dropdown-toggle");
+  for (var i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener('click', function () {this.classList.toggle("show")});
+  };
+})()

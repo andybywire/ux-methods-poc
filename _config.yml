@@ -17,6 +17,9 @@ defaults:
 # Build settings
 markdown: kramdown
 
+#Enable incremental regeneration
+incremental: true
+
 permalink: /:title/
 
 jekyll_rdf:

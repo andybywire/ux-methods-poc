@@ -1,0 +1,14 @@
+---
+title: Improve a Method
+---
+<script>
+  const params = new URLSearchParams(location.search);
+  var method = params.get('method');
+  var iframe = document.createElement('iframe');
+  iframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSfWKiMm7iwjNC9_8iKj9tcHMyWGdS9Ks4ls8j4gofem2nHtkw/viewform?embedded=true&entry.824939893=" + method;
+  iframe.width = "100%";
+  iframe.height = "1200";
+  iframe.frameBorder = "0";
+  iframe.marginHeight = "0";
+  document.getElementsByTagName("main")[0].appendChild(iframe);
+</script>

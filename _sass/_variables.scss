@@ -16,3 +16,16 @@ $gray-text: #606F76;
 $gray-text-dark-bg: #94A2A8;
 $primary: #28B7FF;
 $primary-dark-bg: #2BB6FC;
+$secondary: #58717E;
+$secondary-dark-bg: #567280; //#7BFC1E;
+$alert: #FF940F;
+$alert-dark-bg: #FC9412;
+
+// Breakpoints (cf. http://breakpoint-sass.com/)
+$breakpoints: (
+  // 'small':  375px,
+  'medium': 600px,
+  'large':  1000px
+) !default;
+
+$max-width: 1140px;
