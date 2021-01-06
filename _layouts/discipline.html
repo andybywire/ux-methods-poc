@@ -1,18 +1,18 @@
 ---
 layout: default
 rdf_prefix_path: "_data/prefixes.sparql"
+page_class: discipline
 ---
-<article>
-  {% assign resource = page.rdf | rdf_property: 'rdfs:label' | downcase | slugify %}
-  <picture>
-    <source type="image/jpeg" 
-          srcset="/img/{{ resource }}_215.jpg 215w, 
-                  /img/{{ resource }}_375.jpg 375w,
-                  /img/{{ resource }}_750.jpg 750w"
-          sizes="(min-width: 100px) 375px, 100vw">
-    <img src="/img/{{ resource }}_375.jpg" alt="">
-  </picture>
+  {% assign resource = page.rdf | rdf_property: 'rdfs:label' | downcase | slugify %}  
   <section>
+    <picture>
+      <source type="image/jpeg" 
+            srcset="/img/{{ resource }}_215.jpg 215w, 
+                    /img/{{ resource }}_375.jpg 375w,
+                    /img/{{ resource }}_750.jpg 750w"
+            sizes="(min-width: 100px) 375px, 100vw">
+      <img src="/img/{{ resource }}_375.jpg" alt="">
+    </picture> 
     <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Discipline</span></h1>
     <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
   </section>
@@ -49,10 +49,10 @@ rdf_prefix_path: "_data/prefixes.sparql"
   <section>
     {%- include web-resource-links.html -%}
   </section>
-</article>
+
 <!-- Probalby properly a <section>; could also be an <aside> -->
 <section class="contribute">
   <h2>See Something Missing?</h2>
-  <p class="large">UX Methods is a collaborative effort and is designed to grow with the UX community.</p>
+  <p class="display">UX Methods is a collaborative effort and is designed to grow with the UX community.</p>
   <a class="button" href="/submit-method/index.html">Submit a Method</a>
 </section>

@@ -2,11 +2,10 @@
 
 // Method cards
 ul.method-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax($card-min,3fr));
+  grid-gap: 2rem;
   padding: 0;
-  max-width: 24rem; // eventually: use CSS grid to manage this
-  @include breakpoint(medium) {
-    //max-width: 100%;
-  }
   h3 {
     line-height: 24px;
     margin: 0;
@@ -16,7 +15,7 @@ ul.method-cards {
   }
   li.method-card:not(.see-all) {
     list-style: none;
-    margin: 24px 0;
+    max-width: $card-max;
     padding: 8px;
     background-color: $light-text;
     border-radius: 5px;
@@ -42,14 +41,18 @@ ul.method-cards {
       }
     }
   }
-  .see-all {
+  .see-all-bottom {
     text-decoration: underline;
     list-style: none;
     font-size: 1.2rem;
     text-align: right;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-right: 1rem;
     a, a:visited {
       color: $light-text;
+    }
+    @include breakpoint(medium) {
+      display: none;
     }
   }
   a {
@@ -66,6 +69,9 @@ ul.method-cards {
 }
 // Discipline Cards
 ul.discipline-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax($card-min,3fr));
+  grid-gap: 2rem;
   padding: 0;
   h3, p {
     color: $light-text;
@@ -76,7 +82,7 @@ ul.discipline-cards {
     margin: 0;
   }
   p {
-    margin: 8px 0 0;
+    margin: 8px 4px 0 0;
     //line-height: 20px;
   }
   a {
@@ -93,7 +99,7 @@ ul.discipline-cards {
   }
   li {
     list-style: none;
-    margin: 24px 0;
+    max-width: $card-max;
     background-color: $card-background;
     border-radius: 5px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
@@ -106,12 +112,16 @@ section.contribute {
   color: $light-text;
   text-align: center;
   padding: 3rem 16px;
+  margin: 0;
+  max-width: 100%;
+  * {
+    margin: 0 auto;
+    max-width: 40rem;
+  }
   h2 {
     margin-bottom: 1rem;
   }
-  p.large {
-    font-size: 20px;
-    line-height: 1.2;
+  p.display {
     margin-bottom: 2rem;
   }
   button, a.button {    // this can be cleaned up to eliminate button sytles, once buttons have all been removed.

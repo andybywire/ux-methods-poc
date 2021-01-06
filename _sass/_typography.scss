@@ -32,7 +32,8 @@ h1 {
 }
 h2 {
   font-size: 28px;
-  line-height: 32px;  
+  line-height: 32px;
+  clear: left; // for img on discipline page
 }
 h3 {
   font-size: 20px;
@@ -44,6 +45,10 @@ p {
   font-size: 16px;
   line-height: 1.5;  
   margin-top: 8px;
+  &.display {
+    font-size: 20px;
+    line-height: 1.2;    
+  }
 }
 li, ol {
   line-height: 1.5;

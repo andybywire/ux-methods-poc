@@ -1,5 +1,4 @@
 // UX Methods Page Styes
-// Styles that only crop up on particular pages — e.g. home page
 
 main.home {
   background-color: $dark-background;
@@ -8,94 +7,152 @@ main.home {
     font-size: 32px;
     line-height: 36px;
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-  }
-  // Search
-  input[type=text] {
-    border: none;
-    border-bottom: 2px solid $primary;
-    background-color: $dark-background;
-    color: $light-text;
-    font-size: 1.5rem;
-    width: 100%;
-    padding: 0;
-    box-sizing: border-box;
-    border-radius: 0;
-    margin: 0;
-    &::placeholder {
-      color: $light-gray-text;
-    } 
-    &:focus {
-      outline: none; //rework this for accessibility; cf. answerthepublic
-      &::placeholder {
-        opacity: 0;
-        transition: opacity 0.3s;
-        -webkit-transition: opacity 0.3s; 
-      } 
-    }
-  }
-  label {
-    display: inline-block;
-    color: $light-gray-text;
-    padding: 8px 0 24px;
-  }
-  input[type=submit] {       // DRY this styling out
-    background-color: $primary-dark-bg;
-    color: $light-text;
-    padding: 14px;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    font-family: $header;
-    font-weight: 600;
-    font-size: 1.5rem;
-  }
-  ul#search-results {
-    padding-inline-start: 0;
-    padding: 0 16px;
-    background-color: $card-background;
-    margin: 1rem -16px;
-    li {
-      list-style: none;
-      &.results-count {
-        padding: 1.5rem 0 1rem;
-      }
-      &.no-results {
-        padding: 1.5rem 0;
-      }
-    }
-    h3 {
-      color: $light-text;
-      text-decoration: underline;
-    }
-    .close-icon {
-      display: flex;
-      justify-content: center;
-      padding: 2rem 0 3rem;
-      a {
-        display: inline-block;
-        line-height: 0;
-        background:  $primary-dark-bg;
-        padding: 1.5rem;
-        border-radius: 100px;
-      }
-    }
-  }
-  // Homepage menu
-  .home-page-nav{
-    padding-bottom: 6rem;
-    h2 {
-      font-size: 1.375rem;
+    padding: 1rem 0 3rem;
+    @include breakpoint(medium) {
+      padding: 5rem 0 2rem;
+      font-size: 2.75rem;
       font-weight: 600;
-      padding: 1rem 0;
-      border-bottom: 1px solid $light-text;
+    }
+  }
+  p.display {
+    display: none;
+    margin: 0 auto;
+    width: 45rem;
+    text-align: center;
+    padding-bottom: 3rem;
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+  .search {
+    form {
+      @include breakpoint(medium) {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+      }
+    }
+    input[type=text] {
+      border: none;
+      border-bottom: 2px solid $primary;
+      background-color: $dark-background;
+      color: $light-text;
+      font-size: 1.5rem;
+      width: 100%;
+      padding: 0;
+      box-sizing: border-box;
+      border-radius: 0;
+      margin: 0;
+      &::placeholder {
+        color: $light-gray-text;
+      } 
+      &:focus {
+        outline: none; //rework this for accessibility; cf. answerthepublic
+        &::placeholder {
+          opacity: 0;
+          transition: opacity 0.3s;
+          -webkit-transition: opacity 0.3s; 
+        } 
+      }
+      @include breakpoint(medium) {
+        grid-area: 1 / 1 / 1 / 4;
+      }
+    }
+    label {
+      display: inline-block;
+      color: $light-gray-text;
+      padding: 8px 0 24px;
+      @include breakpoint(medium) {
+        grid-area: 2 / 1 / 2 / 4;
+      }
+    }
+    input[type=submit] {       // DRY this styling out
+      background-color: $primary-dark-bg;
+      color: $light-text;
+      padding: 14px;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      font-family: $header;
+      font-weight: 600;
+      font-size: 1.5rem;
+      @include breakpoint(medium) {
+        grid-area: 1 / 5 / 1 / 4;
+        margin-bottom: 0;
+      }
+    }
+    ul#search-results {
+      padding-inline-start: 0;
+      padding: 0 16px;
+      background-color: $card-background;
+      margin: 1rem -16px;
+      li {
+        list-style: none;
+        &.results-count {
+          padding: 1.5rem 0 1rem;
+        }
+        &.no-results {
+          padding: 1.5rem 0;
+        }
+      }
+      h3 {
+        color: $light-text;
+        text-decoration: underline;
+      }
+      .close-icon {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0 3rem;
+        a {
+          display: inline-block;
+          line-height: 0;
+          background:  $primary-dark-bg;
+          padding: 1.5rem;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+  .home-page-nav {
+    padding-bottom: 6rem;    
+    header.dropdown-toggle {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      padding: 0 0 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $light-text;
+      h2 {
+        font-size: 1.375rem;
+        font-weight: 600;
+      }
       .chevron {
         padding-right: .5rem;
+      }
+      .see-all-top {
+        display: none;
+        color: $light-text;
+        font-size: 1rem;
+        @include breakpoint(medium) {
+          display: inline-block;
+        }
+      }
+      @include breakpoint(medium) {
+        &.first {
+          margin-top: 4rem;
+        }
+        margin-top: 8rem;
+        margin-bottom: 0;
+        border-bottom: none;
+        h2 {
+          font-size: 1.25rem;
+        }
+        .chevron {
+          display: none;
+        }
       }
     }
     ul.menu {
@@ -105,16 +162,6 @@ main.home {
       transition: max-height 0.25s ease-out;
       @include breakpoint(medium) {
         max-height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
-      }
-      @include breakpoint(large) {
-        max-height: 100%;
-        max-width: $max-width;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1rem;
       }
     }
     .show + ul {
@@ -126,17 +173,55 @@ main.home {
   }
   .home-page-about {
     background-color: $card-background;
-    padding-top: 2rem;
-    a {
-      color: $light-text;
-      text-decoration: none;
+    max-width: 100%;
+    article {
+      display: block;
+      max-width: $max-width;
+      margin: 3rem auto;
+      @include breakpoint(med-lg){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+      }
+      a {
+        display: inline-block;
+        color: $light-text;
+        text-decoration: none;
+        @include breakpoint(medium) {
+          padding-right: 3rem;
+        }
+      }
+      h3 {
+        font-size: 1.375rem;
+      }
+      .chevron {
+        padding-left: 1rem;
+      }
     }
-    h3 {
-      font-size: 1.375rem;
-      margin-top: 1.5rem;
+  }
+}
+main.discipline {
+  @media (max-width: map-get($breakpoints, medium) - 1) {
+    section:first-of-type {
+      padding: 0;
     }
-    .chevron {
-      padding-left: 1rem;
+    h1 {
+      padding: 1rem 1rem 0;
+    }
+    p {
+      
+      padding: 0 1rem;
+    }
+  }
+  @include breakpoint(medium) {
+    section:first-of-type {
+      h1, p {
+        padding-left: 2rem;
+        display: flex;
+      }
+    }
+    picture {
+      float: left;
     }
   }
 }

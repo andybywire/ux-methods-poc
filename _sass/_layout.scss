@@ -6,7 +6,7 @@ body {
   background-color: $background;
 }
 nav {
-  background-color: $dark-background;
+  background-color: $card-background;
   position: fixed;
   width: 100%;
   display: flex;
@@ -108,31 +108,29 @@ nav {
   }
 }
 // Dropdown animations
-.dropdown-toggle span svg {
-  transform: rotate(0deg);
-  transition: transform 0.2s ease-out;
-}
-.dropdown-toggle.show span svg {
-  transform: rotate(180deg);
-  transition: transform 0.25s ease-in;
-}
+  .dropdown-toggle span svg {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-out;
+  }
+  .dropdown-toggle.show span svg {
+    transform: rotate(180deg);
+    transition: transform 0.25s ease-in;
+  }
 main {
   padding-top: 60px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
 }
 section {
-  padding:0 1rem 3rem;
-  align-self: center;
-  &:first-of-type {
-    padding-top: 1.5rem;
-  }
+  padding:1.5rem 1rem;
+  margin: 0 auto;
+  max-width: $max-width;
 }
 footer {
   background-color: $dark-background;
   color: $light-text;
   padding: 24px 16px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
   h2 {
     margin-top: 2rem;
   }

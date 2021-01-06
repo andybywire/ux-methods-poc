@@ -4,8 +4,9 @@ page_class: home
 ---
 <section> <!-- Title & Header -->
   <h1>The User Experience Practices Knowledge Graph</h1>
+  <p class="display">UX Methods is a community powered, linked data driven knowledge graph for learning about the techinques of user experience design.</p>
 </section>
-<section> <!-- Search -->
+<section class="search"> <!-- Search -->
   <form action="/" method="get">
     <!-- Consider reintegrating autocomplete -->
     <input type="text" id="search-box" name="query" placeholder="E.g. Card Sorting" autocomplete="off">
@@ -15,6 +16,7 @@ page_class: home
 
   <ul id="search-results"></ul>
 
+  <!-- Consider moving all of these to just before the </body> tag -->
   <script>
     window.store = {
       {% assign query = '
@@ -46,9 +48,13 @@ page_class: home
 </section>
 
 <section class="home-page-nav"> <!-- Home page nav -->
+
   <!-- Disciplines -->
   {% assign uxm-discipline = site.pages | where: "template", "discipline" | sort: 'name' %}
-  <h2 class="dropdown-toggle"><span>UX Disciplines</span><span class="chevron">{% include svg/chevron_down.svg %}</span></h2>
+  <header class="dropdown-toggle first">
+    <h2>UX Disciplines</h2>
+    <span class="chevron">{% include svg/chevron_down.svg %}</span>
+  </header>
   <ul class="menu discipline-cards">
   {% for resource in uxm-discipline %}
     <li>
@@ -65,7 +71,11 @@ page_class: home
   </ul>
 
   <!-- Top Methods -->
-  <h2 class="dropdown-toggle"><span>Top Methods</span><span class="chevron">{% include svg/chevron_down.svg %}</span></h2>
+  <header class="dropdown-toggle">
+    <h2>Top Methods</h2>
+    <span class="chevron">{% include svg/chevron_down.svg %}</span>
+    <a class="see-all-top" href="/methods">Methods A-Z</a>
+  </header>
   {% assign query = '
     SELECT DISTINCT ?method ?label ?description (COUNT(?output) AS ?outputs)
     WHERE {
@@ -93,11 +103,15 @@ page_class: home
       </a>
     </li>
   {% endfor %}
-  <li class="see-all"><a href="/methods">See All Methods A-Z</a></li>
+    <li class="see-all-bottom"><a href="/methods">See All Methods A-Z</a></li>
   </ul>
 
   <!-- Top Outcomes -->
-  <h2 class="dropdown-toggle"><span>Top Goals & Outcomes</span><span class="chevron">{% include svg/chevron_down.svg %}</span></h2>
+  <header class="dropdown-toggle">
+    <h2>Top Goals & Outcomes</h2>
+    <span class="chevron">{% include svg/chevron_down.svg %}</span>
+    <a class="see-all-top" href="/outcomes">Outcomes A-Z</a>
+  </header>
   {% assign query = '
     SELECT DISTINCT ?outcome ?label ?description (COUNT(?methods) AS ?method_count)
     WHERE {
@@ -119,27 +133,22 @@ page_class: home
       </a>
     </li>
   {% endfor %}
-  <li class="see-all"><a href="/outcomes">See All Outcomes A-Z</a></li>
+  <li class="see-all-bottom"><a href="/outcomes">See All Outcomes A-Z</a></li>
   </ul>
 </section>
 <section class="home-page-about">
-  <a href="/about">
-    <h3><span>About</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
-    <p>UX Methods is a linked data driven knowledge graph for documenting and interconnecting the techinques and tools of user experience design.</p> 
-  </a>
-  <a href="">
-    <h3><span>How It Works</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
-    <p>The UX Methods knowledge graph is growing and evolving all the time as methods are added and improved.</p>
-  </a>
-  <a href="">
-    <h3><span>Contribute</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
-    <p>The UX Methods knowledge graph is growing and evolving all the time as methods are added and improved.</p>
-  </a>
+  <article>
+    <a href="/about">
+      <h3><span>About</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
+      <p>UX Methods is a linked data driven knowledge graph for documenting and interconnecting the techinques and tools of user experience design.</p> 
+    </a>
+    <a href="">
+      <h3><span>How It Works</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
+      <p>The UX Methods knowledge graph is growing and evolving all the time as methods are added and improved.</p>
+    </a>
+    <a href="">
+      <h3><span>Contribute</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
+      <p>The UX Methods knowledge graph is growing and evolving all the time as methods are added and improved.</p>
+    </a>
+  </article>
 </section>
-
-
-
-
-
-
-
