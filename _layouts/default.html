@@ -78,6 +78,50 @@ rdf_prefix_path: "_data/prefixes.sparql"
         <li><a href="#">Contribute</a></li>
       </ul>
     </div>
+
+    <!-- Desktop Nav -->
+    <!-- Consider implementing a hover approach. Be sure to accommodate touch: https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices/ -->
+    <div class="navbar"> 
+      <ul>
+        <li><span class="wide-dropdown-toggle">UX Disciplines {% include svg/chevron_down.svg %}</span>
+          <ul class="submenu">
+            <!-- uxm-discipline defined above -->
+            {% for resource in uxm-discipline %}
+              <li>
+                <a href="/{{ resource.rdf.page_url }}.html">{{ resource | rdf_property: 'rdfs:label' }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <li><span class="wide-dropdown-toggle">Top Methods {% include svg/chevron_down.svg %}</span>
+          <ul class="submenu">
+          <!-- topMethods defined above -->
+          {% for resource in topMethods limit: 6 %}
+            <li>
+              <a href="{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
+            </li>
+          {% endfor %}
+          <li><a href="/methods">See All Methods A-Z</a></li>
+          </ul>
+        </li>
+
+
+        <li><span class="wide-dropdown-toggle">Top Goals & Outcomes {% include svg/chevron_down.svg %}</span>
+          <ul class="submenu">
+          <!-- topOutcomes defined above -->
+          {% for resource in topOutcomes limit: 6 %}
+            <li>
+              <a href="{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
+            </li>
+          {% endfor %}
+            <li><a href="/outcomes">See All Outcomes A-Z</a></li>
+          </ul>
+        </li>
+        <li class="about"><a href="/about">About</a></li>
+        <li class="search"><a href="/">{% include svg/search.svg %}</a></li>
+      </ul>
+    </div>
   </nav>
 
   <main {% if page.page_class %}class="{{ page.page_class }}"{% endif %}>

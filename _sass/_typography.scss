@@ -3,6 +3,9 @@
 body {
   font-family: $body;
   font-size: 16px;
+  @include breakpoint (medium) {
+    //font-size: 18px;
+  }
 }
 h1, h2, h3, h4, h4 {
   font-family: $header;
@@ -42,7 +45,7 @@ h3 {
 }
 p {
   font-family: $body;
-  font-size: 16px;
+  //font-size: 16px;
   line-height: 1.5;  
   margin-top: 8px;
   &.display {

@@ -35,4 +35,21 @@ document.getElementById("closeMenu").addEventListener("click", function () {
   for (var i = 0; i < dropdowns.length; i++) {
       dropdowns[i].addEventListener('click', function () {this.classList.toggle("show")});
   };
+})();
+
+// Wide Nav Dropdowns
+(()=> {
+  var dropdowns = document.getElementsByClassName("wide-dropdown-toggle");
+  var main = document.getElementsByTagName("main");
+  for (var i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener('click', function () {
+        this.parentNode.classList.toggle("show");
+      });
+  };
+  main[0].addEventListener('click', function () {
+    this.classList.add("test");
+    for (var i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].parentNode.classList.remove("show");
+    };
+  });
 })()

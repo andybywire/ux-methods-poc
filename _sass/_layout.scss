@@ -11,8 +11,12 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 60px;
   z-index: 1;
+  @include breakpoint(med-lg) {
+    justify-content: flex-start;
+  }
   .title {
     color: $light-text;
     font-family: $header;
@@ -28,6 +32,9 @@ nav {
     margin-right: 5px;
     background-color: inherit;
     border: none;
+    @include breakpoint(med-lg) {
+      display: none;
+    }
   }
   .sidenav {
     height: 100%;
@@ -106,13 +113,71 @@ nav {
       max-height: 400px;
     }
   }
+  .navbar {
+    display: none;
+    @include breakpoint(med-lg) {
+      display: block;
+      flex-grow: 1;
+    }
+    & > ul > li {
+      display: inline-block;
+      list-style: none;
+      color: $light-text;
+      position: relative;
+      padding-right: 1.5rem;
+      padding-top: .125rem;
+      cursor: pointer;
+      a {
+        color: $light-text;
+      }
+      svg {
+        padding: 0 .5rem;
+        width: 14px;
+      }
+      &.about a {
+        text-decoration: none;
+      }
+      &.search {
+        position: absolute;
+        right: 0;
+        padding-top: .25rem;
+        width: 17px;
+      }
+    }
+    .submenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease-in;
+      position: absolute;
+      left: -.5rem;
+      padding: 0;
+      width: 100%;
+      background-color: $card-background;
+      box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      li {
+        list-style: none;
+        padding: .5rem .5rem .5rem 1rem;
+        a {
+          text-decoration: none;
+        }
+        &:first-of-type {
+          padding-top: 2rem;
+        }
+      }
+    }
+    li.show ul.submenu {
+      max-height: 400px;
+    }
+  }
 }
 // Dropdown animations
-  .dropdown-toggle span svg {
+  .dropdown-toggle span svg, li .wide-dropdown-toggle svg {
     transform: rotate(0deg);
     transition: transform 0.2s ease-out;
   }
-  .dropdown-toggle.show span svg {
+  .dropdown-toggle.show span svg, li.show .wide-dropdown-toggle svg {
     transform: rotate(180deg);
     transition: transform 0.25s ease-in;
   }

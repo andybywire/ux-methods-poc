@@ -20,7 +20,7 @@ main.home {
     width: 45rem;
     text-align: center;
     padding-bottom: 3rem;
-    @include breakpoint(medium) {
+    @include breakpoint(med-lg) {
       display: block;
     }
   }
