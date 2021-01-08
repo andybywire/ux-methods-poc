@@ -204,6 +204,7 @@ main.discipline {
   @media (max-width: map-get($breakpoints, medium) - 1) {
     section:first-of-type {
       padding: 0;
+      margin-top: 0
     }
     h1 {
       padding: 1rem 1rem 0;
@@ -213,15 +214,12 @@ main.discipline {
       padding: 0 1rem;
     }
   }
-  @include breakpoint(medium) {
-    section:first-of-type {
-      h1, p {
-        padding-left: 2rem;
-        display: flex;
-      }
-    }
-    picture {
-      float: left;
+  @include breakpoint(med-lg) {
+    article.resource {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 2rem;
     }
   }
+
 }

@@ -3,8 +3,9 @@ layout: default
 rdf_prefix_path: "_data/prefixes.sparql"
 page_class: discipline
 ---
-  {% assign resource = page.rdf | rdf_property: 'rdfs:label' | downcase | slugify %}  
-  <section>
+{% assign resource = page.rdf | rdf_property: 'rdfs:label' | downcase | slugify %}  
+<section>
+  <article class="resource">
     <picture>
       <source type="image/jpeg" 
             srcset="/img/{{ resource }}_215.jpg 215w, 
@@ -13,9 +14,14 @@ page_class: discipline
             sizes="(min-width: 100px) 375px, 100vw">
       <img src="/img/{{ resource }}_375.jpg" alt="">
     </picture> 
-    <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Discipline</span></h1>
-    <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
-  </section>
+    <section>
+      <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Discipline</span></h1>
+      <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
+    </section>
+  </article>
+</section>
+
+
   <section>
     <h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Methods</h2>
     {% assign query = '
