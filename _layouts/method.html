@@ -2,22 +2,27 @@
 layout: default
 rdf_prefix_path: "_data/prefixes.sparql"
 ---
-<article>
-  <section>
-    <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Method</span></h1>
-    <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
-
+<section class="resource">
+  <article>
+    <section>
+      <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Method</span></h1>
+      <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
+    </section>
     <!-- Method steps -->
-    {% assign steps = page.rdf | rdf_property: ':steps' | newline_to_br | strip_newlines | split: '<br />' %}
-    {% if steps.size > 0 %}
-    <h2>Steps</h2>
-    <ol class="steps">
-      {% for step in steps %}
-      <li>{{ step }}</li>
-      {% endfor %}
-    </ol>
-    {% endif %}
+    <section>
+      {% assign steps = page.rdf | rdf_property: ':steps' | newline_to_br | strip_newlines | split: '<br />' %}
+      {% if steps.size > 0 %}
+      <h2>Steps</h2>
+      <ol class="steps">
+        {% for step in steps %}
+        <li>{{ step }}</li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </section>
+  </article>
 
+  <aside>
     <!-- Method inputs — this will need to be a SPARQL query -->
     {% assign inputs = page.rdf | rdf_property: ':inputProvidedBy', nil, true %}
     {% if inputs != nil %}
@@ -51,7 +56,6 @@ rdf_prefix_path: "_data/prefixes.sparql"
                  rdfs:label ?discipline_label .      
       }
       '%}
-
     {% assign disciplines = page.rdf | sparql_query: query %}
 
     <h3>Disciplines</h3>
@@ -62,21 +66,22 @@ rdf_prefix_path: "_data/prefixes.sparql"
         <li><a href="/{{ discipline.discipline_label | replace: ' ','' }}.html">{{ discipline.discipline_label }}</a></li>
     {% endfor %}
     </ul>
-  </section>
+  </aside>
+</section>
 
-  <!-- Next steps -->
-  {% assign card_content = page.rdf | rdf_property: ':providesInputFor', nil, true %}
-  {% if card_content != nil %}
-  <section>    
-    <h2>Next Steps</h2>
-    {%- include method-card.html -%}
-  </section>    
-  {% endif %}
+<!-- Next steps -->
+{% assign card_content = page.rdf | rdf_property: ':providesInputFor', nil, true %}
+{% if card_content != nil %}
+<section>    
+  <h2>Next Steps</h2>
+  {%- include method-card.html -%}
+</section>    
+{% endif %}
 
-  <section>
-    {%- include web-resource-links.html -%}
-  </section>
-</article>
+<section>
+  {%- include web-resource-links.html -%}
+</section>
+
 <section class="contribute">
   <h2>See Something Missing?</h2>
   <p class="display">UX Methods is a collaborative effort and is designed to grow with the UX community.</p>

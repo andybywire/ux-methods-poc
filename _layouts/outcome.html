@@ -2,24 +2,30 @@
 layout: default
 rdf_prefix_path: "_data/prefixes.sparql"
 ---
-<article>
-  <section>
-    <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Outcome</span></h1>
-    <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
-  </section>
-  <section>
-    <!-- Outcome methods -->
-    {% assign card_content = page.rdf | rdf_inverse_property: ':produces', true %}
-    {% if card_content != nil %}
-    <h2>Methods</h2>
-    <p>UX Methods that target this {{ page.rdf | rdf_property: 'rdfs:label' }}s include:</p>
-    {%- include method-card.html -%}
-    {% endif %}
-  </section>
-  <section>
-    {%- include web-resource-links.html -%}
-  </section>
-</article>
+<section class="resource">
+  <article>
+    <section>
+      <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Outcome</span></h1>
+      <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
+    </section>
+  </article>
+</section>
+
+<section>
+  <!-- Outcome methods -->
+  {% assign card_content = page.rdf | rdf_inverse_property: ':produces', true %}
+  {% if card_content != nil %}
+  <h2>Methods</h2>
+  <p>UX Methods that target this {{ page.rdf | rdf_property: 'rdfs:label' }}s include:</p>
+  {%- include method-card.html -%}
+  {% endif %}
+</section>
+
+<section>
+  {%- include web-resource-links.html -%}
+</section>
+
+
 <section class="contribute">
   <h2>See Something Missing?</h2>
   <p class="display">UX Methods is a collaborative effort and is designed to grow with the UX community.</p>

@@ -116,23 +116,38 @@ nav {
     transform: rotate(180deg);
     transition: transform 0.25s ease-in;
   }
+
 main {
   padding-top: 60px;
 }
-section {
+main > section, footer > section {
   padding:1.5rem 1rem;
   margin: 0 auto;
   max-width: $max-width;
 }
+section.resource {
+  display: grid;
+  grid-template-columns: 2fr minmax(300px, 1fr);
+  grid-gap: 6rem;
+}
+aside {
+  padding-top: 2.3rem;
+}
+
 footer {
   background-color: $dark-background;
   color: $light-text;
-  padding: 24px 16px;
+  //padding: 24px 16px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   h2 {
     margin-top: 2rem;
+  }
+  @include breakpoint(med-lg) {
+    section * {
+      width: 50%;
+    }
   }
   .licensing {
     // color: $gray-text-dark-bg;
