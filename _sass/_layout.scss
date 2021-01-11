@@ -141,7 +141,9 @@ nav {
         position: absolute;
         right: 0;
         padding-top: .25rem;
-        width: 17px;
+        a svg {
+          width: 17px;
+        }
       }
     }
     .submenu {
@@ -168,7 +170,7 @@ nav {
       }
     }
     li.show ul.submenu {
-      max-height: 400px;
+      max-height: 500px;
     }
   }
 }
@@ -186,17 +188,24 @@ main {
   padding-top: 60px;
 }
 main > section, footer > section {
-  padding:1.5rem 1rem;
-  margin: 2rem auto 0;
+  padding: 1.5rem 1rem;
+  margin: 0 auto;
   max-width: $max-width;
+  @include breakpoint(med-lg) {
+    margin-top: 2rem;
+  }
 }
 section.resource {
-  display: grid;
-  grid-template-columns: 2fr minmax(300px, 1fr);
-  grid-gap: 6rem;
+  @include breakpoint(med-lg) {
+    display: grid;
+    grid-template-columns: 2fr minmax(300px, 1fr);
+    grid-gap: 6rem;
+  }
 }
 aside {
-  padding-top: 2.3rem;
+  @include breakpoint(med-lg) {
+    padding-top: 2.3rem;
+  }
 }
 
 footer {

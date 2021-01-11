@@ -15,7 +15,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
       <h2>Steps</h2>
       <ol class="steps">
         {% for step in steps %}
-        <li>{{ step }}</li>
+        <li>{{ step | replace: "\", "" }}</li>
         {% endfor %}
       </ol>
       {% endif %}

@@ -209,7 +209,7 @@ main.discipline {
     h1 {
       padding: 1rem 1rem 0;
     }
-    p {
+    article p {
       
       padding: 0 1rem;
     }
@@ -219,6 +219,9 @@ main.discipline {
       display: grid;
       grid-template-columns: 1fr 2fr;
       grid-gap: 2rem;
+    }
+    img {
+      border-radius: 2px;
     }
   }
 

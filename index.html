@@ -59,11 +59,11 @@ page_class: home
   {% for resource in uxm-discipline %}
     <li>
       <a href="/{{ resource.rdf.page_url }}.html">
-        <div class="discipline-img" style="background-image: url(/img/{{ resource | rdf_property: 'rdfs:label' | downcase | slugify }}_375.jpg);background-size: cover; background-position: center;">
+        <div class="discipline-img" style="background-image: url(/img/{{ resource | rdf_property: 'rdfs:label' | downcase | slugify }}_375.jpg);">
         </div>
         <div class="discipline-lede">
           <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
-          <p>{{ resource | rdf_property: 'dc:description' | truncate: 80 }}</p>
+          <p>{{ resource | rdf_property: ':short-description' | truncate: 80 }}</p>
         </div>
       </a>
     </li>

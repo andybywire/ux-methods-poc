@@ -21,8 +21,10 @@ ul.method-cards {
     border-radius: 5px;
     border-left: 8px $primary solid;  
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+    @include card-border(40, 183, 255, .75);
     &.outcome {
-      border-left: 8px $secondary solid;  
+      border-left: 8px $secondary solid;
+      @include card-border(88, 113, 126, .75);  
       }
     &.dark {
       background-color: $card-background;
@@ -38,7 +40,9 @@ ul.method-cards {
       }
       &.outcome {
         border-left: 8px $secondary-dark-bg solid;  
+        @include card-border(86, 114, 128);
       }
+      @include card-border(43, 182, 252);
     }
   }
   .see-all-bottom {
@@ -87,15 +91,27 @@ ul.discipline-cards {
   }
   a {
     display: flex;
+    @include breakpoint(med-lg) {
+      flex-direction: column;
+    }
   }
   .discipline-img {
     flex: 1;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    @include breakpoint(med-lg) {
+      flex: 0 0 180px;
+      border-radius: 5px 5px 0 0;
+    }
   }
   .discipline-lede {
     flex: 2;
     padding: 8px;
+    @include breakpoint(med-lg) {
+      padding: 16px 8px 18px 12px;
+    }
   }
   li {
     list-style: none;
@@ -103,6 +119,12 @@ ul.discipline-cards {
     background-color: $card-background;
     border-radius: 5px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(43, 182, 252, 0);
+    transition: border 0.25s ease-out;
+    &:hover {
+        border: 2px solid rgba(43, 182, 252, .8);
+        transition: border 0.25s ease-in;
+    }
   }
 }
 
@@ -116,7 +138,7 @@ section.contribute {
   max-width: 100%;
   * {
     margin: 0 auto;
-    max-width: 40rem;
+    max-width: 30rem;
   }
   h2 {
     margin-bottom: 1rem;
@@ -135,6 +157,9 @@ section.contribute {
     font-family: $header;
     font-weight: 600;
     font-size: 1.25rem;
+    @include breakpoint(medium) {
+      width: 16rem;
+    }
   }
   a.button {
     text-decoration: none;

@@ -86,6 +86,11 @@ ul.detail-links {
 }
 ul.discipline-links, ul.web-resource-links {
   padding: 0;
+  @include breakpoint(large) {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 3rem;
+  }
   li {
     list-style: none;
     font-weight: 500;
@@ -94,7 +99,14 @@ ul.discipline-links, ul.web-resource-links {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include breakpoint(medium) {
+        display: inline-block;
+        span:nth-child(2) {
+          padding-left: 2rem;
+        }
+      }
     }
+
   }
   ul {
     padding-left: 0;

@@ -5,7 +5,7 @@
 <ul class="web-resource-links">
 {% for resource in resources %}
   <li>
-    <a href=""><span>{{ resource | rdf_property: 'dc:title' }}</span>
+    <a href="{{ resource | rdf_property: 'dc:identifier' }}"><span>{{ resource | rdf_property: 'dc:title' | replace: "\", "" }}</span>
     <span>{% include svg/external_link.svg %}</span></a>
     <ul>
       {% assign creator = resource | rdf_property: 'dc:creator' %}
