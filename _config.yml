@@ -4,8 +4,10 @@ email: andy@andyfitzgeraldconsulting.com
 description: >-
   Proof of concept project for the UX Methods ontology and knowledge graph. 
 baseurl: "/"
-url: "http://uxmethods.app"
+url: "http://uxmethods.org"
 github_username: andybywire
+ontology_repo: "https://github.com/andybywire/ux-methods-ontology"
+kg_repo: "https://github.com/andybywire/ux-methods-kg"
 
 defaults:
   -
