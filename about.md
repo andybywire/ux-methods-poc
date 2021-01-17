@@ -22,7 +22,7 @@ UX Methods' linked data foundation means that others can reference and build on 
 A useful, usable web interface means that everyone can access the knowledge captured in the UX methods ontology and knowledge base. Ideally this will embody a full complement of best practices for the web including accessibility, linked data, progressive web application optimizations, and mobile first design. 
 
 ## How It Works
-A knowledge graph combines data elements from different sources (from realtional and graph databases, flat files, and linked data from the web), and interrelates them with the help of a formally specified "perspective" on how the concepts they represent fit together. For UX Methods, this formal perspective is supplied by the [UX Methods Ontology]({{site.ontology_repo}}). 
+A knowledge graph combines data elements from different sources (from relational and graph databases, flat files, and linked data from the web), and interrelates them with the help of a formally specified "perspective" on how the concepts they represent fit together. For UX Methods, this formal perspective is supplied by the [UX Methods Ontology]({{site.ontology_repo}}). 
 
 Paraphrasing ontology engineering pioneer [Tom Gruber](http://www-ksl.stanford.edu/kst/what-is-an-ontology.html), an ontology is "an  explicit, formal specification of a shared conceptualization." Ontologies provides the shared context for making sense of data, without which data elements are just so many unrelated facts. 
 
@@ -58,5 +58,9 @@ If you have observations, input, or comments you'd like to share privately (i.e.
 
 ### Contribute
 To improve methods, add content or resources (like links to web resources) to exisitng methods, or suggest new methods to include, please use the [Submit Method](/submit-method) form, or hit the "Improve This Method" button at the bottom of each Method page. 
+
+To contribute to ontology driving the UX Methods Knowledge Graph, head over to the [UX Methods Ontology repo on GitHub](https://github.com/andybywire/ux-methods-ontology). Once you're familiar with the ontology purpose, ontological commitments, and competency questions, feel free to fork and clone the repo, make changes, and submit a pull request. 
+
+Learn more about contributing to open source projects at [opensource.com](https://opensource.com/article/19/7/create-pull-request-github). 
 </aside>
 </section>

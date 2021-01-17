@@ -17,6 +17,7 @@
     } else {
       searchResults.innerHTML = '<li class="no-results">Sorry, no results found for <em>' + searchTerm + '</em></li>';
     }
+    // searchResults.scrollIntoView();
   }
 
   function getQueryVariable(variable) {
@@ -36,6 +37,10 @@
 
   if (searchTerm) {
     document.getElementById('search-box').setAttribute("value", searchTerm);
+    // scroll to search box when search performed. A bit awkward still.
+    // maybe use an if statement to grab the scroll position?
+    location.hash = "search-box";
+    location.href = "?query=" + searchTerm + location.hash;
 
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.

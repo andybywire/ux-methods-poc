@@ -13,6 +13,9 @@ ul.method-cards {
   p {
     margin: 8px 0;
   }
+  a:hover {
+    color: inherit;
+  }
   li.method-card:not(.see-all) {
     list-style: none;
     max-width: $card-max;
@@ -91,6 +94,9 @@ ul.discipline-cards {
   }
   a {
     display: flex;
+    &:hover {
+      text-decoration: none;
+    }
     @include breakpoint(med-lg) {
       flex-direction: column;
     }
@@ -134,7 +140,7 @@ section.contribute {
   color: $light-text;
   text-align: center;
   padding: 3rem 16px;
-  margin: 0;
+  margin: 4rem 0 0;
   max-width: 100%;
   * {
     margin: 0 auto;
@@ -167,5 +173,34 @@ section.contribute {
   }
   a {
     color: $light-text;
+  }
+}
+
+.about-subfooter {
+  background-color: $card-background;
+  max-width: 100%;
+  article {
+    display: block;
+    max-width: $max-width;
+    margin: 3rem auto;
+    @include breakpoint(med-lg){
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+    }
+    a {
+      display: inline-block;
+      color: $light-text;
+      text-decoration: none;
+      @include breakpoint(medium) {
+        padding-right: 3rem;
+      }
+    }
+    h3 {
+      font-size: 1.375rem;
+    }
+    .chevron {
+      padding-left: 1rem;
+    }
   }
 }

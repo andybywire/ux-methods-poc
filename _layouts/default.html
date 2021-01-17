@@ -13,7 +13,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
     <div id="globalNav" class="sidenav"> 
       <button id="closeMenu" class="closebtn" type="button">{% include svg/close.svg %}</button>
       <ul id="navint">
-        <li class="search"><a href="/">{% include svg/search.svg %}Search</a></li>
+        <li class="search"><a href="/index.html#search-box">{% include svg/search.svg %}Search</a></li>
         <li class="dropdown-toggle">UX Disciplines<span>{% include svg/chevron_down.svg %}</span></li>
           <ul class="submenu">
             {% assign uxm-discipline = site.pages | where: "template", "discipline" | sort: 'name' %}
@@ -119,7 +119,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
           </ul>
         </li>
         <li class="about"><a href="/about">About</a></li>
-        <li class="search"><a href="/">{% include svg/search.svg %}</a></li>
+        <li class="search"><a href="/index.html#search-box">{% include svg/search.svg %}</a></li>
       </ul>
     </div>
   </nav>

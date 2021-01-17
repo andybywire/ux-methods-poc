@@ -6,8 +6,9 @@ page_class: home
   <h1>The User Experience Practices Knowledge Graph</h1>
   <p class="display">UX Methods is a community powered, linked data driven knowledge graph for learning about the techinques of user experience design.</p>
 </section>
+
 <section class="search"> <!-- Search -->
-  <form action="/" method="get">
+  <form id="site-search" action="/" method="get">
     <!-- Consider reintegrating autocomplete -->
     <input type="text" id="search-box" name="query" placeholder="E.g. Card Sorting" autocomplete="off">
     <label for="search-box">Search for a method by name, goal, or outcome.</label>
@@ -136,19 +137,19 @@ page_class: home
   <li class="see-all-bottom"><a href="/outcomes">See All Outcomes A-Z</a></li>
   </ul>
 </section>
-<section class="home-page-about">
+<section class="about-subfooter">
   <article>
     <a href="/about">
       <h3><span>About</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
       <p>UX Methods is a linked data driven knowledge graph for documenting and interconnecting the techinques and tools of user experience design.</p> 
     </a>
-    <a href="">
+    <a href="/about#how-it-works">
       <h3><span>How It Works</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
-      <p>The UX Methods knowledge graph is growing and evolving all the time as methods are added and improved.</p>
+      <p>UX Methods uses open source semantic web technologies to describe, model, map, and display the methods used in UX design and make their interconnections and relationships clear.</p>
     </a>
-    <a href="">
+    <a href="/about#contribute">
       <h3><span>Contribute</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
-      <p>The UX Methods knowledge graph is growing and evolving all the time as methods are added and improved.</p>
+      <p>The UX Methods knowledge graph is designed to grow and evolve  with input from the UX community. Learn more about how to get involved&mdash;no matter what your level of technical ability.</p>
     </a>
   </article>
 </section>

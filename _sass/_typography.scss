@@ -52,12 +52,33 @@ p {
     font-size: 20px;
     line-height: 1.2;    
   }
+  &.fine-print {
+    font-size: small;
+    color: $gray-text-dark-bg;
+    margin-bottom: 0;
+  }
+  a, a:visited {
+    // color: $primary-text-link;
+    text-decoration: underline;
+    // text-decoration-color: $background;
+  }
+  a:hover {
+      // text-decoration-color: $primary-text-link;
+      // transition: text-decoration-color 0.25s ease-out;
+      color: $primary-text-link;
+      transition: color 0.25s ease-out;
+    }
 }
 li, ol {
   line-height: 1.5;
 }
 a, a:visited {
   color: $text;
+  text-decoration: underline;
+}
+a:hover {
+  color: $primary-text-link;
+  transition: color 0.25s ease-out;
 }
 .method-card .tag {
   font-family: $header;

@@ -2,6 +2,9 @@
 
 // layout, such as the container and any grid systems: header, footer, navigation and the grid system.
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: $background;
 }
@@ -210,7 +213,7 @@ aside {
 footer {
   background-color: $dark-background;
   color: $light-text;
-  //padding: 24px 16px;
+  padding-bottom: 2rem;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
