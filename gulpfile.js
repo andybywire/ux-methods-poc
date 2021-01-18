@@ -4,6 +4,7 @@ const gulp = require('gulp');
 const connect = require('gulp-connect-php');
 const gulpSass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
 
 // Load paths — remove once SASS is set up if I don't need these as a template
@@ -29,6 +30,7 @@ function jekyll (gulpCallBack){
        outputStyle: 'compressed' // compressed, expanded
      })
        .on('error', gulpSass.logError))
+     .pipe(autoprefixer())
      .pipe(sourcemaps.write('./'))
      .pipe(gulp.dest('_site/css'))
      .pipe(browserSync.stream());
