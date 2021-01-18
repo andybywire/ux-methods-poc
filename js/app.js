@@ -38,6 +38,7 @@ document.getElementById("closeMenu").addEventListener("click", function () {
 })();
 
 // Wide Nav Dropdowns
+// use querySelector() for this instead?
 (()=> {
   var dropdowns = document.getElementsByClassName("wide-dropdown-toggle");
   var main = document.getElementsByTagName("main");

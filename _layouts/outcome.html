@@ -16,7 +16,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
   {% assign card_content = page.rdf | rdf_inverse_property: ':produces', true %}
   {% if card_content != nil %}
   <h2>Methods</h2>
-  <p>UX Methods that target this {{ page.rdf | rdf_property: 'rdfs:label' }}s include:</p>
+  <p>UX Methods that target {{ page.rdf | rdf_property: 'rdfs:label' }} include:</p>
   {%- include method-card.html -%}
   {% endif %}
 </section>
