@@ -59,7 +59,7 @@ If you have observations, input, or comments you'd like to share privately (i.e.
 ### Contribute
 To improve methods, add content or resources (like links to web resources) to exisitng methods, or suggest new methods to include, please use the [Submit Method](/submit-method) form, or hit the "Improve This Method" button at the bottom of each Method page. 
 
-To contribute to ontology driving the UX Methods Knowledge Graph, head over to the [UX Methods Ontology repo on GitHub](https://github.com/andybywire/ux-methods-ontology). Once you're familiar with the ontology purpose, ontological commitments, and competency questions, feel free to fork and clone the repo, make changes, and submit a pull request. 
+To contribute to ontology driving the UX Methods Knowledge Graph, head over to the [UX Methods Ontology repo on GitHub]({{site.ontology_repo}}). Once you're familiar with the ontology purpose, ontological commitments, and competency questions, feel free to fork and clone the repo, make changes, and submit a pull request. 
 
 Learn more about contributing to open source projects at [opensource.com](https://opensource.com/article/19/7/create-pull-request-github). 
 </aside>

@@ -220,6 +220,13 @@ footer {
   h2 {
     margin-top: 2rem;
   }
+  a, a:visited {
+    color: $light-text;
+  }
+  a:hover {
+    color: $primary-dark-bg;
+    transition: color 0.25s ease-out;
+  }
   @include breakpoint(med-lg) {
     section * {
       width: 50%;
