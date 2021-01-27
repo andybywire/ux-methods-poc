@@ -1,0 +1,34 @@
+PREFIX : <https://www.uxmethods.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT {
+  :Methods rdf:type owl:Ontology ;
+        dc:title "UX Methods KG Methods Data" .
+  :produces rdf:type owl:ObjectProperty .
+  :providesInputFor rdf:type owl:ObjectProperty .
+}
+FROM <https://docs.google.com/spreadsheets/d/19cAHQNoICjCjOOMDMgvBlRRY7c_L5EC0FG8pzqNLkzk/export?format=csv&id=19cAHQNoICjCjOOMDMgvBlRRY7c_L5EC0FG8pzqNLkzk&gid=1136175385> 
+WHERE {}
+LIMIT 1
+
+CONSTRUCT {
+  ?URI a :Method;
+    :produces ?productIRI;
+    dc:description ?description;
+    :providesInputFor ?inputForIRI;
+    rdfs:label ?label;
+    :steps ?steps.
+} 
+WHERE {
+  BIND (URI(CONCAT('https://www.uxmethods.org/', ?id)) AS ?URI)
+  ?product apf:strSplit (?produces ",")
+  BIND (REPLACE(?product, " ", "") AS ?productId)
+  BIND (URI(CONCAT('https://www.uxmethods.org/', ?productId)) AS ?productIRI)
+  BIND (REPLACE(?inputFor, " ", "") AS ?inputForId)
+  BIND (URI(CONCAT('https://www.uxmethods.org/', ?inputForId)) AS ?inputForIRI)
+}
+
+# sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl

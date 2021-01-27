@@ -1,0 +1,78 @@
+@prefix :  <https://www.uxmethods.org/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+
+:WebResources  rdf:type  owl:Ontology ;
+        dc:title  "UX Methods KG WebResources Data" .
+
+:describes  rdf:type  owl:ObjectProperty .
+
+:resourceLocation  rdf:type  owl:DatatypeProperty .
+
+:TheDelicateArtofInterviewingStakeholders_EightShapes
+        rdf:type           :WebResource ;
+        dc:title           "The Delicate Art of Interviewing Stakeholders" ;
+        dc:creator         "Dan Brown" ;
+        dc:publisher       "EightShapes" ;
+        dc:created         "2018-07-11"^^xsd:date ;
+        :resourceLocation  "https://medium.com/eightshapes-llc/the-delicate-art-of-interviewing-stakeholders-d6496443cbec"^^xsd:anyURI ;
+        dc:created         "2018-07-11"^^xsd:date ;
+        :describes         :StakeholderInterviewing .
+
+:ContextualInterviews_InteractionDesignFoundation
+        rdf:type           :WebResource ;
+        dc:title           "Contextual Interviews" ;
+        dc:publisher       "Interaction Design Foundation" ;
+        :resourceLocation  "https://www.interaction-design.org/literature/topics/contextual-interviews"^^xsd:anyURI ;
+        :describes         :ContextualInterviewing .
+
+:BuildandRunPrototypes_IDEO
+        rdf:type           :WebResource ;
+        dc:title           "Build and Run Prototypes" ;
+        dc:publisher       "IDEO" ;
+        :resourceLocation  "https://www.designkit.org/methods/build-run-prototypes"^^xsd:anyURI ;
+        :describes         :Prototyping .
+
+:FirstClickTesting101_OptimalWorkshop
+        rdf:type           :WebResource ;
+        dc:title           "First Click Testing 101" ;
+        dc:publisher       "Optimal Workshop" ;
+        :resourceLocation  "https://www.optimalworkshop.com/learn/101s/first-click-testing/"^^xsd:anyURI ;
+        :describes         :FirstClickTesting .
+
+:WebsiteNavigationPlanningAndImplementing_SmashingMagazine
+        rdf:type           :WebResource ;
+        dc:title           "Website Navigation Planning And Implementing" ;
+        dc:publisher       "Smashing Magazine" ;
+        dc:created         "2011-06-06"^^xsd:date ;
+        :resourceLocation  "https://www.smashingmagazine.com/2011/06/planning-and-implementing-website-navigation/"^^xsd:anyURI ;
+        dc:created         "2011-06-06"^^xsd:date ;
+        :describes         :NavigationDesign .
+
+:PrototypingUserExperience_UXMatters
+        rdf:type           :WebResource ;
+        dc:title           "Prototyping User Experience" ;
+        dc:creator         "Quincy Smith" ;
+        dc:publisher       "UX Matters" ;
+        dc:created         "2019-01-07"^^xsd:date ;
+        :resourceLocation  "https://www.uxmatters.com/mt/archives/2019/01/prototyping-user-experience.php"^^xsd:anyURI ;
+        dc:created         "2019-01-07"^^xsd:date ;
+        :describes         :Prototyping .
+
+<https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus>
+        rdf:type           :WebResource ;
+        dc:title           "The Beginners' Guide to Contextual Interviewing" ;
+        dc:creator         "David Travis" ;
+        dc:publisher       "Userfocus" ;
+        :resourceLocation  "https://www.userfocus.co.uk/articles/the_beginners_guide_to_contextual_interviewing.html"^^xsd:anyURI ;
+        :describes         :ContextualInterviewing .
+
+:FirstClickTesting_UserInterviews
+        rdf:type           :WebResource ;
+        dc:title           "First Click Testing" ;
+        dc:publisher       "User Interviews" ;
+        :resourceLocation  "https://www.userinterviews.com/ux-research-field-guide-chapter/first-click-testing"^^xsd:anyURI ;
+        :describes         :FirstClickTesting .

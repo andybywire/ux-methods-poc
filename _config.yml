@@ -27,11 +27,11 @@ permalink: /:title/
 jekyll_rdf:
     path: "_data/UXMethods.owl"
     # path: "_data/UXMethods.ttl"
-    baseiri: "https://www.ontology.uxmethods.org/"  # the KG IRI used to generate pages
+    baseiri: "https://www.uxmethods.org/"  # the KG IRI used to generate pages
     default_template: "default-rdf.html"
     restriction: "
       PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-      PREFIX : <https://www.ontology.uxmethods.org/>
+      PREFIX : <https://www.uxmethods.org/>
       SELECT ?resourceUri 
       WHERE { 
         {?resourceUri rdf:type :Discipline . }
@@ -42,9 +42,9 @@ jekyll_rdf:
       }
     "
     class_template_mappings:
-      "https://www.ontology.uxmethods.org/Discipline": "discipline.html"
-      "https://www.ontology.uxmethods.org/Method": "method.html"
-      "https://www.ontology.uxmethods.org/Outcome": "outcome.html"
+      "https://www.uxmethods.org/Discipline": "discipline.html"
+      "https://www.uxmethods.org/Method": "method.html"
+      "https://www.uxmethods.org/Outcome": "outcome.html"
     #instance_template_mappings:
 
 keep_files: 
