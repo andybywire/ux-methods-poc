@@ -1,16 +1,18 @@
-@prefix : <https://www.uxmethods.org/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://www.uxmethods.org/> .
-
-<https://www.uxmethods.org/> rdf:type owl:Ontology ;
-                              owl:versionIRI <https://www.uxmethods.org/1.0/inferred/knowledge-graph/> ;
-                              <http://purl.org/dc/elements/1.1/created> "2021-01-27"@en ;
-                              <http://purl.org/dc/elements/1.1/creator> "Andy Fitzgerald"@en ;
-                              <http://purl.org/dc/elements/1.1/description> """The UX Methods Knowledge Graph is a combination of the UX Methods Ontology with UX Methods and Web Resources data, brought together to create an interconnected graph of resources.
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.uxmethods.org/"
+     xml:base="https://www.uxmethods.org/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="https://www.uxmethods.org/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://www.uxmethods.org/">
+        <owl:versionIRI rdf:resource="https://www.uxmethods.org/1.0/inferred/knowledge-graph/"/>
+        <dc:created xml:lang="en">2021-01-27</dc:created>
+        <dc:creator xml:lang="en">Andy Fitzgerald</dc:creator>
+        <dc:description xml:lang="en">The UX Methods Knowledge Graph is a combination of the UX Methods Ontology with UX Methods and Web Resources data, brought together to create an interconnected graph of resources.
 
 The UX Methods Ontology project aims to create a collaborative, community informed knowledge base that captures the meaningful connections between the methods, tools, and processes used in user experience design practices.
 
@@ -18,788 +20,1086 @@ Project Goals
 - Create a useful, dynamic, and trustworthy resource for UX techniques, processes, and resources
 - Bring together data from multiple sources and present it holistically through a single, unified interface layer
 - Allow the class structure (and resulting top level categories) to evolve based on content, connections, and evolving knowledge and practices in the broad field of user experience design
-- Create a foundation upon which can be built affordances for soliciting and managing input from the wider design community"""@en ;
-                              <http://purl.org/dc/elements/1.1/title> "UX Methods KG Methods Data" ,
-                                                                      "UX Methods KG WebResources Data" ,
-                                                                      "UX Methods Knowledge Graph"@en .
+- Create a foundation upon which can be built affordances for soliciting and managing input from the wider design community</dc:description>
+        <dc:title>UX Methods KG Methods Data</dc:title>
+        <dc:title>UX Methods KG WebResources Data</dc:title>
+        <dc:title xml:lang="en">UX Methods Knowledge Graph</dc:title>
+    </owl:Ontology>
+    
 
-#################################################################
-#    Annotation properties
-#################################################################
 
-###  http://purl.org/dc/elements/1.1/created
-<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
+    
 
-###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
 
+    <!-- http://purl.org/dc/elements/1.1/created -->
 
-###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
 
 
-###  http://purl.org/dc/elements/1.1/publisher
-<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+    <!-- http://purl.org/dc/elements/1.1/creator -->
 
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
 
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
 
-###  https://www.uxmethods.org/steps
-:steps rdf:type owl:AnnotationProperty .
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
 
 
-#################################################################
-#    Datatypes
-#################################################################
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
 
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
 
 
-#################################################################
-#    Object Properties
-#################################################################
+    <!-- http://purl.org/dc/elements/1.1/title -->
 
-###  https://www.uxmethods.org/describedBy
-:describedBy rdf:type owl:ObjectProperty ;
-             owl:inverseOf :describes .
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
 
 
-###  https://www.uxmethods.org/describes
-:describes rdf:type owl:ObjectProperty .
+    <!-- https://www.uxmethods.org/steps -->
 
+    <owl:AnnotationProperty rdf:about="https://www.uxmethods.org/steps"/>
+    
 
-###  https://www.uxmethods.org/focusOf
-:focusOf rdf:type owl:ObjectProperty ;
-         owl:inverseOf :focusesOn .
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-###  https://www.uxmethods.org/focusesOn
-:focusesOn rdf:type owl:ObjectProperty .
+    
 
 
-###  https://www.uxmethods.org/inputProvidedBy
-:inputProvidedBy rdf:type owl:ObjectProperty ;
-                 owl:inverseOf :providesInputFor .
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
 
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
 
-###  https://www.uxmethods.org/produces
-:produces rdf:type owl:ObjectProperty ,
-                   owl:TransitiveProperty ;
-          rdfs:comment "Produces is transitive to infer the production relationships of methods to the methods that specialize them. This creates some unwanted \"production\" relationships, e.g. :OpenCardSorting \"produces\" :CardSorting. This is not incorrect, but it is probalby almost always extraneous. For this solution, the extra triples need to be filtered out in SPARQL. Consider whether a property chain might be a cleaner solution." .
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-###  https://www.uxmethods.org/providesInputFor
-:providesInputFor rdf:type owl:ObjectProperty .
+    
 
 
-###  https://www.uxmethods.org/specializes
-:specializes rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :produces .
+    <!-- https://www.uxmethods.org/describedBy -->
 
+    <owl:ObjectProperty rdf:about="https://www.uxmethods.org/describedBy">
+        <owl:inverseOf rdf:resource="https://www.uxmethods.org/describes"/>
+    </owl:ObjectProperty>
+    
 
-#################################################################
-#    Data properties
-#################################################################
 
-###  https://www.uxmethods.org/resourceLocation
-:resourceLocation rdf:type owl:DatatypeProperty .
+    <!-- https://www.uxmethods.org/describes -->
 
+    <owl:ObjectProperty rdf:about="https://www.uxmethods.org/describes"/>
+    
 
-#################################################################
-#    Classes
-#################################################################
 
-###  http://www.w3.org/2002/07/owl#Thing
-owl:Thing rdfs:subClassOf owl:Thing .
+    <!-- https://www.uxmethods.org/focusOf -->
 
+    <owl:ObjectProperty rdf:about="https://www.uxmethods.org/focusOf">
+        <owl:inverseOf rdf:resource="https://www.uxmethods.org/focusesOn"/>
+    </owl:ObjectProperty>
+    
 
-###  https://www.uxmethods.org/ContentStrategyMethod
-:ContentStrategyMethod rdf:type owl:Class ;
-                       owl:equivalentClass [ owl:intersectionOf ( :Method
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty :produces ;
-                                                                    owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                         owl:onProperty :focusOf ;
-                                                                                         owl:hasValue :ContentStrategy
-                                                                                       ]
-                                                                  ]
-                                                                ) ;
-                                             rdf:type owl:Class
-                                           ] ;
-                       rdfs:subClassOf :Method .
-
-
-###  https://www.uxmethods.org/Discipline
-:Discipline rdf:type owl:Class ;
-            rdfs:comment "Disciplines within the field of User experience (UX) focus on creating a deep understanding of users, what they need, what they value, their abilities, and also their limitations. They also takes into account the business goals and objectives of the group managing the project. Finally, UX disciplines promote improving the quality of the user’s interaction with and perceptions of a product and related services. SOURCE: https://www.usability.gov/what-and-why/user-experience.html"@en ;
-            rdfs:label "Discipline"@en .
-
-
-###  https://www.uxmethods.org/InformationArchitectureMethod
-:InformationArchitectureMethod rdf:type owl:Class ;
-                               owl:equivalentClass [ owl:intersectionOf ( :Method
-                                                                          [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty :produces ;
-                                                                            owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                                 owl:onProperty :focusOf ;
-                                                                                                 owl:hasValue :InformationArchitecture
-                                                                                               ]
-                                                                          ]
-                                                                        ) ;
-                                                     rdf:type owl:Class
-                                                   ] ;
-                               rdfs:subClassOf :Method .
-
-
-###  https://www.uxmethods.org/Insight
-:Insight rdf:type owl:Class ;
-         rdfs:subClassOf :Outcome .
-
-
-###  https://www.uxmethods.org/InteractionDesignMethod
-:InteractionDesignMethod rdf:type owl:Class ;
-                         owl:equivalentClass [ owl:intersectionOf ( :Method
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty :produces ;
-                                                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty :focusOf ;
-                                                                                           owl:hasValue :InteractionDesign
-                                                                                         ]
-                                                                    ]
-                                                                  ) ;
-                                               rdf:type owl:Class
-                                             ] ;
-                         rdfs:subClassOf :Method .
-
-
-###  https://www.uxmethods.org/Method
-:Method rdf:type owl:Class ;
-        rdfs:comment "A UX method is a pupose-driven activity defined by a set of executable steps. UX methods can be completed within a foreseeable timline and are planned, modified, and executed in order to create specific desired outcomes."@en ;
-        rdfs:label "Method"@en .
-
-
-###  https://www.uxmethods.org/Outcome
-:Outcome rdf:type owl:Class ;
-         rdfs:comment "Outcomes are the work products of Methods. These might be solutions to particular project, in the form of deliverables or artifacts, or insights intended to further work through deeper perspective on and context of a particular design problem. Outcomes are also the focus of disciplines and constitute a key element in how disciplines are defined and connected." .
-
-
-###  https://www.uxmethods.org/Solution
-:Solution rdf:type owl:Class ;
-          rdfs:subClassOf :Outcome .
-
-
-###  https://www.uxmethods.org/SpecializedMethod
-:SpecializedMethod rdf:type owl:Class ;
-                   owl:equivalentClass [ owl:intersectionOf ( :Method
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty :specializes ;
-                                                                owl:someValuesFrom :Method
-                                                              ]
-                                                            ) ;
-                                         rdf:type owl:Class
-                                       ] ;
-                   rdfs:subClassOf :Method .
-
-
-###  https://www.uxmethods.org/UsabilityEvaluationMethod
-:UsabilityEvaluationMethod rdf:type owl:Class ;
-                           owl:equivalentClass [ owl:intersectionOf ( :Method
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty :produces ;
-                                                                        owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty :focusOf ;
-                                                                                             owl:hasValue :UsabilityEvaluation
-                                                                                           ]
-                                                                      ]
-                                                                    ) ;
-                                                 rdf:type owl:Class
-                                               ] ;
-                           rdfs:subClassOf :Method .
-
-
-###  https://www.uxmethods.org/UserResearchMethod
-:UserResearchMethod rdf:type owl:Class ;
-                    owl:equivalentClass [ owl:intersectionOf ( :Method
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty :produces ;
-                                                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty :focusOf ;
-                                                                                      owl:hasValue :UserResearch
-                                                                                    ]
-                                                               ]
-                                                             ) ;
-                                          rdf:type owl:Class
-                                        ] ;
-                    rdfs:subClassOf :Method .
-
-
-###  https://www.uxmethods.org/VisualDesignMethod
-:VisualDesignMethod rdf:type owl:Class ;
-                    owl:equivalentClass [ owl:intersectionOf ( :Method
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty :produces ;
-                                                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty :focusOf ;
-                                                                                      owl:hasValue :VisualDesign
-                                                                                    ]
-                                                               ]
-                                                             ) ;
-                                          rdf:type owl:Class
-                                        ] ;
-                    rdfs:subClassOf :Method .
-
-
-###  https://www.uxmethods.org/WebResource
-:WebResource rdf:type owl:Class ;
-             rdfs:comment """Web Resources are online articles and tools that provide summaries, how-tos, examples of, or templates for particular methods or disciplines. A Web Resource may be connected to a Method, Discipline, or Outcome. This is intended to ensure that the broadest possible selection of resources can be included, and that they can be queried relative to core ontology types with minimal effort.
-
-Web Resources are named with a code-based scheme due to the high variability of resource types and related metadata. The scheme currently used is AYYMMDD, where \"A\" is the first letter of the author last name (if known), or the first letter of publication name, and YYMMDD is the year, month, and date of publication, if known. If the date is not known, resources should be assigned a unique incremental number, starting with 000001.""" .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  https://www.uxmethods.org/BuildandRunPrototypes_IDEO
-:BuildandRunPrototypes_IDEO rdf:type owl:NamedIndividual ,
-                                     :WebResource ;
-                            :describes :Prototyping ;
-                            :resourceLocation "https://www.designkit.org/methods/build-run-prototypes"^^xsd:anyURI ;
-                            <http://purl.org/dc/elements/1.1/publisher> "IDEO" ;
-                            <http://purl.org/dc/elements/1.1/title> "Build and Run Prototypes" .
-
-
-###  https://www.uxmethods.org/BusinessGoals
-:BusinessGoals rdf:type owl:NamedIndividual ,
-                        :Insight ,
-                        :Outcome ;
-               :focusOf :ContentStrategy ,
-                        :InformationArchitecture ,
-                        :InteractionDesign ,
-                        :UserResearch ;
-               <http://purl.org/dc/elements/1.1/description> "The objectives and problems business stakeholders intend to meet/solve with the product or service that is the focus of work." ;
-               rdfs:label "Business Goals" .
-
-
-###  https://www.uxmethods.org/CardSorting
-:CardSorting rdf:type owl:NamedIndividual ,
-                      :InformationArchitectureMethod ,
-                      :InteractionDesignMethod ,
-                      :Method ,
-                      :UsabilityEvaluationMethod ,
-                      :UserResearchMethod ;
-             :produces :MentalModel ,
-                       :UserBehavior ;
-             :providesInputFor :NavigationDesign ;
-             <http://purl.org/dc/elements/1.1/description> "Card sorting is a method used to help design or evaluate the information architecture of a site. In a card sorting session, participants organize topics into categories that make sense to them and they may also help you label these groups. To conduct a card sort, you can use actual cards, pieces of paper, or one of several online card-sorting software tools." ;
-             rdfs:label "Card Sorting" ;
-             :steps """Give users a collection of content represented on cards.
+
+    <!-- https://www.uxmethods.org/focusesOn -->
+
+    <owl:ObjectProperty rdf:about="https://www.uxmethods.org/focusesOn"/>
+    
+
+
+    <!-- https://www.uxmethods.org/inputProvidedBy -->
+
+    <owl:ObjectProperty rdf:about="https://www.uxmethods.org/inputProvidedBy">
+        <owl:inverseOf rdf:resource="https://www.uxmethods.org/providesInputFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.uxmethods.org/produces -->
+
+    <owl:ObjectProperty rdf:about="https://www.uxmethods.org/produces">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment>Produces is transitive to infer the production relationships of methods to the methods that specialize them. This creates some unwanted &quot;production&quot; relationships, e.g. :OpenCardSorting &quot;produces&quot; :CardSorting. This is not incorrect, but it is probalby almost always extraneous. For this solution, the extra triples need to be filtered out in SPARQL. Consider whether a property chain might be a cleaner solution.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.uxmethods.org/providesInputFor -->
+
+    <owl:ObjectProperty rdf:about="https://www.uxmethods.org/providesInputFor"/>
+    
+
+
+    <!-- https://www.uxmethods.org/specializes -->
+
+    <owl:ObjectProperty rdf:about="https://www.uxmethods.org/specializes">
+        <rdfs:subPropertyOf rdf:resource="https://www.uxmethods.org/produces"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.uxmethods.org/resourceLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://www.uxmethods.org/resourceLocation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://www.uxmethods.org/ContentStrategyMethod -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/ContentStrategyMethod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.uxmethods.org/Method"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.uxmethods.org/produces"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.uxmethods.org/focusOf"/>
+                                <owl:hasValue rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/Discipline -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/Discipline">
+        <rdfs:comment xml:lang="en">Disciplines within the field of User experience (UX) focus on creating a deep understanding of users, what they need, what they value, their abilities, and also their limitations. They also takes into account the business goals and objectives of the group managing the project. Finally, UX disciplines promote improving the quality of the user’s interaction with and perceptions of a product and related services. SOURCE: https://www.usability.gov/what-and-why/user-experience.html</rdfs:comment>
+        <rdfs:label xml:lang="en">Discipline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/InformationArchitectureMethod -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/InformationArchitectureMethod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.uxmethods.org/Method"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.uxmethods.org/produces"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.uxmethods.org/focusOf"/>
+                                <owl:hasValue rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/Insight -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/Insight">
+        <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Outcome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/InteractionDesignMethod -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/InteractionDesignMethod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.uxmethods.org/Method"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.uxmethods.org/produces"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.uxmethods.org/focusOf"/>
+                                <owl:hasValue rdf:resource="https://www.uxmethods.org/InteractionDesign"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/Method -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/Method">
+        <rdfs:comment xml:lang="en">A UX method is a pupose-driven activity defined by a set of executable steps. UX methods can be completed within a foreseeable timline and are planned, modified, and executed in order to create specific desired outcomes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/Outcome -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/Outcome">
+        <rdfs:comment>Outcomes are the work products of Methods. These might be solutions to particular project, in the form of deliverables or artifacts, or insights intended to further work through deeper perspective on and context of a particular design problem. Outcomes are also the focus of disciplines and constitute a key element in how disciplines are defined and connected.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/Solution -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/Solution">
+        <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Outcome"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/SpecializedMethod -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/SpecializedMethod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.uxmethods.org/Method"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.uxmethods.org/specializes"/>
+                        <owl:someValuesFrom rdf:resource="https://www.uxmethods.org/Method"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/UsabilityEvaluationMethod -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/UsabilityEvaluationMethod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.uxmethods.org/Method"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.uxmethods.org/produces"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.uxmethods.org/focusOf"/>
+                                <owl:hasValue rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/UserResearchMethod -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/UserResearchMethod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.uxmethods.org/Method"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.uxmethods.org/produces"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.uxmethods.org/focusOf"/>
+                                <owl:hasValue rdf:resource="https://www.uxmethods.org/UserResearch"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/VisualDesignMethod -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/VisualDesignMethod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.uxmethods.org/Method"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.uxmethods.org/produces"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.uxmethods.org/focusOf"/>
+                                <owl:hasValue rdf:resource="https://www.uxmethods.org/VisualDesign"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.uxmethods.org/WebResource -->
+
+    <owl:Class rdf:about="https://www.uxmethods.org/WebResource">
+        <rdfs:comment>Web Resources are online articles and tools that provide summaries, how-tos, examples of, or templates for particular methods or disciplines. A Web Resource may be connected to a Method, Discipline, or Outcome. This is intended to ensure that the broadest possible selection of resources can be included, and that they can be queried relative to core ontology types with minimal effort.
+
+Web Resources are named with a code-based scheme due to the high variability of resource types and related metadata. The scheme currently used is AYYMMDD, where &quot;A&quot; is the first letter of the author last name (if known), or the first letter of publication name, and YYMMDD is the year, month, and date of publication, if known. If the date is not known, resources should be assigned a unique incremental number, starting with 000001.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.uxmethods.org/BuildandRunPrototypes_IDEO -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/BuildandRunPrototypes_IDEO">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/Prototyping"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.designkit.org/methods/build-run-prototypes</resourceLocation>
+        <dc:publisher>IDEO</dc:publisher>
+        <dc:title>Build and Run Prototypes</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.uxmethods.org/BusinessGoals -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/BusinessGoals">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InteractionDesign"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
+        <dc:description>The objectives and problems business stakeholders intend to meet/solve with the product or service that is the focus of work.</dc:description>
+        <rdfs:label>Business Goals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.uxmethods.org/CardSorting -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/CardSorting">
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UsabilityEvaluationMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
+        <produces rdf:resource="https://www.uxmethods.org/MentalModel"/>
+        <produces rdf:resource="https://www.uxmethods.org/UserBehavior"/>
+        <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
+        <dc:description>Card sorting is a method used to help design or evaluate the information architecture of a site. In a card sorting session, participants organize topics into categories that make sense to them and they may also help you label these groups. To conduct a card sort, you can use actual cards, pieces of paper, or one of several online card-sorting software tools.</dc:description>
+        <rdfs:label>Card Sorting</rdfs:label>
+        <steps>Give users a collection of content represented on cards.
 Ask users to separate the cards into whatever categories make sense to them.
 Ask users to label those categories.
-Ask users to tell you why they grouped the cards and labeled the categories as they did.""" .
+Ask users to tell you why they grouped the cards and labeled the categories as they did.</steps>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/CategoryDesign
-:CategoryDesign rdf:type owl:NamedIndividual ,
-                         :ContentStrategyMethod ,
-                         :InformationArchitectureMethod ,
-                         :Method ;
-                :inputProvidedBy :OpenCardSorting ;
-                :produces :MetadataScheme ,
-                          :SiteMap ;
-                :providesInputFor :NavigationDesign ;
-                <http://purl.org/dc/elements/1.1/description> "The design of the structures and schemes used to categorize content and resources in order to make the location and use of resources easier for the intended audience." ;
-                rdfs:label "Category Design" .
+    <!-- https://www.uxmethods.org/CategoryDesign -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/CategoryDesign">
+        <rdf:type rdf:resource="https://www.uxmethods.org/ContentStrategyMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <inputProvidedBy rdf:resource="https://www.uxmethods.org/OpenCardSorting"/>
+        <produces rdf:resource="https://www.uxmethods.org/MetadataScheme"/>
+        <produces rdf:resource="https://www.uxmethods.org/SiteMap"/>
+        <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
+        <dc:description>The design of the structures and schemes used to categorize content and resources in order to make the location and use of resources easier for the intended audience.</dc:description>
+        <rdfs:label>Category Design</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/ClosedCardSorting
-:ClosedCardSorting rdf:type owl:NamedIndividual ,
-                            :Method ,
-                            :UsabilityEvaluationMethod ;
-                   :produces :NavigationEffectiveness ;
-                   <http://purl.org/dc/elements/1.1/description> "Participants are asked to sort topics from content within your website into pre-defined categories. A closed card sort works best when you are working with a pre-defined set of categories, and you want to learn how users sort content items into each category." ;
-                   rdfs:label "Closed Card Sorting" .
+    <!-- https://www.uxmethods.org/ClosedCardSorting -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ClosedCardSorting">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UsabilityEvaluationMethod"/>
+        <produces rdf:resource="https://www.uxmethods.org/NavigationEffectiveness"/>
+        <dc:description>Participants are asked to sort topics from content within your website into pre-defined categories. A closed card sort works best when you are working with a pre-defined set of categories, and you want to learn how users sort content items into each category.</dc:description>
+        <rdfs:label>Closed Card Sorting</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/ColorPalette
-:ColorPalette rdf:type owl:NamedIndividual ,
-                       :Outcome ,
-                       :Solution ;
-              :focusOf :VisualDesign ;
-              <http://purl.org/dc/elements/1.1/description> "The coordinated set of colors to be used in interface visual design"^^xsd:string ;
-              rdfs:label "Color Palette"^^xsd:string .
+    <!-- https://www.uxmethods.org/ColorPalette -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ColorPalette">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/VisualDesign"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The coordinated set of colors to be used in interface visual design</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Color Palette</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/ContentAuditing
-:ContentAuditing rdf:type owl:NamedIndividual ,
-                          :ContentStrategyMethod ,
-                          :Method ;
-                 :produces :ContentInsight ;
-                 <http://purl.org/dc/elements/1.1/description> "A content audit is a listing and analysis of all the content on an existing website (including pages, files, videos, audio or other data) that your users might reasonably encounter. Content audits identify content that needs to be revised in new versions of a website. Content audits can also help you identify who is responsible for content, how often it should be updated, and what role a particular piece of content plays for users." ;
-                 rdfs:label "Content Auditing" ;
-                 :steps """Identify a specific user need or user question that you’d like to address.
+    <!-- https://www.uxmethods.org/ContentAuditing -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ContentAuditing">
+        <rdf:type rdf:resource="https://www.uxmethods.org/ContentStrategyMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <produces rdf:resource="https://www.uxmethods.org/ContentInsight"/>
+        <dc:description>A content audit is a listing and analysis of all the content on an existing website (including pages, files, videos, audio or other data) that your users might reasonably encounter. Content audits identify content that needs to be revised in new versions of a website. Content audits can also help you identify who is responsible for content, how often it should be updated, and what role a particular piece of content plays for users.</dc:description>
+        <rdfs:label>Content Auditing</rdfs:label>
+        <steps>Identify a specific user need or user question that you’d like to address.
 Create an inventory of content on your website. Navigate through the site from the home page and make notes about every piece of content. Common elemnts include: title used in the site’s navigation for that page, title displayed on the page or item itself, URL, and parent page.
 Identify the main entry points for the user need you’re addressing. This could be external marketing, the homepage, a microsite, or another page.
 From each entry point, trace the pages and tasks a user moves through until they address their need.
-For every piece of content they might come across on that task flow, note who wrote or created the page ('Author'), who ensures its credibility ('Content owner'), how often or when it was last updated, and qualitative assessment comments of what to change to better address your identified user need.""" .
+For every piece of content they might come across on that task flow, note who wrote or created the page (&apos;Author&apos;), who ensures its credibility (&apos;Content owner&apos;), how often or when it was last updated, and qualitative assessment comments of what to change to better address your identified user need.</steps>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/ContentInsight
-:ContentInsight rdf:type owl:NamedIndividual ,
-                         :Insight ,
-                         :Outcome ;
-                :focusOf :ContentStrategy ;
-                <http://purl.org/dc/elements/1.1/description> "\"Insight into the quality, content, and scope of existing content\""^^xsd:string ;
-                rdfs:label "Content Insight"^^xsd:string .
+    <!-- https://www.uxmethods.org/ContentInsight -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ContentInsight">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Insight into the quality, content, and scope of existing content&quot;</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Insight</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/ContentStrategy
-:ContentStrategy rdf:type owl:NamedIndividual ,
-                          :Discipline ;
-                 :focusesOn :BusinessGoals ,
-                            :ContentInsight ,
-                            :ContentStructure ,
-                            :MetadataScheme ,
-                            :UserGoals ;
-                 <http://purl.org/dc/elements/1.1/description> "Content strategy focuses on the planning, creation, delivery, and governance of content."@en ;
-                 rdfs:label "Content Strategy" .
+    <!-- https://www.uxmethods.org/ContentStrategy -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ContentStrategy">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Discipline"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/BusinessGoals"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/ContentInsight"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/ContentStructure"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/MetadataScheme"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
+        <dc:description xml:lang="en">Content strategy focuses on the planning, creation, delivery, and governance of content.</dc:description>
+        <rdfs:label>Content Strategy</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/ContentStructure
-:ContentStructure rdf:type owl:NamedIndividual ,
-                           :Outcome ,
-                           :Solution ;
-                  :focusOf :ContentStrategy ;
-                  <http://purl.org/dc/elements/1.1/description> "\"The arrangementand, number, and hierarchy of categories used to classify content and resources\""^^xsd:string ;
-                  rdfs:label "Content Structure"^^xsd:string .
+    <!-- https://www.uxmethods.org/ContentStructure -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ContentStructure">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The arrangementand, number, and hierarchy of categories used to classify content and resources&quot;</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Structure</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/ContextualInterviewing
-:ContextualInterviewing rdf:type owl:NamedIndividual ,
-                                 :ContentStrategyMethod ,
-                                 :InformationArchitectureMethod ,
-                                 :InteractionDesignMethod ,
-                                 :Method ,
-                                 :UsabilityEvaluationMethod ,
-                                 :UserResearchMethod ;
-                        :describedBy :ContextualInterviews_InteractionDesignFoundation ,
-                                     <https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus> ;
-                        :produces :Interviewing ,
-                                  :UserBehavior ,
-                                  :UserGoals ;
-                        <http://purl.org/dc/elements/1.1/description> "During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don’t use tasks or scripts." ;
-                        rdfs:label "Contextual Interviewing" ;
-                        :steps """Introduce yourself and build rapport with the user
+    <!-- https://www.uxmethods.org/ContextualInterviewing -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ContextualInterviewing">
+        <rdf:type rdf:resource="https://www.uxmethods.org/ContentStrategyMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UsabilityEvaluationMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/ContextualInterviews_InteractionDesignFoundation"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus"/>
+        <produces rdf:resource="https://www.uxmethods.org/Interviewing"/>
+        <produces rdf:resource="https://www.uxmethods.org/UserBehavior"/>
+        <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
+        <dc:description>During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don’t use tasks or scripts.</dc:description>
+        <rdfs:label>Contextual Interviewing</rdfs:label>
+        <steps>Introduce yourself and build rapport with the user
 Transition from a traditional interview to a master-apprentice model. Tell the participant that you want to learn by watching and asking questions, as if you were an apprentice learning how to do their job
 Observe. Resist the temptation to continually ask questions. The observation phase is where you should spend the bulk of your time. 
 Interpret: verify your assumptions and conclusions with the participant.
-Summarize. Immediately at the end of each sessions, write down your immediate thoughts and observations.""" .
+Summarize. Immediately at the end of each sessions, write down your immediate thoughts and observations.</steps>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/ContextualInterviews_InteractionDesignFoundation
-:ContextualInterviews_InteractionDesignFoundation rdf:type owl:NamedIndividual ,
-                                                           :WebResource ;
-                                                  :describes :ContextualInterviewing ;
-                                                  :resourceLocation "https://www.interaction-design.org/literature/topics/contextual-interviews"^^xsd:anyURI ;
-                                                  <http://purl.org/dc/elements/1.1/publisher> "Interaction Design Foundation" ;
-                                                  <http://purl.org/dc/elements/1.1/title> "Contextual Interviews" .
+    <!-- https://www.uxmethods.org/ContextualInterviews_InteractionDesignFoundation -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ContextualInterviews_InteractionDesignFoundation">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/ContextualInterviewing"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.interaction-design.org/literature/topics/contextual-interviews</resourceLocation>
+        <dc:publisher>Interaction Design Foundation</dc:publisher>
+        <dc:title>Contextual Interviews</dc:title>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/FirstClickTesting
-:FirstClickTesting rdf:type owl:NamedIndividual ,
-                            :InteractionDesignMethod ,
-                            :Method ,
-                            :UsabilityEvaluationMethod ,
-                            :UserResearchMethod ;
-                   :describedBy :FirstClickTesting101_OptimalWorkshop ,
-                                :FirstClickTesting_UserInterviews ;
-                   :produces :NavigationEffectiveness ,
-                             :TaskCompletionInsight ,
-                             :UserBehavior ;
-                   :providesInputFor :Wireframing ;
-                   <http://purl.org/dc/elements/1.1/description> "First Click Testing examines what a test participant would click on first on the interface in order to complete their intended task.  It can be performed on a functioning website, a prototype or a wireframe. Though this testing can be done with observation alone, recording the sessions is recommended.  There is also software available which can assist you in tracking clicks and creating heatmaps of the activity." ;
-                   rdfs:label "First Click Testing" ;
-                   :steps """When creating tasks, focus on providing the participants with a problem to solve; “You are interested in finding out how much…how many…where to…�� to foster a more natural interaction with the site.
+    <!-- https://www.uxmethods.org/FirstClickTesting -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/FirstClickTesting">
+        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UsabilityEvaluationMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/FirstClickTesting101_OptimalWorkshop"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/FirstClickTesting_UserInterviews"/>
+        <produces rdf:resource="https://www.uxmethods.org/NavigationEffectiveness"/>
+        <produces rdf:resource="https://www.uxmethods.org/TaskCompletionInsight"/>
+        <produces rdf:resource="https://www.uxmethods.org/UserBehavior"/>
+        <providesInputFor rdf:resource="https://www.uxmethods.org/Wireframing"/>
+        <dc:description>First Click Testing examines what a test participant would click on first on the interface in order to complete their intended task.  It can be performed on a functioning website, a prototype or a wireframe. Though this testing can be done with observation alone, recording the sessions is recommended.  There is also software available which can assist you in tracking clicks and creating heatmaps of the activity.</dc:description>
+        <rdfs:label>First Click Testing</rdfs:label>
+        <steps>When creating tasks, focus on providing the participants with a problem to solve; “You are interested in finding out how much…how many…where to…�� to foster a more natural interaction with the site.
 Make sure you know and have documented the correct path to compete each task, both for yourself and for your observers. This will simplify note taking and transcription.
 Track each click and time how long it takes the user to make this click.  Taking a long time to make that first click may indicate an issue with navigation that will need to be monitored or address.
 After each task, assess whether the participants feel they were able to find the correct information using a satisfaction or confidence scale.
-Next assess the ease or difficulty of completing each task. Using response scales here will aid analysis as well, but consider free response options as well to provide additional context.""" .
+Next assess the ease or difficulty of completing each task. Using response scales here will aid analysis as well, but consider free response options as well to provide additional context.</steps>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/FirstClickTesting101_OptimalWorkshop
-:FirstClickTesting101_OptimalWorkshop rdf:type owl:NamedIndividual ,
-                                               :WebResource ;
-                                      :describes :FirstClickTesting ;
-                                      :resourceLocation "https://www.optimalworkshop.com/learn/101s/first-click-testing/"^^xsd:anyURI ;
-                                      <http://purl.org/dc/elements/1.1/publisher> "Optimal Workshop" ;
-                                      <http://purl.org/dc/elements/1.1/title> "First Click Testing 101" .
+    <!-- https://www.uxmethods.org/FirstClickTesting101_OptimalWorkshop -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/FirstClickTesting101_OptimalWorkshop">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/FirstClickTesting"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.optimalworkshop.com/learn/101s/first-click-testing/</resourceLocation>
+        <dc:publisher>Optimal Workshop</dc:publisher>
+        <dc:title>First Click Testing 101</dc:title>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/FirstClickTesting_UserInterviews
-:FirstClickTesting_UserInterviews rdf:type owl:NamedIndividual ,
-                                           :WebResource ;
-                                  :describes :FirstClickTesting ;
-                                  :resourceLocation "https://www.userinterviews.com/ux-research-field-guide-chapter/first-click-testing"^^xsd:anyURI ;
-                                  <http://purl.org/dc/elements/1.1/publisher> "User Interviews" ;
-                                  <http://purl.org/dc/elements/1.1/title> "First Click Testing" .
+    <!-- https://www.uxmethods.org/FirstClickTesting_UserInterviews -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/FirstClickTesting_UserInterviews">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/FirstClickTesting"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.userinterviews.com/ux-research-field-guide-chapter/first-click-testing</resourceLocation>
+        <dc:publisher>User Interviews</dc:publisher>
+        <dc:title>First Click Testing</dc:title>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/HeuristicEvaluation
-:HeuristicEvaluation rdf:type owl:NamedIndividual ,
-                              :Method ,
-                              :UsabilityEvaluationMethod ;
-                     :produces :NavigationEffectiveness ,
-                               :TaskCompletionInsight ;
-                     <http://purl.org/dc/elements/1.1/description> "In a heuristic evaluation, usability experts review your site’s interface and compare it against accepted usability principles. The analysis results in a list of potential usability issues." ;
-                     rdfs:label "Heuristic Evaluation" ;
-                     :steps """Recruit a group of three to five people familiar with evaluation methods. These people are not necessarily designers, but are familiar with common usability best practices. They are usually not users.
+    <!-- https://www.uxmethods.org/HeuristicEvaluation -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/HeuristicEvaluation">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UsabilityEvaluationMethod"/>
+        <produces rdf:resource="https://www.uxmethods.org/NavigationEffectiveness"/>
+        <produces rdf:resource="https://www.uxmethods.org/TaskCompletionInsight"/>
+        <dc:description>In a heuristic evaluation, usability experts review your site’s interface and compare it against accepted usability principles. The analysis results in a list of potential usability issues.</dc:description>
+        <rdfs:label>Heuristic Evaluation</rdfs:label>
+        <steps>Recruit a group of three to five people familiar with evaluation methods. These people are not necessarily designers, but are familiar with common usability best practices. They are usually not users.
 Ask each person to individually create a list of “heuristics” or general usability best practices. 
 Ask each person to evaluate the website against their list and write down possible problems.
-After individual evaluations, gather people to discuss what they found and prioritize potential problems.""" .
+After individual evaluations, gather people to discuss what they found and prioritize potential problems.</steps>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/InformationArchitecture
-:InformationArchitecture rdf:type owl:NamedIndividual ,
-                                  :Discipline ;
-                         :focusesOn :BusinessGoals ,
-                                    :InformationHierarchy ,
-                                    :LabelingScheme ,
-                                    :MentalModel ,
-                                    :MetadataScheme ,
-                                    :NavigationModel ,
-                                    :SiteMap ,
-                                    :UserGoals ;
-                         <http://purl.org/dc/elements/1.1/description> "Information architecture (IA) focuses on organizing, structuring, and labeling content in an effective and sustainable way in order to help users find information and complete tasks. Update."@en ;
-                         rdfs:label "Information Architecture" .
+    <!-- https://www.uxmethods.org/InformationArchitecture -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/InformationArchitecture">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Discipline"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/BusinessGoals"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/InformationHierarchy"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/LabelingScheme"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/MentalModel"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/MetadataScheme"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/NavigationModel"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/SiteMap"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
+        <dc:description xml:lang="en">Information architecture (IA) focuses on organizing, structuring, and labeling content in an effective and sustainable way in order to help users find information and complete tasks. Update.</dc:description>
+        <rdfs:label>Information Architecture</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/InformationHierarchy
-:InformationHierarchy rdf:type owl:NamedIndividual ,
-                               :Outcome ,
-                               :Solution ;
-                      :focusOf :InformationArchitecture ,
-                               :VisualDesign ;
-                      <http://purl.org/dc/elements/1.1/description> "The page level prioritization of information"^^xsd:string ;
-                      rdfs:label "Information Hierarchy"^^xsd:string .
+    <!-- https://www.uxmethods.org/InformationHierarchy -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/InformationHierarchy">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/VisualDesign"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The page level prioritization of information</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Hierarchy</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/InteractionDesign
-:InteractionDesign rdf:type owl:NamedIndividual ,
-                            :Discipline ;
-                   :focusesOn :BusinessGoals ,
-                              :InteractionPattern ,
-                              :UserBehavior ,
-                              :UserGoals ;
-                   <http://purl.org/dc/elements/1.1/description> "Interaction design focuses on creating engaging interfaces with well thought out behaviors."@en ;
-                   rdfs:label "Interaction Design" .
+    <!-- https://www.uxmethods.org/InteractionDesign -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/InteractionDesign">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Discipline"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/BusinessGoals"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/InteractionPattern"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/UserBehavior"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
+        <dc:description xml:lang="en">Interaction design focuses on creating engaging interfaces with well thought out behaviors.</dc:description>
+        <rdfs:label>Interaction Design</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/InteractionPattern
-:InteractionPattern rdf:type owl:NamedIndividual ,
-                             :Outcome ,
-                             :Solution ;
-                    :focusOf :InteractionDesign ;
-                    <http://purl.org/dc/elements/1.1/description> "A repeatable set of behaviors for engaging with content and/or functionality in a given interface"^^xsd:string ;
-                    rdfs:label "Interaction Pattern"^^xsd:string .
+    <!-- https://www.uxmethods.org/InteractionPattern -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/InteractionPattern">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InteractionDesign"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A repeatable set of behaviors for engaging with content and/or functionality in a given interface</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/Interviewing
-:Interviewing rdf:type owl:NamedIndividual ,
-                       :ContentStrategyMethod ,
-                       :InformationArchitectureMethod ,
-                       :InteractionDesignMethod ,
-                       :Method ,
-                       :UserResearchMethod ;
-              :produces :UserGoals ;
-              <http://purl.org/dc/elements/1.1/description> "In individual interviews, an interviewer talks with one user for 30 minutes to an hour. Individual interviews allow you to probe their attitudes, beliefs, desires, and experiences to get a deeper understanding of the users who come to your site. You can also ask them to rate or rank choices for site content.  These interviews can take place face-to-face, by phone or video conference, or via instant messaging system." ;
-              rdfs:label "Interviewing" ;
-              :steps """Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a back up. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
+    <!-- https://www.uxmethods.org/Interviewing -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/Interviewing">
+        <rdf:type rdf:resource="https://www.uxmethods.org/ContentStrategyMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
+        <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
+        <dc:description>In individual interviews, an interviewer talks with one user for 30 minutes to an hour. Individual interviews allow you to probe their attitudes, beliefs, desires, and experiences to get a deeper understanding of the users who come to your site. You can also ask them to rate or rank choices for site content.  These interviews can take place face-to-face, by phone or video conference, or via instant messaging system.</dc:description>
+        <rdfs:label>Interviewing</rdfs:label>
+        <steps>Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a back up. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
 Sit down one-on-one with the participant, or two-on-one with a note-taker or joint interviewer, in a focused environment. Introduce yourself. Explain the premise for the interview as far as you can without biasing their responses.
 Follow the conversation where the participant takes it. They will focus on their priorities and interests. Be comfortable with silences, which allow the participant to elaborate. To keep from getting entirely off course, use your interview guide to make sure you cover what you need to. Ask lots of “why is that” and “how do you do that” questions.
-If there are other products they use or your product doesn’t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.""" .
+If there are other products they use or your product doesn’t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</steps>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/LabelingScheme
-:LabelingScheme rdf:type owl:NamedIndividual ,
-                         :Outcome ,
-                         :Solution ;
-                :focusOf :InformationArchitecture ;
-                <http://purl.org/dc/elements/1.1/description> "The set of labels used to represent a collection of content and functionality"^^xsd:string ;
-                rdfs:label "Labeling Scheme"^^xsd:string .
+    <!-- https://www.uxmethods.org/LabelingScheme -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/LabelingScheme">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of labels used to represent a collection of content and functionality</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Labeling Scheme</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/MentalModel
-:MentalModel rdf:type owl:NamedIndividual ,
-                      :Insight ,
-                      :Outcome ;
-             :focusOf :InformationArchitecture ,
-                      :UserResearch ;
-             <http://purl.org/dc/elements/1.1/description> "The user's conceptualization about how a system or service works."^^xsd:string ;
-             rdfs:label "Mental Model"^^xsd:string .
+    <!-- https://www.uxmethods.org/MentalModel -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/MentalModel">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The user&apos;s conceptualization about how a system or service works.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mental Model</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/MetadataScheme
-:MetadataScheme rdf:type owl:NamedIndividual ,
-                         :Outcome ,
-                         :Solution ;
-                :focusOf :ContentStrategy ,
-                         :InformationArchitecture ;
-                <http://purl.org/dc/elements/1.1/description> "The collection of metadata elements used to describe a collection of content and functionality"^^xsd:string ;
-                rdfs:label "Metadata Scheme"^^xsd:string .
+    <!-- https://www.uxmethods.org/MetadataScheme -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/MetadataScheme">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The collection of metadata elements used to describe a collection of content and functionality</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metadata Scheme</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/NavigationDesign
-:NavigationDesign rdf:type owl:NamedIndividual ,
-                           :InformationArchitectureMethod ,
-                           :Method ;
-                  :describedBy :WebsiteNavigationPlanningAndImplementing_SmashingMagazine ;
-                  :inputProvidedBy :CardSorting ,
-                                   :CategoryDesign ,
-                                   :Prototyping ;
-                  :produces :LabelingScheme ,
-                            :NavigationModel ;
-                  :providesInputFor :Wireframing ;
-                  <http://purl.org/dc/elements/1.1/description> "Creating the system of hyperlinks that allows users to navigate between pages of a website." ;
-                  rdfs:label "Navigation Design" ;
-                  :steps """Organize structure
+    <!-- https://www.uxmethods.org/NavigationDesign -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/NavigationDesign">
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/WebsiteNavigationPlanningAndImplementing_SmashingMagazine"/>
+        <inputProvidedBy rdf:resource="https://www.uxmethods.org/CardSorting"/>
+        <inputProvidedBy rdf:resource="https://www.uxmethods.org/CategoryDesign"/>
+        <inputProvidedBy rdf:resource="https://www.uxmethods.org/Prototyping"/>
+        <produces rdf:resource="https://www.uxmethods.org/LabelingScheme"/>
+        <produces rdf:resource="https://www.uxmethods.org/NavigationModel"/>
+        <providesInputFor rdf:resource="https://www.uxmethods.org/Wireframing"/>
+        <dc:description>Creating the system of hyperlinks that allows users to navigate between pages of a website.</dc:description>
+        <rdfs:label>Navigation Design</rdfs:label>
+        <steps>Organize structure
 Assign labels
-Test and iterate""" .
+Test and iterate</steps>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/NavigationEffectiveness
-:NavigationEffectiveness rdf:type owl:NamedIndividual ,
-                                  :Insight ,
-                                  :Outcome ;
-                         :focusOf :UsabilityEvaluation ;
-                         <http://purl.org/dc/elements/1.1/description> "Insight into users' ability to easily and effectively locate content via navigation affordances"^^xsd:string ;
-                         rdfs:label "Navigation Effectiveness"^^xsd:string .
+    <!-- https://www.uxmethods.org/NavigationEffectiveness -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/NavigationEffectiveness">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into users&apos; ability to easily and effectively locate content via navigation affordances</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Navigation Effectiveness</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/NavigationModel
-:NavigationModel rdf:type owl:NamedIndividual ,
-                          :Outcome ,
-                          :Solution ;
-                 :focusOf :InformationArchitecture ;
-                 <http://purl.org/dc/elements/1.1/description> "\"The set of patterns, structures, and supported behaviors that afford users to opportunity to move between content and interface elements\""^^xsd:string ;
-                 rdfs:label "Navigation Model"^^xsd:string .
+    <!-- https://www.uxmethods.org/NavigationModel -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/NavigationModel">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The set of patterns, structures, and supported behaviors that afford users to opportunity to move between content and interface elements&quot;</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Navigation Model</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/OpenCardSorting
-:OpenCardSorting rdf:type owl:NamedIndividual ,
-                          :InformationArchitectureMethod ,
-                          :Method ;
-                 :produces :LabelingScheme ;
-                 :providesInputFor :CategoryDesign ;
-                 <http://purl.org/dc/elements/1.1/description> "Participants are asked to organize topics from content within your website into groups that make sense to them and then name each group they created in a way that they feel accurately describes the content. Use an open card sort to learn how users group content and the terms or labels they give each category." ;
-                 rdfs:label "Open Card Sorting" .
+    <!-- https://www.uxmethods.org/OpenCardSorting -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/OpenCardSorting">
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <produces rdf:resource="https://www.uxmethods.org/LabelingScheme"/>
+        <providesInputFor rdf:resource="https://www.uxmethods.org/CategoryDesign"/>
+        <dc:description>Participants are asked to organize topics from content within your website into groups that make sense to them and then name each group they created in a way that they feel accurately describes the content. Use an open card sort to learn how users group content and the terms or labels they give each category.</dc:description>
+        <rdfs:label>Open Card Sorting</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/Prototyping
-:Prototyping rdf:type owl:NamedIndividual ,
-                      :InformationArchitectureMethod ,
-                      :InteractionDesignMethod ,
-                      :Method ,
-                      :VisualDesignMethod ;
-             :describedBy :BuildandRunPrototypes_IDEO ,
-                          :PrototypingUserExperience_UXMatters ;
-             :produces :InformationHierarchy ,
-                       :InteractionPattern ,
-                       :NavigationModel ;
-             :providesInputFor :NavigationDesign ;
-             <http://purl.org/dc/elements/1.1/description> "A prototype is a draft version of a product that allows you to explore your ideas and show the intention behind a feature or the overall design concept to users before investing time and money into development. A prototype can be anything from paper drawings (low-fidelity) to something that allows click-through of a few pieces of content to a fully functioning site (high-fidelity)." ;
-             rdfs:label "Prototyping" ;
-             :steps """Determine what you need your prototype to accomplish. What moments in the experience do you need to gather more information on? 
+    <!-- https://www.uxmethods.org/Prototyping -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/Prototyping">
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/VisualDesignMethod"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/BuildandRunPrototypes_IDEO"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/PrototypingUserExperience_UXMatters"/>
+        <produces rdf:resource="https://www.uxmethods.org/InformationHierarchy"/>
+        <produces rdf:resource="https://www.uxmethods.org/InteractionPattern"/>
+        <produces rdf:resource="https://www.uxmethods.org/NavigationModel"/>
+        <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
+        <dc:description>A prototype is a draft version of a product that allows you to explore your ideas and show the intention behind a feature or the overall design concept to users before investing time and money into development. A prototype can be anything from paper drawings (low-fidelity) to something that allows click-through of a few pieces of content to a fully functioning site (high-fidelity).</dc:description>
+        <rdfs:label>Prototyping</rdfs:label>
+        <steps>Determine what you need your prototype to accomplish. What moments in the experience do you need to gather more information on? 
 Determine the modality of your prototype. Can you answer your product and experience questions with a simple paper prototype, or do you need to be able to click through scenarios on a device? If the latter, can you click through PDFs or a Figma file, or will you need to mock up your prototype in HTML?
 Determine the fidelity of your prototype based on what you need to learn. Fidelity ranges from low-fidelity (often inexpensive), to high-fidelity, which simulates a greater range of functionality, but often takes more time (and more money).
-Build and run your prototype according to purpose, modality, and fidelity you've sketched out.""" .
+Build and run your prototype according to purpose, modality, and fidelity you&apos;ve sketched out.</steps>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/PrototypingUserExperience_UXMatters
-:PrototypingUserExperience_UXMatters rdf:type owl:NamedIndividual ,
-                                              :WebResource ;
-                                     :describes :Prototyping ;
-                                     :resourceLocation "https://www.uxmatters.com/mt/archives/2019/01/prototyping-user-experience.php"^^xsd:anyURI ;
-                                     <http://purl.org/dc/elements/1.1/created> "2019-01-07"^^xsd:date ;
-                                     <http://purl.org/dc/elements/1.1/creator> "Quincy Smith" ;
-                                     <http://purl.org/dc/elements/1.1/publisher> "UX Matters" ;
-                                     <http://purl.org/dc/elements/1.1/title> "Prototyping User Experience" .
+    <!-- https://www.uxmethods.org/PrototypingUserExperience_UXMatters -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/PrototypingUserExperience_UXMatters">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/Prototyping"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.uxmatters.com/mt/archives/2019/01/prototyping-user-experience.php</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-07</dc:created>
+        <dc:creator>Quincy Smith</dc:creator>
+        <dc:publisher>UX Matters</dc:publisher>
+        <dc:title>Prototyping User Experience</dc:title>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/SiteMap
-:SiteMap rdf:type owl:NamedIndividual ,
-                  :Outcome ,
-                  :Solution ;
-         :focusOf :InformationArchitecture ;
-         <http://purl.org/dc/elements/1.1/description> "\"A visual or schematic representation of a website's categories, structure, and navigation\""^^xsd:string ;
-         rdfs:label "Site Map"^^xsd:string .
+    <!-- https://www.uxmethods.org/SiteMap -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/SiteMap">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A visual or schematic representation of a website&apos;s categories, structure, and navigation&quot;</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site Map</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/StakeholderInterviewing
-:StakeholderInterviewing rdf:type owl:NamedIndividual ,
-                                  :ContentStrategyMethod ,
-                                  :InformationArchitectureMethod ,
-                                  :InteractionDesignMethod ,
-                                  :Method ,
-                                  :UserResearchMethod ;
-                         :describedBy :TheDelicateArtofInterviewingStakeholders_EightShapes ;
-                         :produces :BusinessGoals ,
-                                   :Interviewing ,
-                                   :UserGoals ;
-                         <http://purl.org/dc/elements/1.1/description> "Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it." ;
-                         rdfs:label "Stakeholder Interviewing" .
+    <!-- https://www.uxmethods.org/StakeholderInterviewing -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/StakeholderInterviewing">
+        <rdf:type rdf:resource="https://www.uxmethods.org/ContentStrategyMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/TheDelicateArtofInterviewingStakeholders_EightShapes"/>
+        <produces rdf:resource="https://www.uxmethods.org/BusinessGoals"/>
+        <produces rdf:resource="https://www.uxmethods.org/Interviewing"/>
+        <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
+        <dc:description>Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it.</dc:description>
+        <rdfs:label>Stakeholder Interviewing</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/StyleTileCreation
-:StyleTileCreation rdf:type owl:NamedIndividual ,
-                            :Method ,
-                            :VisualDesignMethod ;
-                   :produces :ColorPalette ,
-                             :Typography ;
-                   <http://purl.org/dc/elements/1.1/description> "A Style Tile is a design deliverable consisting of fonts colors and interface elements that communicates the evolution of a visual brand for the web.'" ;
-                   rdfs:label "Style Tile Creation" .
+    <!-- https://www.uxmethods.org/StyleTileCreation -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/StyleTileCreation">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/VisualDesignMethod"/>
+        <produces rdf:resource="https://www.uxmethods.org/ColorPalette"/>
+        <produces rdf:resource="https://www.uxmethods.org/Typography"/>
+        <dc:description>A Style Tile is a design deliverable consisting of fonts colors and interface elements that communicates the evolution of a visual brand for the web.&apos;</dc:description>
+        <rdfs:label>Style Tile Creation</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/TaskCompletionInsight
-:TaskCompletionInsight rdf:type owl:NamedIndividual ,
-                                :Insight ,
-                                :Outcome ;
-                       :focusOf :UsabilityEvaluation ;
-                       <http://purl.org/dc/elements/1.1/description> "Insight into the rate at which and ease with which users are able to complete a concrete task or set of tasks"^^xsd:string ;
-                       rdfs:label "Task Completion Insight"^^xsd:string .
+    <!-- https://www.uxmethods.org/TaskCompletionInsight -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/TaskCompletionInsight">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into the rate at which and ease with which users are able to complete a concrete task or set of tasks</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task Completion Insight</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/TechnicalConstraints
-:TechnicalConstraints rdf:type owl:NamedIndividual ,
-                               :Insight ,
-                               :Outcome ;
-                      <http://purl.org/dc/elements/1.1/description> "The engineering and development limitations that must be taken into account when formulating a design solution"^^xsd:string ;
-                      rdfs:label "Technical Constraints"^^xsd:string .
+    <!-- https://www.uxmethods.org/TechnicalConstraints -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/TechnicalConstraints">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The engineering and development limitations that must be taken into account when formulating a design solution</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical Constraints</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/TheDelicateArtofInterviewingStakeholders_EightShapes
-:TheDelicateArtofInterviewingStakeholders_EightShapes rdf:type owl:NamedIndividual ,
-                                                               :WebResource ;
-                                                      :describes :StakeholderInterviewing ;
-                                                      :resourceLocation "https://medium.com/eightshapes-llc/the-delicate-art-of-interviewing-stakeholders-d6496443cbec"^^xsd:anyURI ;
-                                                      <http://purl.org/dc/elements/1.1/created> "2018-07-11"^^xsd:date ;
-                                                      <http://purl.org/dc/elements/1.1/creator> "Dan Brown" ;
-                                                      <http://purl.org/dc/elements/1.1/publisher> "EightShapes" ;
-                                                      <http://purl.org/dc/elements/1.1/title> "The Delicate Art of Interviewing Stakeholders" .
+    <!-- https://www.uxmethods.org/TheDelicateArtofInterviewingStakeholders_EightShapes -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/TheDelicateArtofInterviewingStakeholders_EightShapes">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/StakeholderInterviewing"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://medium.com/eightshapes-llc/the-delicate-art-of-interviewing-stakeholders-d6496443cbec</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-07-11</dc:created>
+        <dc:creator>Dan Brown</dc:creator>
+        <dc:publisher>EightShapes</dc:publisher>
+        <dc:title>The Delicate Art of Interviewing Stakeholders</dc:title>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/Typography
-:Typography rdf:type owl:NamedIndividual ,
-                     :Outcome ,
-                     :Solution ;
-            :focusOf :VisualDesign ;
-            <http://purl.org/dc/elements/1.1/description> "Font choice and combination recommendations for text presentation and typographic scale"^^xsd:string ;
-            rdfs:label "Typography"^^xsd:string .
+    <!-- https://www.uxmethods.org/Typography -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/Typography">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/VisualDesign"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Font choice and combination recommendations for text presentation and typographic scale</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Typography</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/UsabilityEvaluation
-:UsabilityEvaluation rdf:type owl:NamedIndividual ,
-                              :Discipline ;
-                     :focusesOn :NavigationEffectiveness ,
-                                :TaskCompletionInsight ,
-                                :UserBehavior ,
-                                :UserSatisfaction ;
-                     <http://purl.org/dc/elements/1.1/description> "Usability Evaluation focuses on how well users can learn and use a product to achieve their goals. It also refers to how satisfied users are with that process. To gather this information, practitioners use a variety of methods that gather feedback from users about an existing site or plans related to a new site."@en ;
-                     rdfs:label "Usability Evaluation" .
+    <!-- https://www.uxmethods.org/UsabilityEvaluation -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UsabilityEvaluation">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Discipline"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/NavigationEffectiveness"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/TaskCompletionInsight"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/UserBehavior"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/UserSatisfaction"/>
+        <dc:description xml:lang="en">Usability Evaluation focuses on how well users can learn and use a product to achieve their goals. It also refers to how satisfied users are with that process. To gather this information, practitioners use a variety of methods that gather feedback from users about an existing site or plans related to a new site.</dc:description>
+        <rdfs:label>Usability Evaluation</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/UserBehavior
-:UserBehavior rdf:type owl:NamedIndividual ,
-                       :Insight ,
-                       :Outcome ;
-              :focusOf :InteractionDesign ,
-                       :UsabilityEvaluation ,
-                       :UserResearch ;
-              <http://purl.org/dc/elements/1.1/description> "\"Insight into how users interact with an interface, service, or product\""^^xsd:string ;
-              rdfs:label "User Behavior"^^xsd:string .
+    <!-- https://www.uxmethods.org/UserBehavior -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UserBehavior">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InteractionDesign"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Insight into how users interact with an interface, service, or product&quot;</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Behavior</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/UserGoals
-:UserGoals rdf:type owl:NamedIndividual ,
-                    :Insight ,
-                    :Outcome ;
-           :focusOf :ContentStrategy ,
-                    :InformationArchitecture ,
-                    :InteractionDesign ,
-                    :UserResearch ;
-           <http://purl.org/dc/elements/1.1/description> "The objectives users hope to meet or problems they hope to solve in using an interface"^^xsd:string ;
-           rdfs:label "User Goals"^^xsd:string .
+    <!-- https://www.uxmethods.org/UserGoals -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UserGoals">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/InteractionDesign"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The objectives users hope to meet or problems they hope to solve in using an interface</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Goals</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/UserResearch
-:UserResearch rdf:type owl:NamedIndividual ,
-                       :Discipline ;
-              :focusesOn :BusinessGoals ,
-                         :MentalModel ,
-                         :UserBehavior ,
-                         :UserGoals ;
-              <http://purl.org/dc/elements/1.1/description> "User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies."@en ;
-              rdfs:label "User Research" .
+    <!-- https://www.uxmethods.org/UserResearch -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UserResearch">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Discipline"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/BusinessGoals"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/MentalModel"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/UserBehavior"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
+        <dc:description xml:lang="en">User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies.</dc:description>
+        <rdfs:label>User Research</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/UserSatisfaction
-:UserSatisfaction rdf:type owl:NamedIndividual ,
-                           :Insight ,
-                           :Outcome ;
-                  :focusOf :UsabilityEvaluation ;
-                  <http://purl.org/dc/elements/1.1/description> "\"The degree to which users feel they are able to effectively and easily meet their needs with a given interface"^^xsd:string ;
-                  rdfs:label "User Satisfaction"^^xsd:string .
+    <!-- https://www.uxmethods.org/UserSatisfaction -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UserSatisfaction">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
+        <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The degree to which users feel they are able to effectively and easily meet their needs with a given interface</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Satisfaction</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/VisualDesign
-:VisualDesign rdf:type owl:NamedIndividual ,
-                       :Discipline ;
-              :focusesOn :ColorPalette ,
-                         :InformationHierarchy ,
-                         :Typography ;
-              <http://purl.org/dc/elements/1.1/description> "Visual design focuses on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements.  A successful visual design does not take away from the content on the page or function. Instead, it enhances it by engaging users and helping to build trust and interest in the brand."@en ;
-              rdfs:label "Visual Design" .
+    <!-- https://www.uxmethods.org/VisualDesign -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/VisualDesign">
+        <rdf:type rdf:resource="https://www.uxmethods.org/Discipline"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/ColorPalette"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/InformationHierarchy"/>
+        <focusesOn rdf:resource="https://www.uxmethods.org/Typography"/>
+        <dc:description xml:lang="en">Visual design focuses on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements.  A successful visual design does not take away from the content on the page or function. Instead, it enhances it by engaging users and helping to build trust and interest in the brand.</dc:description>
+        <rdfs:label>Visual Design</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/WebsiteNavigationPlanningAndImplementing_SmashingMagazine
-:WebsiteNavigationPlanningAndImplementing_SmashingMagazine rdf:type owl:NamedIndividual ,
-                                                                    :WebResource ;
-                                                           :describes :NavigationDesign ;
-                                                           :resourceLocation "https://www.smashingmagazine.com/2011/06/planning-and-implementing-website-navigation/"^^xsd:anyURI ;
-                                                           <http://purl.org/dc/elements/1.1/created> "2011-06-06"^^xsd:date ;
-                                                           <http://purl.org/dc/elements/1.1/publisher> "Smashing Magazine" ;
-                                                           <http://purl.org/dc/elements/1.1/title> "Website Navigation Planning And Implementing" .
+    <!-- https://www.uxmethods.org/WebsiteNavigationPlanningAndImplementing_SmashingMagazine -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/WebsiteNavigationPlanningAndImplementing_SmashingMagazine">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.smashingmagazine.com/2011/06/planning-and-implementing-website-navigation/</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-06</dc:created>
+        <dc:publisher>Smashing Magazine</dc:publisher>
+        <dc:title>Website Navigation Planning And Implementing</dc:title>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/Wireframing
-:Wireframing rdf:type owl:NamedIndividual ,
-                      :InformationArchitectureMethod ,
-                      :InteractionDesignMethod ,
-                      :Method ,
-                      :VisualDesignMethod ;
-             :inputProvidedBy :FirstClickTesting ,
-                              :NavigationDesign ;
-             :produces :InformationHierarchy ,
-                       :InteractionPattern ;
-             <http://purl.org/dc/elements/1.1/description> "A wireframe is a two-dimensional illustration of a page’s interface that specifically focuses on space allocation and prioritization of content, functionalities available, and intended behaviors." ;
-             rdfs:label "Wireframing" ;
-             :steps """Build preliminary blueprints that show structure, placement, and hierarchy for your product. Steer clear of font choices, color, or other elements that would distract both the researcher and the reviewer. 
+    <!-- https://www.uxmethods.org/Wireframing -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/Wireframing">
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/VisualDesignMethod"/>
+        <inputProvidedBy rdf:resource="https://www.uxmethods.org/FirstClickTesting"/>
+        <inputProvidedBy rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
+        <produces rdf:resource="https://www.uxmethods.org/InformationHierarchy"/>
+        <produces rdf:resource="https://www.uxmethods.org/InteractionPattern"/>
+        <dc:description>A wireframe is a two-dimensional illustration of a page’s interface that specifically focuses on space allocation and prioritization of content, functionalities available, and intended behaviors.</dc:description>
+        <rdfs:label>Wireframing</rdfs:label>
+        <steps>Build preliminary blueprints that show structure, placement, and hierarchy for your product. Steer clear of font choices, color, or other elements that would distract both the researcher and the reviewer. 
 Use this opportunity to start listing what UX/UI patterns you will need.
 Review your wireframes with specific user scenarios and personas in mind. Can users accomplish their task with the wireframe you are sketching out?
-Use the wireframes to get the team’s feedback on feasibility and structure.""" .
+Use the wireframes to get the team’s feedback on feasibility and structure.</steps>
+    </owl:NamedIndividual>
+    
 
 
-###  https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus
-<https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus> rdf:type owl:NamedIndividual ,
-                                                                                            :WebResource ;
-                                                                                   :describes :ContextualInterviewing ;
-                                                                                   :resourceLocation "https://www.userfocus.co.uk/articles/the_beginners_guide_to_contextual_interviewing.html"^^xsd:anyURI ;
-                                                                                   <http://purl.org/dc/elements/1.1/creator> "David Travis" ;
-                                                                                   <http://purl.org/dc/elements/1.1/publisher> "Userfocus" ;
-                                                                                   <http://purl.org/dc/elements/1.1/title> "The Beginners' Guide to Contextual Interviewing" .
+    <!-- https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/ContextualInterviewing"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.userfocus.co.uk/articles/the_beginners_guide_to_contextual_interviewing.html</resourceLocation>
+        <dc:creator>David Travis</dc:creator>
+        <dc:publisher>Userfocus</dc:publisher>
+        <dc:title>The Beginners&apos; Guide to Contextual Interviewing</dc:title>
+    </owl:NamedIndividual>
+</rdf:RDF>
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
