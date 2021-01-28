@@ -29,11 +29,13 @@
         dc:description     "The design of the structures and schemes used to categorize content and resources in order to make the location and use of resources easier for the intended audience." ;
         :providesInputFor  :NavigationDesign ;
         rdfs:label         "Category Design" ;
+        :steps             "Gather data about your users, content, and business context. Conduct a content audit to determine what content you have, run a card sort to learn how your users think about that content, and talk to business stakeholders to understand your organization's priorities. \nDraft a classification scheme that balances a usable distribution of your current (and pending) content, user needs, and business goals.\nLabel your categories with terms that match user mental models and align with business and brand priorities.\nTest your system (tree testing and interactive prototypes are good for this) and revise your category scheme as needed. " ;
         rdf:type           :Method ;
         :produces          :SiteMap ;
         dc:description     "The design of the structures and schemes used to categorize content and resources in order to make the location and use of resources easier for the intended audience." ;
         :providesInputFor  :NavigationDesign ;
-        rdfs:label         "Category Design" .
+        rdfs:label         "Category Design" ;
+        :steps             "Gather data about your users, content, and business context. Conduct a content audit to determine what content you have, run a card sort to learn how your users think about that content, and talk to business stakeholders to understand your organization's priorities. \nDraft a classification scheme that balances a usable distribution of your current (and pending) content, user needs, and business goals.\nLabel your categories with terms that match user mental models and align with business and brand priorities.\nTest your system (tree testing and interactive prototypes are good for this) and revise your category scheme as needed. " .
 
 :ContentAuditing  rdf:type  :Method ;
         :produces       :ContentInsight ;
@@ -131,14 +133,17 @@
         :produces       :Interviewing ;
         dc:description  "Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it." ;
         rdfs:label      "Stakeholder Interviewing" ;
+        :steps          "Establish goals. What you want to find out from interviewees?\nIdentify stakeholders. The number and role of stakeholders will vary depending on the organization. In smaller companies, you may talk to the founder or CEO. In large organizations, department heads (or their proxies) may be who you need. \nPrepare questions. Keep them open ended and as a guide to the conversation.\nDocument and analyze responses. Try organizing your research findings into categories: Business, Users, Problems, Fears, Motives, Competitive advantages, Solutions, Alternatives, and Unique value propositions." ;
         rdf:type        :Method ;
         :produces       :UserGoals ;
         dc:description  "Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it." ;
         rdfs:label      "Stakeholder Interviewing" ;
+        :steps          "Establish goals. What you want to find out from interviewees?\nIdentify stakeholders. The number and role of stakeholders will vary depending on the organization. In smaller companies, you may talk to the founder or CEO. In large organizations, department heads (or their proxies) may be who you need. \nPrepare questions. Keep them open ended and as a guide to the conversation.\nDocument and analyze responses. Try organizing your research findings into categories: Business, Users, Problems, Fears, Motives, Competitive advantages, Solutions, Alternatives, and Unique value propositions." ;
         rdf:type        :Method ;
         :produces       :BusinessGoals ;
         dc:description  "Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it." ;
-        rdfs:label      "Stakeholder Interviewing" .
+        rdfs:label      "Stakeholder Interviewing" ;
+        :steps          "Establish goals. What you want to find out from interviewees?\nIdentify stakeholders. The number and role of stakeholders will vary depending on the organization. In smaller companies, you may talk to the founder or CEO. In large organizations, department heads (or their proxies) may be who you need. \nPrepare questions. Keep them open ended and as a guide to the conversation.\nDocument and analyze responses. Try organizing your research findings into categories: Business, Users, Problems, Fears, Motives, Competitive advantages, Solutions, Alternatives, and Unique value propositions." .
 
 :StyleTileCreation  rdf:type  :Method ;
         :produces       :Typography ;

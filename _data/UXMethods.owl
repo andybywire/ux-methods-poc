@@ -69,12 +69,6 @@ Project Goals
     
 
 
-    <!-- https://www.uxmethods.org/shortDescription -->
-
-    <owl:AnnotationProperty rdf:about="https://www.uxmethods.org/shortDescription"/>
-    
-
-
     <!-- https://www.uxmethods.org/steps -->
 
     <owl:AnnotationProperty rdf:about="https://www.uxmethods.org/steps"/>
@@ -430,6 +424,48 @@ Web Resources are named with a code-based scheme due to the high variability of 
     
 
 
+    <!-- https://www.uxmethods.org/AStakeholderInterviewChecklist_BoxesandArrows -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/AStakeholderInterviewChecklist_BoxesandArrows">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/StakeholderInterviewing"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://boxesandarrows.com/a-stakeholder-interview-checklist/</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-08</dc:created>
+        <dc:creator>Kim Goodwin</dc:creator>
+        <dc:publisher>Boxes and Arrows</dc:publisher>
+        <dc:title>A Stakeholder Interview Checklist</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.uxmethods.org/AvoidCategoryNamesThatSuck_NielsenNormanGroup -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/AvoidCategoryNamesThatSuck_NielsenNormanGroup">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/CategoryDesign"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nngroup.com/articles/category-names-suck/</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-15</dc:created>
+        <dc:creator>Hoa Loranger</dc:creator>
+        <dc:publisher>Nielsen Norman Group</dc:publisher>
+        <dc:title>Avoid Category Names That Suck</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.uxmethods.org/BuildEmpathyWithStakeholderInterviews_Digital.gov -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/BuildEmpathyWithStakeholderInterviews_Digital.gov">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/StakeholderInterviewing"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://digital.gov/2016/07/01/build-empathy-with-stakeholder-interviews-part-1-preparation/#:~:text=What%20are%20stakeholder%20interviews%3F,in%20all%20shapes%20and%20sizes.</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-07-01</dc:created>
+        <dc:creator>Andrew Maier</dc:creator>
+        <dc:publisher>Digital.gov</dc:publisher>
+        <dc:title>Build Empathy With Stakeholder Interviews</dc:title>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.uxmethods.org/BuildandRunPrototypes_IDEO -->
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/BuildandRunPrototypes_IDEO">
@@ -465,6 +501,10 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/UsabilityEvaluationMethod"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/CardSorting101_OptimalWorkshop"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/HowtoChooseTopicsforCardSorting_AndyFitzgeraldConsulting"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/CardSorting%3AADefinitiveGuide_BoxesandArrows"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/CardSorting%3AUncoverUsers%27MentalModelsforBetterInformationArchitecture_NielsenNormanGroup"/>
         <produces rdf:resource="https://www.uxmethods.org/MentalModel"/>
         <produces rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
@@ -478,18 +518,36 @@ Ask users to tell you why they grouped the cards and labeled the categories as t
     
 
 
+    <!-- https://www.uxmethods.org/CardSorting101_OptimalWorkshop -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/CardSorting101_OptimalWorkshop">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/CardSorting"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.optimalworkshop.com/learn/101s/card-sorting/</resourceLocation>
+        <dc:publisher>Optimal Workshop</dc:publisher>
+        <dc:title>Card Sorting 101</dc:title>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.uxmethods.org/CategoryDesign -->
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/CategoryDesign">
         <rdf:type rdf:resource="https://www.uxmethods.org/ContentStrategyMethod"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/AvoidCategoryNamesThatSuck_NielsenNormanGroup"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/Classification%2CNavigation%2CandtheSecretLivesofWatermelon_Anthro-Tech"/>
         <inputProvidedBy rdf:resource="https://www.uxmethods.org/OpenCardSorting"/>
         <produces rdf:resource="https://www.uxmethods.org/MetadataScheme"/>
         <produces rdf:resource="https://www.uxmethods.org/SiteMap"/>
         <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
         <dc:description>The design of the structures and schemes used to categorize content and resources in order to make the location and use of resources easier for the intended audience.</dc:description>
         <rdfs:label>Category Design</rdfs:label>
+        <steps>Gather data about your users, content, and business context. Conduct a content audit to determine what content you have, run a card sort to learn how your users think about that content, and talk to business stakeholders to understand your organization&apos;s priorities. 
+Draft a classification scheme that balances a usable distribution of your current (and pending) content, user needs, and business goals.
+Label your categories with terms that match user mental models and align with business and brand priorities.
+Test your system (tree testing and interactive prototypes are good for this) and revise your category scheme as needed. </steps>
     </owl:NamedIndividual>
     
 
@@ -558,7 +616,6 @@ For every piece of content they might come across on that task flow, note who wr
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description xml:lang="en">Content strategy focuses on the planning, creation, delivery, and governance of content.</dc:description>
         <rdfs:label>Content Strategy</rdfs:label>
-        <shortDescription>Focuses on the planning, creation, delivery, and governance of content.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -677,6 +734,20 @@ After individual evaluations, gather people to discuss what they found and prior
     
 
 
+    <!-- https://www.uxmethods.org/HowtoChooseTopicsforCardSorting_AndyFitzgeraldConsulting -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/HowtoChooseTopicsforCardSorting_AndyFitzgeraldConsulting">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/CardSorting"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.andyfitzgeraldconsulting.com/writing/choosing-card-sorting-topics/</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-09-17</dc:created>
+        <dc:creator>Andy Fitzgerald</dc:creator>
+        <dc:publisher>Andy Fitzgerald Consulting</dc:publisher>
+        <dc:title>How to Choose Topics for Card Sorting</dc:title>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.uxmethods.org/InformationArchitecture -->
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/InformationArchitecture">
@@ -691,7 +762,6 @@ After individual evaluations, gather people to discuss what they found and prior
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description xml:lang="en">Information architecture (IA) focuses on organizing, structuring, and labeling content in an effective and sustainable way in order to help users find information and complete tasks. Update.</dc:description>
         <rdfs:label>Information Architecture</rdfs:label>
-        <shortDescription>Focuses on organizing, structuring, and labeling content for findability.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -719,7 +789,6 @@ After individual evaluations, gather people to discuss what they found and prior
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description xml:lang="en">Interaction design focuses on creating engaging interfaces with well thought out behaviors.</dc:description>
         <rdfs:label>Interaction Design</rdfs:label>
-        <shortDescription>Focuses on creating engaging interfaces with well thought out behaviors.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -908,12 +977,19 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/AStakeholderInterviewChecklist_BoxesandArrows"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/BuildEmpathyWithStakeholderInterviews_Digital.gov"/>
         <describedBy rdf:resource="https://www.uxmethods.org/TheDelicateArtofInterviewingStakeholders_EightShapes"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/Theultimateguidetostakeholderinterviews%3Aunderstandyourclients_UXCollective"/>
         <produces rdf:resource="https://www.uxmethods.org/BusinessGoals"/>
         <produces rdf:resource="https://www.uxmethods.org/Interviewing"/>
         <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description>Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it.</dc:description>
         <rdfs:label>Stakeholder Interviewing</rdfs:label>
+        <steps>Establish goals. What you want to find out from interviewees?
+Identify stakeholders. The number and role of stakeholders will vary depending on the organization. In smaller companies, you may talk to the founder or CEO. In large organizations, department heads (or their proxies) may be who you need. 
+Prepare questions. Keep them open ended and as a guide to the conversation.
+Document and analyze responses. Try organizing your research findings into categories: Business, Users, Problems, Fears, Motives, Competitive advantages, Solutions, Alternatives, and Unique value propositions.</steps>
     </owl:NamedIndividual>
     
 
@@ -990,7 +1066,6 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <focusesOn rdf:resource="https://www.uxmethods.org/UserSatisfaction"/>
         <dc:description xml:lang="en">Usability Evaluation focuses on how well users can learn and use a product to achieve their goals. It also refers to how satisfied users are with that process. To gather this information, practitioners use a variety of methods that gather feedback from users about an existing site or plans related to a new site.</dc:description>
         <rdfs:label>Usability Evaluation</rdfs:label>
-        <shortDescription>Focuses on how well users can learn and use a product to achieve their goals.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1034,7 +1109,6 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description xml:lang="en">User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies.</dc:description>
         <rdfs:label>User Research</rdfs:label>
-        <shortDescription>Focuses on an empirical understanding user behaviors, needs, and motivations.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1060,7 +1134,6 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <focusesOn rdf:resource="https://www.uxmethods.org/Typography"/>
         <dc:description xml:lang="en">Visual design focuses on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements.  A successful visual design does not take away from the content on the page or function. Instead, it enhances it by engaging users and helping to build trust and interest in the brand.</dc:description>
         <rdfs:label>Visual Design</rdfs:label>
-        <shortDescription>Focuses on the aesthetics of a site, including images, colors, and fonts.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1099,6 +1172,48 @@ Use the wireframes to get the team’s feedback on feasibility and structure.</s
     
 
 
+    <!-- https://www.uxmethods.org/CardSorting%3AADefinitiveGuide_BoxesandArrows -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/CardSorting%3AADefinitiveGuide_BoxesandArrows">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/CardSorting"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://boxesandarrows.com/card-sorting-a-definitive-guide/</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-04-07</dc:created>
+        <dc:creator>Donna Spencer and Todd Warfel</dc:creator>
+        <dc:publisher>Boxes and Arrows</dc:publisher>
+        <dc:title>Card Sorting: A Definitive Guide</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.uxmethods.org/CardSorting%3AUncoverUsers%27MentalModelsforBetterInformationArchitecture_NielsenNormanGroup -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/CardSorting%3AUncoverUsers%27MentalModelsforBetterInformationArchitecture_NielsenNormanGroup">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/CardSorting"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nngroup.com/articles/card-sorting-definition/</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-18</dc:created>
+        <dc:creator>Katie Sherwin</dc:creator>
+        <dc:publisher>Nielsen Norman Group</dc:publisher>
+        <dc:title>Card Sorting: Uncover Users&apos; Mental Models for Better Information Architecture</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.uxmethods.org/Classification%2CNavigation%2CandtheSecretLivesofWatermelon_Anthro-Tech -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/Classification%2CNavigation%2CandtheSecretLivesofWatermelon_Anthro-Tech">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/CategoryDesign"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://anthro-tech.com/blog/post/classification-navigation-and-the-secret-lives-of-watermelon</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-10-28</dc:created>
+        <dc:creator>Andy Fitzgerald</dc:creator>
+        <dc:publisher>Anthro-Tech</dc:publisher>
+        <dc:title>Classification, Navigation, and the Secret Lives of Watermelon</dc:title>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus -->
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus">
@@ -1108,6 +1223,20 @@ Use the wireframes to get the team’s feedback on feasibility and structure.</s
         <dc:creator>David Travis</dc:creator>
         <dc:publisher>Userfocus</dc:publisher>
         <dc:title>The Beginners&apos; Guide to Contextual Interviewing</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.uxmethods.org/Theultimateguidetostakeholderinterviews%3Aunderstandyourclients_UXCollective -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/Theultimateguidetostakeholderinterviews%3Aunderstandyourclients_UXCollective">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/StakeholderInterviewing"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://uxdesign.cc/the-ultimate-guide-to-stakeholder-interviews-understand-your-clients-a3bcf87b6e8b</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-29</dc:created>
+        <dc:creator>Adam Fard</dc:creator>
+        <dc:publisher>UX Collective</dc:publisher>
+        <dc:title>The ultimate guide to stakeholder interviews: understand your clients</dc:title>
     </owl:NamedIndividual>
 </rdf:RDF>
 
