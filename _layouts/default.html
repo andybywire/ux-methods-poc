@@ -105,7 +105,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
           <!-- topMethods defined above -->
           {% for resource in topMethods limit: 6 %}
             <li>
-              <a href="{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
+              <a href="/{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
             </li>
           {% endfor %}
           <li><a href="/methods">See All Methods A-Z</a></li>
@@ -118,7 +118,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
           <!-- topOutcomes defined above -->
           {% for resource in topOutcomes limit: 6 %}
             <li>
-              <a href="{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
+              <a href="/{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
             </li>
           {% endfor %}
             <li><a href="/outcomes">See All Outcomes A-Z</a></li>

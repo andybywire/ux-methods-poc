@@ -96,6 +96,14 @@ Project Goals
     
 
 
+    <!-- https://www.uxmethods.org/shortDescription -->
+
+    <owl:AnnotationProperty rdf:about="https://www.uxmethods.org/shortDescription">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- https://www.uxmethods.org/steps -->
 
     <owl:AnnotationProperty rdf:about="https://www.uxmethods.org/steps"/>
@@ -485,6 +493,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description xml:lang="en">Content strategy focuses on the planning, creation, delivery, and governance of content.</dc:description>
         <rdfs:label>Content Strategy</rdfs:label>
+        <shortDescription>Focuses on the planning, creation, delivery, and governance of content.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -513,6 +522,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description xml:lang="en">Information architecture (IA) focuses on organizing, structuring, and labeling content in an effective and sustainable way in order to help users find information and complete tasks. Update.</dc:description>
         <rdfs:label>Information Architecture</rdfs:label>
+        <shortDescription>Focuses on organizing, structuring, and labeling content for findability.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -537,6 +547,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description xml:lang="en">Interaction design focuses on creating engaging interfaces with well thought out behaviors.</dc:description>
         <rdfs:label>Interaction Design</rdfs:label>
+        <shortDescription>Focuses on creating engaging interfaces with well thought out behaviors.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -651,6 +662,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <focusesOn rdf:resource="https://www.uxmethods.org/UserSatisfaction"/>
         <dc:description xml:lang="en">Usability Evaluation focuses on how well users can learn and use a product to achieve their goals. It also refers to how satisfied users are with that process. To gather this information, practitioners use a variety of methods that gather feedback from users about an existing site or plans related to a new site.</dc:description>
         <rdfs:label>Usability Evaluation</rdfs:label>
+        <shortDescription>Focuses on how well users can learn and use a product to achieve their goals.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -685,6 +697,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description xml:lang="en">User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies.</dc:description>
         <rdfs:label>User Research</rdfs:label>
+        <shortDescription>Focuses on an empirical understanding user behaviors, needs, and motivations.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -708,6 +721,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <focusesOn rdf:resource="https://www.uxmethods.org/Typography"/>
         <dc:description xml:lang="en">Visual design focuses on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements.  A successful visual design does not take away from the content on the page or function. Instead, it enhances it by engaging users and helping to build trust and interest in the brand.</dc:description>
         <rdfs:label>Visual Design</rdfs:label>
+        <shortDescription>Focuses on the aesthetics of a site, including images, colors, and fonts.</shortDescription>
     </owl:NamedIndividual>
 </rdf:RDF>
 
