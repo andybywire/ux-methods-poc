@@ -64,7 +64,7 @@ page_class: home
         </div>
         <div class="discipline-lede">
           <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
-          <p>{{ resource | rdf_property: ':short-description' | truncate: 80 }}</p>
+          <p>{{ resource | rdf_property: ':shortDescription' | truncate: 80 }}</p>
         </div>
       </a>
     </li>
