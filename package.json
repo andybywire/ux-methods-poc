@@ -17,6 +17,7 @@
         "gulp-autoprefixer": "^7.0.1",
         "gulp-connect-php": "^1.0.3",
         "gulp-sass": "^4.0.0",
+        "gulp-shell": "^0.8.0",
         "gulp-sourcemaps": "^2.6.0"
     },
     "license": "ISC"

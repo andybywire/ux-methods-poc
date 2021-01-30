@@ -8,7 +8,7 @@ page_class: about
 
 # About UX Methods 
 {: .no-eyebrow}
-UX Methods is a collaborative, Linked Data powered Knowledge Graph. Its goal is to document and interconnect the practices and techinques of user experience design. It is built with open source tools and technologies, and is designed to evolve and scale over time.
+UX Methods is a collaborative, Linked Data powered Knowledge Graph. Its goal is to document and interconnect the practices and technique of user experience design. It is built with open source tools and technologies, and is designed to evolve and scale over time.
 
 The UX Methods project envisions: 
 
@@ -32,9 +32,9 @@ The UX Methods ontology describes a simple model in which the relationships betw
   <img style="border-radius: 5px; margin: 1rem 0 2rem;" src="https://user-images.githubusercontent.com/3710835/99914748-582cd280-2cb4-11eb-8cf7-3d4709e98c0a.png">
 </figure>
 
-Individual data elements, such as methods, their dependancies, and their outcomes, are then used to drive the user-focused page templates that make up the UX Methods site. Discipline, method, and outcome resources are presented in templates purpose-built for the content they contain, and navigation is assembled and ordered based on resouces in the knowledge graph. The "Top Methods" menu, for instance, is generated from the 6 most "central" method resources methods in the graph (those with the greatest [degree centrality](https://en.wikipedia.org/wiki/Centrality)). 
+Individual data elements, such as methods, their dependencies, and their outcomes, are then used to drive the user-focused page templates that make up the UX Methods site. Discipline, method, and outcome resources are presented in templates purpose-built for the content they contain, and navigation is assembled and ordered based on resources in the knowledge graph. The "Top Methods" menu, for instance, is generated from the 6 most "central" method resources methods in the graph (those with the greatest [degree centrality](https://en.wikipedia.org/wiki/Centrality)). 
 
-The benefit of this ontology-driven approach to information organization and presentations is that as as the collection of methods described here evolves, the connections between them are continuously (and programatically) updated to reflect the perspective on their relationships provided by the ontology. Likewise, as the ontology itself evolves&mdash;either to correct errors or to accommodate new perspectives and greater complexity&mdash;the methods it organizes evolve in parallel, reflecting changes to the way we collectively understand their relationships in real time. 
+The benefit of this ontology-driven approach to information organization and presentations is that as as the collection of methods described here evolves, the connections between them are continuously (and programmatically) updated to reflect the perspective on their relationships provided by the ontology. Likewise, as the ontology itself evolves&mdash;either to correct errors or to accommodate new perspectives and greater complexity&mdash;the methods it organizes evolve in parallel, reflecting changes to the way we collectively understand their relationships in real time. 
 
 ## Front End Tools
 This (eventually progressive) web app was created to be as lightweight and low bandwidth as possible so that the content collected here is easy to access, explore, and use. Tools used include: 
@@ -57,7 +57,7 @@ The version of UX Methods you're currently viewing is brand new and still held t
 If you have observations, input, or comments you'd like to share privately (i.e. outside of GitHub or methods suggestions), please feel free to [contact me directly](https://www.andyfitzgeraldconsulting.com/contact/).
 
 ### Contribute
-To improve methods, add content or resources (like links to web resources) to exisitng methods, or suggest new methods to include, please use the [Submit Method](/submit-method) form, or hit the "Improve This Method" button at the bottom of each Method page. 
+To improve methods, add content or resources (like links to web resources) to existing methods, or suggest new methods to include, please use the [Submit Method](/submit-method) form, or hit the "Improve This Method" button at the bottom of each Method page. 
 
 To contribute to ontology driving the UX Methods Knowledge Graph, head over to the [UX Methods Ontology repo on GitHub]({{site.ontology_repo}}). Once you're familiar with the ontology purpose, ontological commitments, and competency questions, feel free to fork and clone the repo, make changes, and submit a pull request. 
 

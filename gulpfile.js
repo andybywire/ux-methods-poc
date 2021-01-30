@@ -1,17 +1,12 @@
 "use strict";
 // Load plugins
 const gulp = require('gulp');
+const shell = require('gulp-shell');
 const connect = require('gulp-connect-php');
 const gulpSass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
-
-// Load paths — remove once SASS is set up if I don't need these as a template
-// var sassPaths = [
-//   'node_modules/foundation-sites/scss',
-//   'node_modules/motion-ui/src'
-// ];
 
 // Build Jekyll site (but do not compile CSS)
 function jekyll (gulpCallBack){
@@ -73,5 +68,13 @@ function watch() {
   );
 }
 
+// Shell test
+// Not yet working. To come back to. 
+function etl(done) {
+  gulp.task('build', shell.task('sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl & sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl'));
+  done();
+}
+
 // Export tasks
 exports.default = gulp.series(jekyll, sass, gulp.parallel(watch, php));
+exports.etl = etl;
