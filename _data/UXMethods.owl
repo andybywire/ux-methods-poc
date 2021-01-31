@@ -544,6 +544,7 @@ Ask users to tell you why they grouped the cards and labeled the categories as t
         <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
         <describedBy rdf:resource="https://www.uxmethods.org/AvoidCategoryNamesThatSuck_NielsenNormanGroup"/>
         <describedBy rdf:resource="https://www.uxmethods.org/Classification%2CNavigation%2CandtheSecretLivesofWatermelon_Anthro-Tech"/>
+        <inputProvidedBy rdf:resource="https://www.uxmethods.org/CompetitiveAnalysis"/>
         <inputProvidedBy rdf:resource="https://www.uxmethods.org/OpenCardSorting"/>
         <produces rdf:resource="https://www.uxmethods.org/MetadataScheme"/>
         <produces rdf:resource="https://www.uxmethods.org/SiteMap"/>
@@ -564,7 +565,7 @@ Test your system (tree testing and interactive prototypes are good for this) and
         <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/UsabilityEvaluationMethod"/>
         <produces rdf:resource="https://www.uxmethods.org/NavigationEffectiveness"/>
-        <dc:description>Participants are asked to sort topics from content within your website into pre-defined categories. A closed card sort works best when you are working with a pre-defined set of categories, and you want to learn how users sort content items into each category.</dc:description>
+        <dc:description>Participants are asked to sort topics from content within your website into predefined categories. A closed card sort works best when you are working with a predefined set of categories, and you want to learn how users sort content items into each category.</dc:description>
         <rdfs:label>Closed Card Sorting</rdfs:label>
     </owl:NamedIndividual>
     
@@ -582,6 +583,32 @@ Test your system (tree testing and interactive prototypes are good for this) and
     
 
 
+    <!-- https://www.uxmethods.org/CompetitiveAnalysis -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/CompetitiveAnalysis">
+        <rdf:type rdf:resource="https://www.uxmethods.org/ContentStrategyMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
+        <produces rdf:resource="https://www.uxmethods.org/BusinessGoals"/>
+        <produces rdf:resource="https://www.uxmethods.org/ContentStructure"/>
+        <providesInputFor rdf:resource="https://www.uxmethods.org/CategoryDesign"/>
+        <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
+        <providesInputFor rdf:resource="https://www.uxmethods.org/Wireframing"/>
+        <dc:description>A competitive analysis is a formal exploration of the companies or organizations in a given industry sector or market niche, typically those that are competing with your company’s products or services for market share. Competitive analysis can help you identify opportunities, gaps in other services, and potential design patterns to adopt or avoid. In most cases, you will identify competitors in collaboration with your client or project sponsor. The analysis may be an in-depth exploration of the top five competitors, or a larger survey of a greater number of competitors (typically with less depth in the analysis). In most cases, the client will have identified the target competitors for you.
+
+Identifying your competitors and evaluating their strategies to determine their strengths and weaknesses relative to those of your own product or service.</dc:description>
+        <rdfs:label>Competitive Analysis</rdfs:label>
+        <steps>Identify a list of services that would be either direct or related competitors to your service. Pare the list down to four or five.
+Establish which criteria or heuristics you will use to evaluate each competing service.
+Break down the analysis of each selected competitor into specific focal areas for evaluation. For example, how relevant are search results?
+Use a spreadsheet to capture the evaluation and determine how the targeted services and agencies perform based on the identified heuristics.
+Present the analysis, which should showcase areas of opportunities that you can take advantage of and design patterns you might adopt or avoid.</steps>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.uxmethods.org/ContentAuditing -->
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ContentAuditing">
@@ -591,7 +618,7 @@ Test your system (tree testing and interactive prototypes are good for this) and
         <dc:description>A content audit is a listing and analysis of all the content on an existing website (including pages, files, videos, audio or other data) that your users might reasonably encounter. Content audits identify content that needs to be revised in new versions of a website. Content audits can also help you identify who is responsible for content, how often it should be updated, and what role a particular piece of content plays for users.</dc:description>
         <rdfs:label>Content Auditing</rdfs:label>
         <steps>Identify a specific user need or user question that you’d like to address.
-Create an inventory of content on your website. Navigate through the site from the home page and make notes about every piece of content. Common elemnts include: title used in the site’s navigation for that page, title displayed on the page or item itself, URL, and parent page.
+Create an inventory of content on your website. Navigate through the site from the home page and make notes about every piece of content. Common elements include: title used in the site’s navigation for that page, title displayed on the page or item itself, URL, and parent page.
 Identify the main entry points for the user need you’re addressing. This could be external marketing, the homepage, a microsite, or another page.
 From each entry point, trace the pages and tasks a user moves through until they address their need.
 For every piece of content they might come across on that task flow, note who wrote or created the page (&apos;Author&apos;), who ensures its credibility (&apos;Content owner&apos;), how often or when it was last updated, and qualitative assessment comments of what to change to better address your identified user need.</steps>
@@ -653,7 +680,7 @@ For every piece of content they might come across on that task flow, note who wr
         <produces rdf:resource="https://www.uxmethods.org/Interviewing"/>
         <produces rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description>During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don’t use tasks or scripts.</dc:description>
+        <dc:description>During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don&apos;t use tasks or scripts.</dc:description>
         <rdfs:label>Contextual Interviewing</rdfs:label>
         <steps>Introduce yourself and build rapport with the user
 Transition from a traditional interview to a master-apprentice model. Tell the participant that you want to learn by watching and asking questions, as if you were an apprentice learning how to do their job
@@ -825,10 +852,10 @@ After individual evaluations, gather people to discuss what they found and prior
         <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description>In individual interviews, an interviewer talks with one user for 30 minutes to an hour. Individual interviews allow you to probe their attitudes, beliefs, desires, and experiences to get a deeper understanding of the users who come to your site. You can also ask them to rate or rank choices for site content.  These interviews can take place face-to-face, by phone or video conference, or via instant messaging system.</dc:description>
         <rdfs:label>Interviewing</rdfs:label>
-        <steps>Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a back up. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
+        <steps>Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a backup. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
 Sit down one-on-one with the participant, or two-on-one with a note-taker or joint interviewer, in a focused environment. Introduce yourself. Explain the premise for the interview as far as you can without biasing their responses.
 Follow the conversation where the participant takes it. They will focus on their priorities and interests. Be comfortable with silences, which allow the participant to elaborate. To keep from getting entirely off course, use your interview guide to make sure you cover what you need to. Ask lots of “why is that” and “how do you do that” questions.
-If there are other products they use or your product doesn’t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</steps>
+If there are other products they use or your product doesn&apos;t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</steps>
     </owl:NamedIndividual>
     
 
@@ -879,6 +906,7 @@ If there are other products they use or your product doesn’t have constraints 
         <describedBy rdf:resource="https://www.uxmethods.org/WebsiteNavigationPlanningAndImplementing_SmashingMagazine"/>
         <inputProvidedBy rdf:resource="https://www.uxmethods.org/CardSorting"/>
         <inputProvidedBy rdf:resource="https://www.uxmethods.org/CategoryDesign"/>
+        <inputProvidedBy rdf:resource="https://www.uxmethods.org/CompetitiveAnalysis"/>
         <inputProvidedBy rdf:resource="https://www.uxmethods.org/Prototyping"/>
         <produces rdf:resource="https://www.uxmethods.org/LabelingScheme"/>
         <produces rdf:resource="https://www.uxmethods.org/NavigationModel"/>
@@ -1170,6 +1198,7 @@ Document and analyze responses. Try organizing your research findings into categ
         <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/VisualDesignMethod"/>
+        <inputProvidedBy rdf:resource="https://www.uxmethods.org/CompetitiveAnalysis"/>
         <inputProvidedBy rdf:resource="https://www.uxmethods.org/FirstClickTesting"/>
         <inputProvidedBy rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
         <produces rdf:resource="https://www.uxmethods.org/InformationHierarchy"/>

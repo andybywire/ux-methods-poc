@@ -18,17 +18,20 @@ CONSTRUCT {
   ?URI a :Method;
     :produces ?productIRI;
     dc:description ?description;
-    :providesInputFor ?inputForIRI;
     rdfs:label ?label;
-    :steps ?steps.
+    :steps ?steps;
+    :providesInputFor ?inputForIRI.
 } 
 WHERE {
   BIND (URI(CONCAT('https://www.uxmethods.org/', ?id)) AS ?URI)
   ?product apf:strSplit (?produces ",")
   BIND (REPLACE(?product, " ", "") AS ?productId)
   BIND (URI(CONCAT('https://www.uxmethods.org/', ?productId)) AS ?productIRI)
-  BIND (REPLACE(?inputFor, " ", "") AS ?inputForId)
-  BIND (URI(CONCAT('https://www.uxmethods.org/', ?inputForId)) AS ?inputForIRI)
+  OPTIONAL {
+    ?input apf:strSplit (?inputFor ",")
+    BIND (REPLACE(?input, " ", "") AS ?inputForId)
+    BIND (URI(CONCAT('https://www.uxmethods.org/', ?inputForId)) AS ?inputForIRI)
+  }
 }
 
 # sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl
