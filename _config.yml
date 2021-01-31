@@ -7,7 +7,8 @@ baseurl: "/"
 url: "http://uxmethods.org"
 github_username: andybywire
 ontology_repo: "https://github.com/andybywire/ux-methods-ontology"
-kg_repo: "https://github.com/andybywire/ux-methods-kg"
+kg_repo: "https://github.com/andybywire/ux-methods"
+repo: "https://github.com/andybywire/ux-methods"
 
 defaults:
   -
