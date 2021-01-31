@@ -62,7 +62,8 @@ function watch() {
       "serviceworker.js",
       "**/*.md",
       "_config.yml",
-      "_data/*"
+      "!_data/**",
+      "_data/UXMethods.owl"
     ],
     gulp.series(jekyll, reload)
   );
