@@ -476,7 +476,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ContentInsight">
         <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Insight into the quality, content, and scope of existing content&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into the quality, content, and scope of existing content.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Insight</rdfs:label>
     </owl:NamedIndividual>
     
@@ -502,7 +502,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ContentStructure">
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The arrangementand, number, and hierarchy of categories used to classify content and resources&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The arrangementand, number, and hierarchy of categories used to classify content and resources</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Structure</rdfs:label>
     </owl:NamedIndividual>
     
@@ -606,7 +606,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/NavigationModel">
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The set of patterns, structures, and supported behaviors that afford users to opportunity to move between content and interface elements&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of patterns, structures, and supported behaviors that afford users to opportunity to move between content and interface elements</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Navigation Model</rdfs:label>
     </owl:NamedIndividual>
     
@@ -616,7 +616,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/SiteMap">
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A visual or schematic representation of a website&apos;s categories, structure, and navigation&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A visual or schematic representation of a website&apos;s categories, structure, and navigation</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site Map</rdfs:label>
     </owl:NamedIndividual>
     
@@ -671,7 +671,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UserBehavior">
         <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Insight into how users interact with an interface, service, or product&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into how users interact with an interface, service, or product</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Behavior</rdfs:label>
     </owl:NamedIndividual>
     
@@ -706,7 +706,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UserSatisfaction">
         <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The degree to which users feel they are able to effectively and easily meet their needs with a given interface</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree to which users feel they are able to effectively and easily meet their needs with a given interface</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Satisfaction</rdfs:label>
     </owl:NamedIndividual>
     

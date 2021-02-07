@@ -632,7 +632,7 @@ For every piece of content they might come across on that task flow, note who wr
         <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Insight into the quality, content, and scope of existing content&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into the quality, content, and scope of existing content.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Insight</rdfs:label>
     </owl:NamedIndividual>
     
@@ -660,7 +660,7 @@ For every piece of content they might come across on that task flow, note who wr
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The arrangementand, number, and hierarchy of categories used to classify content and resources&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The arrangementand, number, and hierarchy of categories used to classify content and resources</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Structure</rdfs:label>
     </owl:NamedIndividual>
     
@@ -677,7 +677,6 @@ For every piece of content they might come across on that task flow, note who wr
         <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
         <describedBy rdf:resource="https://www.uxmethods.org/ContextualInterviews_InteractionDesignFoundation"/>
         <describedBy rdf:resource="https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus"/>
-        <produces rdf:resource="https://www.uxmethods.org/Interviewing"/>
         <produces rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description>During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don&apos;t use tasks or scripts.</dc:description>
@@ -938,7 +937,7 @@ Test and iterate</steps>
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The set of patterns, structures, and supported behaviors that afford users to opportunity to move between content and interface elements&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of patterns, structures, and supported behaviors that afford users to opportunity to move between content and interface elements</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Navigation Model</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1000,7 +999,7 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A visual or schematic representation of a website&apos;s categories, structure, and navigation&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A visual or schematic representation of a website&apos;s categories, structure, and navigation</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site Map</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1019,7 +1018,6 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <describedBy rdf:resource="https://www.uxmethods.org/TheDelicateArtofInterviewingStakeholders_EightShapes"/>
         <describedBy rdf:resource="https://www.uxmethods.org/Theultimateguidetostakeholderinterviews%3Aunderstandyourclients_UXCollective"/>
         <produces rdf:resource="https://www.uxmethods.org/BusinessGoals"/>
-        <produces rdf:resource="https://www.uxmethods.org/Interviewing"/>
         <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
         <dc:description>Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it.</dc:description>
         <rdfs:label>Stakeholder Interviewing</rdfs:label>
@@ -1116,7 +1114,7 @@ Document and analyze responses. Try organizing your research findings into categ
         <focusOf rdf:resource="https://www.uxmethods.org/InteractionDesign"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Insight into how users interact with an interface, service, or product&quot;</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into how users interact with an interface, service, or product</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Behavior</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1158,7 +1156,7 @@ Document and analyze responses. Try organizing your research findings into categ
         <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The degree to which users feel they are able to effectively and easily meet their needs with a given interface</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree to which users feel they are able to effectively and easily meet their needs with a given interface</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Satisfaction</rdfs:label>
     </owl:NamedIndividual>
     

@@ -3,6 +3,6 @@
     <uri id="User Entered Import Resolution" name="https://www.uxmethods.org/WebResources" uri="WebResources.ttl"/>
     <uri id="User Entered Import Resolution" name="https://www.uxmethods.org/Methods" uri="Methods.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1612033258928" name="https://www.uxmethods.org/" uri="UXMethodsKG.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1612393344114" name="https://www.uxmethods.org/" uri="UXMethodsKG.owl"/>
     </group>
 </catalog>

@@ -45,11 +45,6 @@
 
 :ContextualInterviewing
         rdf:type        :Method ;
-        :produces       :Interviewing ;
-        dc:description  "During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don't use tasks or scripts." ;
-        rdfs:label      "Contextual Interviewing" ;
-        :steps          "Introduce yourself and build rapport with the user\nTransition from a traditional interview to a master-apprentice model. Tell the participant that you want to learn by watching and asking questions, as if you were an apprentice learning how to do their job\nObserve. Resist the temptation to continually ask questions. The observation phase is where you should spend the bulk of your time. \nInterpret: verify your assumptions and conclusions with the participant.\nSummarize. Immediately at the end of each sessions, write down your immediate thoughts and observations." ;
-        rdf:type        :Method ;
         :produces       :UserGoals ;
         dc:description  "During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don't use tasks or scripts." ;
         rdfs:label      "Contextual Interviewing" ;
@@ -129,11 +124,6 @@
         :providesInputFor  :NavigationDesign .
 
 :StakeholderInterviewing
-        rdf:type        :Method ;
-        :produces       :Interviewing ;
-        dc:description  "Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it." ;
-        rdfs:label      "Stakeholder Interviewing" ;
-        :steps          "Establish goals. What you want to find out from interviewees?\nIdentify stakeholders. The number and role of stakeholders will vary depending on the organization. In smaller companies, you may talk to the founder or CEO. In large organizations, department heads (or their proxies) may be who you need. \nPrepare questions. Keep them open ended and as a guide to the conversation.\nDocument and analyze responses. Try organizing your research findings into categories: Business, Users, Problems, Fears, Motives, Competitive advantages, Solutions, Alternatives, and Unique value propositions." ;
         rdf:type        :Method ;
         :produces       :UserGoals ;
         dc:description  "Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it." ;
