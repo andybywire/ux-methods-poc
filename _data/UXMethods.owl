@@ -63,6 +63,12 @@ Project Goals
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
@@ -647,7 +653,10 @@ For every piece of content they might come across on that task flow, note who wr
         <focusesOn rdf:resource="https://www.uxmethods.org/ContentStructure"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/MetadataScheme"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description xml:lang="en">Content strategy focuses on the planning, creation, delivery, and governance of content.</dc:description>
+        <dc:description xml:lang="en">Content strategy focuses on the planning, creation, delivery, and governance of content. Content not only includes the words on the page but also the images and multimedia that are used. Ensuring that you have useful and usable content that is well structured and easily found is vital to improving the user experience of a website. 
+Content strategy methods help you to identify what content already exists, when content needs to be improved, and where new content should be created.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/content-strategy.html</dc:source>
         <rdfs:label>Content Strategy</rdfs:label>
         <shortDescription>Focuses on the planning, creation, delivery, and governance of content.</shortDescription>
     </owl:NamedIndividual>
@@ -793,7 +802,9 @@ After individual evaluations, gather people to discuss what they found and prior
         <focusesOn rdf:resource="https://www.uxmethods.org/NavigationModel"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/SiteMap"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description xml:lang="en">Information architecture (IA) focuses on organizing, structuring, and labeling content in an effective and sustainable way in order to help users find information and complete tasks. Update.</dc:description>
+        <dc:description xml:lang="en">Information architecture (IA) focuses on organizing, structuring, and labeling content in an effective and sustainable way in order to help users find information and complete tasks. Information architecture tasks help you understand how the pieces fit together to create the larger picture, and how items relate to each other within the overall information system.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/information-architecture.html</dc:source>
         <rdfs:label>Information Architecture</rdfs:label>
         <shortDescription>Focuses on organizing, structuring, and labeling content for findability.</shortDescription>
     </owl:NamedIndividual>
@@ -821,7 +832,9 @@ After individual evaluations, gather people to discuss what they found and prior
         <focusesOn rdf:resource="https://www.uxmethods.org/InteractionPattern"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description xml:lang="en">Interaction design focuses on creating engaging interfaces with well thought out behaviors.</dc:description>
+        <dc:description xml:lang="en">Understanding how users and technology communicate with each other is fundamental to creating an effective user experience. Interaction design methods focus on creating engaging interfaces with well thought out behaviors. With this understanding, you can anticipate how someone might interact with the system, fix problems early, as well as invent new ways of doing things.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/interaction-design.html</dc:source>
         <rdfs:label>Interaction Design</rdfs:label>
         <shortDescription>Focuses on creating engaging interfaces with well thought out behaviors.</shortDescription>
     </owl:NamedIndividual>
@@ -1099,7 +1112,10 @@ Document and analyze responses. Try organizing your research findings into categ
         <focusesOn rdf:resource="https://www.uxmethods.org/TaskCompletionInsight"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserSatisfaction"/>
-        <dc:description xml:lang="en">Usability Evaluation focuses on how well users can learn and use a product to achieve their goals. It also refers to how satisfied users are with that process. To gather this information, practitioners use a variety of methods that gather feedback from users about an existing site or plans related to a new site.</dc:description>
+        <dc:description xml:lang="en">Usability Evaluation focuses on how well users can learn and use a product to achieve their goals. It also refers to how satisfied users are with that process. To gather this information, practitioners use a variety of methods that gather feedback from users about an existing site or plans related to a new site.
+Usability Evaluation methods focus on the quality of a user&apos;s experience when interacting with products or systems, including websites, software, devices, or applications.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/usability-evaluation.html</dc:source>
         <rdfs:label>Usability Evaluation</rdfs:label>
         <shortDescription>Focuses on how well users can learn and use a product to achieve their goals.</shortDescription>
     </owl:NamedIndividual>
@@ -1143,7 +1159,10 @@ Document and analyze responses. Try organizing your research findings into categ
         <focusesOn rdf:resource="https://www.uxmethods.org/MentalModel"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description xml:lang="en">User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies.</dc:description>
+        <dc:description xml:lang="en">User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies.  Mike Kuniaysky further notes that it is \“the process of understanding the impact of design on an audience.\&quot;
+Which user research methods you can or should perform will depend on the type of site, system or app you are developing, your timeline, and your environment.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/user-research.html</dc:source>
         <rdfs:label>User Research</rdfs:label>
         <shortDescription>Focuses on an empirical understanding user behaviors, needs, and motivations.</shortDescription>
     </owl:NamedIndividual>
@@ -1169,7 +1188,9 @@ Document and analyze responses. Try organizing your research findings into categ
         <focusesOn rdf:resource="https://www.uxmethods.org/ColorPalette"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/InformationHierarchy"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/Typography"/>
-        <dc:description xml:lang="en">Visual design focuses on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements.  A successful visual design does not take away from the content on the page or function. Instead, it enhances it by engaging users and helping to build trust and interest in the brand.</dc:description>
+        <dc:description xml:lang="en">Visual design methods focus on the aesthetics of a site and its related materials by strategically implementing images, colors, fonts, and other elements. A successful visual design does not take away from the content on the page or function. Instead, it enhances it by engaging users and helping to build trust and interest in the brand.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/visual-design.html</dc:source>
         <rdfs:label>Visual Design</rdfs:label>
         <shortDescription>Focuses on the aesthetics of a site, including images, colors, and fonts.</shortDescription>
     </owl:NamedIndividual>

@@ -16,7 +16,10 @@ page_class: discipline
     </picture> 
     <section>
       <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Discipline</span></h1>
-      <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
+      {% assign description_pars = page.rdf | rdf_property: 'dc:description' | newline_to_br | strip_newlines | split: '<br />' %}
+      {% for par in description_pars %}
+      <p>{{ par }}</p>
+      {% endfor %}
     </section>
   </article>
 </section>
