@@ -176,6 +176,18 @@ main.home {
   }
 }
 main.discipline {
+  .resource {
+    p.source {
+      text-align: right;
+      span {
+        padding-left: .5rem;
+      }
+      svg {
+        height: 14px;
+        width: 14px;
+      }
+    }
+  }
   @media (max-width: map-get($breakpoints, medium) - 1) {
     section:first-of-type {
       padding: 0;
