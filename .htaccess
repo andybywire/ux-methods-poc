@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# <IfModule mod_expires.c>
+#   <FilesMatch "serviceworker.js">
+#     ExpiresDefault "access plus 0 seconds"
+#   </FilesMatch>
+# </IfModule>
+
+# ErrorDocument 404 /404/index.html
+
+Redirect 301 /ontology https://github.com/andybywire/ux-methods/tree/main/_data/etl#the-ux-methods-ontology
