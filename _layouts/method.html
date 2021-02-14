@@ -6,7 +6,11 @@ rdf_prefix_path: "_data/prefixes.sparql"
   <article>
     <section>
       <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Method</span></h1>
-      <p>{{ page.rdf | rdf_property: 'dc:description' }}</p>
+      {% assign description_pars = page.rdf | rdf_property: 'dc:description' | newline_to_br | strip_newlines | split: '<br />' %}
+      {% for par in description_pars %}
+      <p>{{ par }}</p>
+      {% endfor %}
+      <p class="source"><a href="{{ page.rdf | rdf_property: 'dc:source' }}">{{ page.rdf | rdf_property: 'dc:publisher' }}<span>{% include svg/external_link.svg %}</span></a></p>
     </section>
     <!-- Method steps -->
     <section>

@@ -205,6 +205,19 @@ section.resource {
     grid-gap: 6rem;
   }
 }
+// Method and Discipline add .resource at a different level. Sort out why and clean this up so that declarations like this will be tidier. 
+.resource {
+  p.source {
+    text-align: right;
+    span {
+      padding-left: .5rem;
+    }
+    svg {
+      height: 14px;
+      width: 14px;
+    }
+  }
+}
 aside {
   @include breakpoint(med-lg) {
     padding-top: 2.3rem;

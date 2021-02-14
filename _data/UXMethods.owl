@@ -526,8 +526,12 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <produces rdf:resource="https://www.uxmethods.org/MentalModel"/>
         <produces rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
-        <dc:description>Card sorting is a method used to help design or evaluate the information architecture of a site. In a card sorting session, participants organize topics into categories that make sense to them and they may also help you label these groups. To conduct a card sort, you can use actual cards, pieces of paper, or one of several online card-sorting software tools.</dc:description>
+        <dc:description>Card sorting is a method used to help design or evaluate the information architecture of a site. In a card sorting session, participants organize topics into categories that make sense to them and they may also help you label these groups. To conduct a card sort, you can use actual cards, pieces of paper, or one of several online card-sorting software tools.
+Card sorting will help you understand your users&apos; expectations and understanding of your topics. It is often most useful once you have done some homework to find out about your users and understand your content. Knowing how your users group information can help you build the structure for your website, decide what to put on the homepage, and create effective labels for categories and navigation.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source>https://www.usability.gov/how-to-and-tools/methods/card-sorting.html</dc:source>
         <rdfs:label>Card Sorting</rdfs:label>
+        <shortDescription>Design or evaluate the information architecture of a site.</shortDescription>
         <steps>Give users a collection of content represented on cards.
 Ask users to separate the cards into whatever categories make sense to them.
 Ask users to label those categories.
@@ -557,28 +561,19 @@ Ask users to tell you why they grouped the cards and labeled the categories as t
         <describedBy rdf:resource="https://www.uxmethods.org/AvoidCategoryNamesThatSuck_NielsenNormanGroup"/>
         <describedBy rdf:resource="https://www.uxmethods.org/Classification%2CNavigation%2CandtheSecretLivesofWatermelon_Anthro-Tech"/>
         <inputProvidedBy rdf:resource="https://www.uxmethods.org/CompetitiveAnalysis"/>
-        <inputProvidedBy rdf:resource="https://www.uxmethods.org/OpenCardSorting"/>
         <produces rdf:resource="https://www.uxmethods.org/MetadataScheme"/>
         <produces rdf:resource="https://www.uxmethods.org/SiteMap"/>
         <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
-        <dc:description>The design of the structures and schemes used to categorize content and resources in order to make the location and use of resources easier for the intended audience.</dc:description>
+        <dc:description>The design of the structures and schemes used to categorize content and resources in order to make the location and use of resources easier for the intended audience.
+An organizational structure is how you define the relationships between pieces of content. Successful structures allow users to predict where they will find information on the site. Organization schemes have to do with how you are going to categorize your content and the various ways you&apos;ll create relationships between each piece. Most content can be categorized in multiple ways, including those that are &quot;exact&quot; (like alphabetical, or geographic) and those that are &quot;subjective,&quot; such as those based on topics or tasks.  Depending on the content, it’s conceivable that a site may combine schemes as opposed to treating them independently.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source>https://www.usability.gov/how-to-and-tools/methods/organization-schemes.html</dc:source>
         <rdfs:label>Category Design</rdfs:label>
+        <shortDescription>Creating structures and schemes that make the location and use of content clear.</shortDescription>
         <steps>Gather data about your users, content, and business context. Conduct a content audit to determine what content you have, run a card sort to learn how your users think about that content, and talk to business stakeholders to understand your organization&apos;s priorities. 
 Draft a classification scheme that balances a usable distribution of your current (and pending) content, user needs, and business goals.
 Label your categories with terms that match user mental models and align with business and brand priorities.
 Test your system (tree testing and interactive prototypes are good for this) and revise your category scheme as needed. </steps>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://www.uxmethods.org/ClosedCardSorting -->
-
-    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/ClosedCardSorting">
-        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
-        <rdf:type rdf:resource="https://www.uxmethods.org/UsabilityEvaluationMethod"/>
-        <produces rdf:resource="https://www.uxmethods.org/NavigationEffectiveness"/>
-        <dc:description>Participants are asked to sort topics from content within your website into predefined categories. A closed card sort works best when you are working with a predefined set of categories, and you want to learn how users sort content items into each category.</dc:description>
-        <rdfs:label>Closed Card Sorting</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -608,10 +603,11 @@ Test your system (tree testing and interactive prototypes are good for this) and
         <providesInputFor rdf:resource="https://www.uxmethods.org/CategoryDesign"/>
         <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
         <providesInputFor rdf:resource="https://www.uxmethods.org/Wireframing"/>
-        <dc:description>A competitive analysis is a formal exploration of the companies or organizations in a given industry sector or market niche, typically those that are competing with your company’s products or services for market share. Competitive analysis can help you identify opportunities, gaps in other services, and potential design patterns to adopt or avoid. In most cases, you will identify competitors in collaboration with your client or project sponsor. The analysis may be an in-depth exploration of the top five competitors, or a larger survey of a greater number of competitors (typically with less depth in the analysis). In most cases, the client will have identified the target competitors for you.
-
-Identifying your competitors and evaluating their strategies to determine their strengths and weaknesses relative to those of your own product or service.</dc:description>
+        <dc:description>A competitive analysis is a formal exploration of the companies or organizations in a given industry sector or market niche, typically those that are competing with your company’s products or services for market share. Competitive analysis can help you identify opportunities, gaps in other services, and potential design patterns to adopt or avoid. In most cases, you will identify competitors in collaboration with your client or project sponsor. The analysis may be an in-depth exploration of the top five competitors, or a larger survey of a greater number of competitors (typically with less depth in the analysis). In most cases, the client will have identified the target competitors for you.</dc:description>
+        <dc:publisher>Boxes and Arrows</dc:publisher>
+        <dc:source>https://boxesandarrows.com/competitive-analysis-understanding-the-market-context/</dc:source>
         <rdfs:label>Competitive Analysis</rdfs:label>
+        <shortDescription>Evaluate competitors to identify opportunities in their strengths and weaknesses.</shortDescription>
         <steps>Identify a list of services that would be either direct or related competitors to your service. Pare the list down to four or five.
 Establish which criteria or heuristics you will use to evaluate each competing service.
 Break down the analysis of each selected competitor into specific focal areas for evaluation. For example, how relevant are search results?
@@ -628,7 +624,10 @@ Present the analysis, which should showcase areas of opportunities that you can 
         <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
         <produces rdf:resource="https://www.uxmethods.org/ContentInsight"/>
         <dc:description>A content audit is a listing and analysis of all the content on an existing website (including pages, files, videos, audio or other data) that your users might reasonably encounter. Content audits identify content that needs to be revised in new versions of a website. Content audits can also help you identify who is responsible for content, how often it should be updated, and what role a particular piece of content plays for users.</dc:description>
+        <dc:publisher>18F</dc:publisher>
+        <dc:source>https://methods.18f.gov/decide/content-audit/</dc:source>
         <rdfs:label>Content Auditing</rdfs:label>
+        <shortDescription>Identify and assess the quality and usefulness of existing content.</shortDescription>
         <steps>Identify a specific user need or user question that you’d like to address.
 Create an inventory of content on your website. Navigate through the site from the home page and make notes about every piece of content. Common elements include: title used in the site’s navigation for that page, title displayed on the page or item itself, URL, and parent page.
 Identify the main entry points for the user need you’re addressing. This could be external marketing, the homepage, a microsite, or another page.
@@ -695,8 +694,12 @@ Content strategy methods help you to identify what content already exists, when 
         <describedBy rdf:resource="https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus"/>
         <produces rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description>During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don&apos;t use tasks or scripts.</dc:description>
+        <dc:description>During contextual interviews, researchers watch and listen as users work in the user’s own environment, as opposed to being in a lab. Contextual interviews tend to be more natural and sometimes more realistic as a result. They are also usually less formal than lab tests and don&apos;t use tasks or scripts.
+In a contextual interview, you watch and listen as the user works. You don&apos;t usually give the user tasks or scenarios. To understand what a user is doing or thinking you can ask questions as the user navigates the site. The results are usually qualitative, observed data, rather than quantitative, measured data.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source>https://www.usability.gov/how-to-and-tools/methods/contextual-interview.html</dc:source>
         <rdfs:label>Contextual Interviewing</rdfs:label>
+        <shortDescription>Observation of users performing tasks in their own environment. </shortDescription>
         <steps>Introduce yourself and build rapport with the user
 Transition from a traditional interview to a master-apprentice model. Tell the participant that you want to learn by watching and asking questions, as if you were an apprentice learning how to do their job
 Observe. Resist the temptation to continually ask questions. The observation phase is where you should spend the bulk of your time. 
@@ -731,8 +734,12 @@ Summarize. Immediately at the end of each sessions, write down your immediate th
         <produces rdf:resource="https://www.uxmethods.org/TaskCompletionInsight"/>
         <produces rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <providesInputFor rdf:resource="https://www.uxmethods.org/Wireframing"/>
-        <dc:description>First Click Testing examines what a test participant would click on first on the interface in order to complete their intended task.  It can be performed on a functioning website, a prototype or a wireframe. Though this testing can be done with observation alone, recording the sessions is recommended.  There is also software available which can assist you in tracking clicks and creating heatmaps of the activity.</dc:description>
+        <dc:description>First Click Testing examines what a test participant would click on first on the interface in order to complete their intended task. It can be performed on a functioning website, a prototype or a wireframe. Successful websites take users’ tasks into account upfront. First Click Testing allows you to evaluate the effectiveness of the linking structure of your site, including the navigation, to see if users how to get around the site and complete their intended task.
+Though this testing can be done with observation alone, recording the sessions is recommended. There is also software available which can assist you in tracking clicks and creating heatmaps of the activity.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source>https://www.usability.gov/how-to-and-tools/methods/first-click-testing.html</dc:source>
         <rdfs:label>First Click Testing</rdfs:label>
+        <shortDescription>Discover what users interact with first when they land on your web page.</shortDescription>
         <steps>When creating tasks, focus on providing the participants with a problem to solve; You are interested in finding out how much…how many…where to… to foster a more natural interaction with the site.
 Make sure you know and have documented the correct path to compete each task, both for yourself and for your observers. This will simplify note taking and transcription.
 Track each click and time how long it takes the user to make this click.  Taking a long time to make that first click may indicate an issue with navigation that will need to be monitored or address.
@@ -773,8 +780,12 @@ Next assess the ease or difficulty of completing each task. Using response scale
         <rdf:type rdf:resource="https://www.uxmethods.org/UsabilityEvaluationMethod"/>
         <produces rdf:resource="https://www.uxmethods.org/NavigationEffectiveness"/>
         <produces rdf:resource="https://www.uxmethods.org/TaskCompletionInsight"/>
-        <dc:description>In a heuristic evaluation, usability experts review your site’s interface and compare it against accepted usability principles. The analysis results in a list of potential usability issues.</dc:description>
+        <dc:description>Heuristic evaluation is a process where experts use rules of thumb to measure the usability of user interfaces in independent walkthroughs and report issues. Evaluators use established heuristics (rules of thumb) to reveal insight that can help design teams enhance product usability from early in development.
+A heuristic evaluation should not replace usability testing. Although the heuristics relate to criteria that affect a site’s usability, the issues identified in a heuristic evaluation are not be as specific those found in a usability test with actual users.</dc:description>
+        <dc:publisher>Interaction Design Foundation</dc:publisher>
+        <dc:source>https://www.interaction-design.org/literature/topics/heuristic-evaluation</dc:source>
         <rdfs:label>Heuristic Evaluation</rdfs:label>
+        <shortDescription>Evaluate a site to indentify usability flaws and other areas for improvement.</shortDescription>
         <steps>Recruit a group of three to five people familiar with evaluation methods. These people are not necessarily designers, but are familiar with common usability best practices. They are usually not users.
 Ask each person to individually create a list of “heuristics” or general usability best practices. 
 Ask each person to evaluate the website against their list and write down possible problems.
@@ -861,21 +872,16 @@ After individual evaluations, gather people to discuss what they found and prior
     
 
 
-    <!-- https://www.uxmethods.org/Interviewing -->
+    <!-- https://www.uxmethods.org/InterviewingUsers_NielsenNormanGroup -->
 
-    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/Interviewing">
-        <rdf:type rdf:resource="https://www.uxmethods.org/ContentStrategyMethod"/>
-        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
-        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
-        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
-        <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
-        <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description>In individual interviews, an interviewer talks with one user for 30 minutes to an hour. Individual interviews allow you to probe their attitudes, beliefs, desires, and experiences to get a deeper understanding of the users who come to your site. You can also ask them to rate or rank choices for site content.  These interviews can take place face-to-face, by phone or video conference, or via instant messaging system.</dc:description>
-        <rdfs:label>Interviewing</rdfs:label>
-        <steps>Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a backup. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
-Sit down one-on-one with the participant, or two-on-one with a note-taker or joint interviewer, in a focused environment. Introduce yourself. Explain the premise for the interview as far as you can without biasing their responses.
-Follow the conversation where the participant takes it. They will focus on their priorities and interests. Be comfortable with silences, which allow the participant to elaborate. To keep from getting entirely off course, use your interview guide to make sure you cover what you need to. Ask lots of “why is that” and “how do you do that” questions.
-If there are other products they use or your product doesn&apos;t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</steps>
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/InterviewingUsers_NielsenNormanGroup">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/UserInterviewing"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nngroup.com/articles/interviewing-users/</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-07-25</dc:created>
+        <dc:creator>Jakob Nielsen</dc:creator>
+        <dc:publisher>Nielsen Norman Group</dc:publisher>
+        <dc:title>Interviewing Users </dc:title>
     </owl:NamedIndividual>
     
 
@@ -931,11 +937,15 @@ If there are other products they use or your product doesn&apos;t have constrain
         <produces rdf:resource="https://www.uxmethods.org/LabelingScheme"/>
         <produces rdf:resource="https://www.uxmethods.org/NavigationModel"/>
         <providesInputFor rdf:resource="https://www.uxmethods.org/Wireframing"/>
-        <dc:description>Creating the system of hyperlinks that allows users to navigate between pages of a website.</dc:description>
+        <dc:description>A website’s navigation is a collection of user interface components. The primary goal of navigation is to help users find information and functionality, and encourage them to take desirable actions. Navigation components include global navigation, local navigation, utility navigation, breadcrumbs, filters, facets, related links, footers, fat footers, and so on.
+When approaching a design or redesign project, it is important to take a look under the hood and start by defining or redefining the IA. The IA doesn’t need to be final before beginning to wireframe and prototype, but a first pass is necessary to get a handle on the volume and complexity of the content. Making navigation component choices based on looks alone can force you to change an ideal IA to something that doesn’t best serve the needs of users or accommodate your content.</dc:description>
+        <dc:publisher>Nielsen Norman Group</dc:publisher>
+        <dc:source>https://www.nngroup.com/articles/ia-vs-navigation/</dc:source>
         <rdfs:label>Navigation Design</rdfs:label>
-        <steps>Organize structure
-Assign labels
-Test and iterate</steps>
+        <shortDescription>The system of links that allows users to move between pages of a website.</shortDescription>
+        <steps>Determine usage priority: How much will users rely on this navigation component? For example, will users primarily navigate the site using local navigation? Or are they likely to more heavily rely on related links?
+Determine placement: On which pages should navigation be present? Where should it be placed within the page layout grid (e.g., top, left, right, bottom)?
+Establish patterns: Which navigation design patterns best support findability and discoverability — tabs, megamenus, carousels, accordions, and so on?</steps>
     </owl:NamedIndividual>
     
 
@@ -966,19 +976,6 @@ Test and iterate</steps>
     
 
 
-    <!-- https://www.uxmethods.org/OpenCardSorting -->
-
-    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/OpenCardSorting">
-        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
-        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
-        <produces rdf:resource="https://www.uxmethods.org/LabelingScheme"/>
-        <providesInputFor rdf:resource="https://www.uxmethods.org/CategoryDesign"/>
-        <dc:description>Participants are asked to organize topics from content within your website into groups that make sense to them and then name each group they created in a way that they feel accurately describes the content. Use an open card sort to learn how users group content and the terms or labels they give each category.</dc:description>
-        <rdfs:label>Open Card Sorting</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://www.uxmethods.org/Prototyping -->
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/Prototyping">
@@ -992,8 +989,12 @@ Test and iterate</steps>
         <produces rdf:resource="https://www.uxmethods.org/InteractionPattern"/>
         <produces rdf:resource="https://www.uxmethods.org/NavigationModel"/>
         <providesInputFor rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
-        <dc:description>A prototype is a draft version of a product that allows you to explore your ideas and show the intention behind a feature or the overall design concept to users before investing time and money into development. A prototype can be anything from paper drawings (low-fidelity) to something that allows click-through of a few pieces of content to a fully functioning site (high-fidelity).</dc:description>
+        <dc:description>Prototyping is an experimental process where design teams implement ideas into tangible forms. Teams build prototypes of varying degrees of fidelity to capture design concepts and test with users. With prototypes, you can refine and validate your designs so you can be more sure you release the right products.
+Start by crafting a simple experimental model of your proposed product so you can check how well it matches what users want through the feedback they give. You should consider prototyping from early on—using paper prototyping, if appropriate—so the feedback you gather from users can help guide development.</dc:description>
+        <dc:publisher>Interaction Design Foundation</dc:publisher>
+        <dc:source>https://www.interaction-design.org/literature/topics/prototyping</dc:source>
         <rdfs:label>Prototyping</rdfs:label>
+        <shortDescription>A draft version of a product that helps you explore its functionality and use. </shortDescription>
         <steps>Determine what you need your prototype to accomplish. What moments in the experience do you need to gather more information on? 
 Determine the modality of your prototype. Can you answer your product and experience questions with a simple paper prototype, or do you need to be able to click through scenarios on a device? If the latter, can you click through PDFs or a Figma file, or will you need to mock up your prototype in HTML?
 Determine the fidelity of your prototype based on what you need to learn. Fidelity ranges from low-fidelity (often inexpensive), to high-fidelity, which simulates a greater range of functionality, but often takes more time (and more money).
@@ -1042,8 +1043,12 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <describedBy rdf:resource="https://www.uxmethods.org/Theultimateguidetostakeholderinterviews%3Aunderstandyourclients_UXCollective"/>
         <produces rdf:resource="https://www.uxmethods.org/BusinessGoals"/>
         <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description>Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it.</dc:description>
+        <dc:description>Someone is a stakeholder when they care about the outcome of your project. They may be accountable for its success or failure. They may contribute to the care and maintenance of the product. Interviewing stakeholders helps us better understand not just what we’re designing, but how we’ll need to design it.
+Different stakeholders influence the process differently, and you can’t plan for those vectors if you’re not aware of them. As a designer, understanding and acknowledging these factors, influences, and inputs can help put you on the right path toward a project’s goals.</dc:description>
+        <dc:publisher>Eight Shapes</dc:publisher>
+        <dc:source>https://medium.com/eightshapes-llc/the-delicate-art-of-interviewing-stakeholders-d6496443cbec</dc:source>
         <rdfs:label>Stakeholder Interviewing</rdfs:label>
+        <shortDescription>Understanding the perspective and influence of those invested in a project&apos;s success.</shortDescription>
         <steps>Establish goals. What you want to find out from interviewees?
 Identify stakeholders. The number and role of stakeholders will vary depending on the organization. In smaller companies, you may talk to the founder or CEO. In large organizations, department heads (or their proxies) may be who you need. 
 Prepare questions. Keep them open ended and as a guide to the conversation.
@@ -1059,8 +1064,16 @@ Document and analyze responses. Try organizing your research findings into categ
         <rdf:type rdf:resource="https://www.uxmethods.org/VisualDesignMethod"/>
         <produces rdf:resource="https://www.uxmethods.org/ColorPalette"/>
         <produces rdf:resource="https://www.uxmethods.org/Typography"/>
-        <dc:description>A Style Tile is a design deliverable consisting of fonts colors and interface elements that communicates the evolution of a visual brand for the web.&apos;</dc:description>
+        <dc:description>A Style tile is a design deliverable consisting of fonts, colors, and interface elements that communicates the evolution of a visual brand for the web. Style tiles help form a common visual language between the designers and the stakeholders and provide a catalyst for discussions around the preferences and goals of the client.
+Style tiles are for when a moodboard is too vague and a comp is too literal. Style tiles establish a direct connection with actual interface elements without defining layout. They work well for clients who have established brands and need them to translate smoothly to the web. Whereas the word “mood” is often associated with brand and identity design, the word “style” was chosen to mirror “cascading stylesheets” and reinforce that style tiles are specific to Web design.</dc:description>
+        <dc:publisher>Style Tiles</dc:publisher>
+        <dc:source>http://styletil.es/</dc:source>
         <rdfs:label>Style Tile Creation</rdfs:label>
+        <shortDescription>Communicate the use of fonts, colors, and interface elements in a design system.</shortDescription>
+        <steps>Listen. It seems simple, but it is so easy to come out of the gate telling your client what you think they need. Your clients hold an invaluable amount of information. Hold a kickoff meeting and ask questions.
+Interpret what you hear. Aggregate adjectives from the answer process, identify themes and sort similarities.
+Define a Visual Language. This is the actual process of composing the style tile. Determine themes from the aggregated adjectives and begin to match them up with styles. The Style Tiles give the client a point of reference to determine if you both are on the same page.
+Iterate. Making changes in style out of the context of layout takes less time and allows you to work faster. Presenting multiple tiles gives you information to work with that can influence the evolution of a tile.</steps>
     </owl:NamedIndividual>
     
 
@@ -1163,6 +1176,31 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
     
 
 
+    <!-- https://www.uxmethods.org/UserInterviewing -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UserInterviewing">
+        <rdf:type rdf:resource="https://www.uxmethods.org/ContentStrategyMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InformationArchitectureMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/InteractionDesignMethod"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/Method"/>
+        <rdf:type rdf:resource="https://www.uxmethods.org/UserResearchMethod"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/InterviewingUsers_NielsenNormanGroup"/>
+        <describedBy rdf:resource="https://www.uxmethods.org/UserInterviews%3AHow%2CWhen%2CandWhytoConductThem_NielsenNormanGroup"/>
+        <produces rdf:resource="https://www.uxmethods.org/UserGoals"/>
+        <dc:description>In individual user interviews, an interviewer talks with one user for 30 minutes to an hour. Individual interviews allow you to probe participants&apos; attitudes, beliefs, desires, and experiences to get a deeper understanding of those who use your site or service. Interviews can take place face-to-face, by phone or video conference, or even via instant messaging system.
+You might also use individual interviews to supplement online surveys. Performing an interview before a survey helps you to refine questions for the survey. Interviewing participants after a survey allows you to probe for details and reasons behind answers that users give on a survey.</dc:description>
+        <dc:publisher>Usability.gov</dc:publisher>
+        <dc:source>https://www.usability.gov/how-to-and-tools/methods/individual-interviews.html</dc:source>
+        <rdfs:label>User Interviewing</rdfs:label>
+        <shortDescription>Understand the tasks and motivations of the user group for whom you are designing.</shortDescription>
+        <steps>Create a guide for yourself of some topics you’d like to ask about, and some specific questions as a backup. Questions will often concern the individual’s role, the organization, the individuals’ needs, and metrics for success of the project.
+Sit down one-on-one with the participant, or two-on-one with a note-taker or joint interviewer, in a focused environment. Introduce yourself. Explain the premise for the interview as far as you can without biasing their responses.
+Follow the conversation where the participant takes it. They will focus on their priorities and interests. Be comfortable with silences, which allow the participant to elaborate. To keep from getting entirely off course, use your interview guide to make sure you cover what you need to. Ask lots of “why is that” and “how do you do that” questions.
+If there are other products they use or your product doesn&apos;t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</steps>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.uxmethods.org/UserResearch -->
 
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UserResearch">
@@ -1235,8 +1273,13 @@ Which user research methods you can or should perform will depend on the type of
         <inputProvidedBy rdf:resource="https://www.uxmethods.org/NavigationDesign"/>
         <produces rdf:resource="https://www.uxmethods.org/InformationHierarchy"/>
         <produces rdf:resource="https://www.uxmethods.org/InteractionPattern"/>
-        <dc:description>A wireframe is a two-dimensional illustration of a page’s interface that specifically focuses on space allocation and prioritization of content, functionalities available, and intended behaviors.</dc:description>
+        <dc:description>Wireframes are basic visual guides in which designers propose elements for screens and webpages and show how experimental solutions would flow for target users. Wireframing is invaluable early in the interaction design process for design teams to explore how concepts accommodate user and business needs.
+Good wireframing is the skill of creating realistic-looking, lean layouts so your team and stakeholders can quickly determine if concepts are worth developing. Wireframing is distinct from prototyping in the sense that prototyping deals more with testing interactivity and, when done at the highest level of fidelity, sophisticated versions that might closely resemble the released products. 
+Wireframing is similar to prototyping, however, in that you can also do wireframing by hand (e.g. using boxes and lines to represent pictures, text, etc.) or with software and make low- to high-fidelity versions. In low-fidelity wireframing, you use placeholders to mark content and pictures in grayscale. In high-fidelity wireframing, you introduce more realism, including pictures and perhaps even some interactivity. Well-crafted wireframes can far more easily be adapted into prototypes for usability testing.</dc:description>
+        <dc:publisher>Interaction Design Foundation</dc:publisher>
+        <dc:source>https://www.interaction-design.org/literature/topics/wireframing</dc:source>
         <rdfs:label>Wireframing</rdfs:label>
+        <shortDescription>Interface illustration that focuses on prioritization, functionality, and behavior.</shortDescription>
         <steps>Build preliminary blueprints that show structure, placement, and hierarchy for your product. Steer clear of font choices, color, or other elements that would distract both the researcher and the reviewer. 
 Use this opportunity to start listing what UX/UI patterns you will need.
 Review your wireframes with specific user scenarios and personas in mind. Can users accomplish their task with the wireframe you are sketching out?
@@ -1310,6 +1353,20 @@ Use the wireframes to get the team’s feedback on feasibility and structure.</s
         <dc:creator>Adam Fard</dc:creator>
         <dc:publisher>UX Collective</dc:publisher>
         <dc:title>The ultimate guide to stakeholder interviews: understand your clients</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.uxmethods.org/UserInterviews%3AHow%2CWhen%2CandWhytoConductThem_NielsenNormanGroup -->
+
+    <owl:NamedIndividual rdf:about="https://www.uxmethods.org/UserInterviews%3AHow%2CWhen%2CandWhytoConductThem_NielsenNormanGroup">
+        <rdf:type rdf:resource="https://www.uxmethods.org/WebResource"/>
+        <describes rdf:resource="https://www.uxmethods.org/UserInterviewing"/>
+        <resourceLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nngroup.com/articles/user-interviews/</resourceLocation>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-07</dc:created>
+        <dc:creator>Kara Pernice</dc:creator>
+        <dc:publisher>Nielsen Norman Group</dc:publisher>
+        <dc:title>User Interviews: How, When, and Why to Conduct Them</dc:title>
     </owl:NamedIndividual>
 </rdf:RDF>
 

@@ -3,7 +3,7 @@
   <li class="method-card">
     <a href="/{{ resource.render_path }}">
       <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
-      <p>{{ resource | rdf_property: 'dc:description' | truncate: 90 }}</p>
+      <p>{{ resource | rdf_property: ':shortDescription' }}</p>
       {% assign produces = resource | rdf_property: ':produces', nil, true %}
       <ul>
       {% for outcome in produces limit: 2 %}

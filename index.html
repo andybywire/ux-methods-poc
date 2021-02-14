@@ -82,7 +82,7 @@ page_class: home
     WHERE {
       ?method rdf:type :Method ;
         rdfs:label ?label ;
-        dc:description ?description;
+        :shortDescription ?description;
         :produces ?output .
     }
     GROUP BY ?method ?label ?description
@@ -94,7 +94,7 @@ page_class: home
     <li class="method-card dark">
       <a href="{{ resource.label | replace: ' ','' }}.html">
         <h3>{{ resource.label }}</h3>
-        <p>{{ resource.description | truncate: 90 }}</p>
+        <p>{{ resource.description }}</p>
         {% assign produces = resource.method | rdf_property: ':produces', nil, true %}
         <ul>
         {% for outcome in produces limit: 2 %}
@@ -114,14 +114,17 @@ page_class: home
     <a class="see-all-top" href="/outcomes">Outcomes A-Z</a>
   </header>
   {% assign query = '
-    SELECT DISTINCT ?outcome ?label ?description (COUNT(?methods) AS ?method_count)
+    SELECT DISTINCT ?outcome ?label ?description ?shortDescription (COUNT(?methods) AS ?method_count)
     WHERE {
       ?outcome rdf:type :Outcome ;
         rdfs:label ?label ;
         dc:description ?description;
         :focusOf ?methods .
+        OPTIONAL {
+        ?outcome :shortDescription ?shortDescription.
+      }
     }
-    GROUP BY ?outcome ?label ?description
+    GROUP BY ?outcome ?label ?description ?shortDescription
     ORDER BY DESC(?method_count) ?outcome
   '%}
   {% assign topOutcomes = query | sparql_query %}
@@ -130,7 +133,11 @@ page_class: home
     <li class="method-card dark outcome">
       <a href="{{ resource.label | replace: ' ','' }}.html">
         <h3>{{ resource.label }}</h3>
-        <p>{{ resource.description | truncate: 90 }}</p>
+        {% if resource.shortDescription != nil %}
+        <p>{{ resource.shortDescription }}</p>
+        {% else %}
+        <p>{{ resource.description }}</p>
+        {% endif %}
       </a>
     </li>
   {% endfor %}

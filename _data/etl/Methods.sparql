@@ -18,6 +18,9 @@ CONSTRUCT {
   ?URI a :Method;
     :produces ?productIRI;
     dc:description ?description;
+    dc:source ?source;
+    dc:publisher ?publisher;
+    :shortDescription ?shortDescription;
     rdfs:label ?label;
     :steps ?steps;
     :providesInputFor ?inputForIRI.
