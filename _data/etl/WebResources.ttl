@@ -163,3 +163,23 @@
         :resourceLocation  "https://anthro-tech.com/blog/post/classification-navigation-and-the-secret-lives-of-watermelon"^^xsd:anyURI ;
         dc:created         "2019-10-28"^^xsd:date ;
         :describes         :CategoryDesign .
+
+:InterviewingUsers_NielsenNormanGroup
+        rdf:type           :WebResource ;
+        dc:title           "Interviewing Users " ;
+        dc:creator         "Jakob Nielsen" ;
+        dc:publisher       "Nielsen Norman Group" ;
+        dc:created         "2010-07-25"^^xsd:date ;
+        :resourceLocation  "https://www.nngroup.com/articles/interviewing-users/"^^xsd:anyURI ;
+        dc:created         "2010-07-25"^^xsd:date ;
+        :describes         :UserInterviewing .
+
+<https://www.uxmethods.org/UserInterviews%3AHow%2CWhen%2CandWhytoConductThem_NielsenNormanGroup>
+        rdf:type           :WebResource ;
+        dc:title           "User Interviews: How, When, and Why to Conduct Them" ;
+        dc:creator         "Kara Pernice" ;
+        dc:publisher       "Nielsen Norman Group" ;
+        dc:created         "2018-10-07"^^xsd:date ;
+        :resourceLocation  "https://www.nngroup.com/articles/user-interviews/"^^xsd:anyURI ;
+        dc:created         "2018-10-07"^^xsd:date ;
+        :describes         :UserInterviewing .

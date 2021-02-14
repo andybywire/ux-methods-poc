@@ -9,7 +9,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://www.uxmethods.org/">
-        <owl:versionIRI rdf:resource="https://www.uxmethods.org/1.0/inferred/knowledge-graph/"/>
+        <owl:versionIRI rdf:resource="https://www.uxmethods.org/1.1/inferred/knowledge-graph/"/>
         <dc:created xml:lang="en">2021-01-27</dc:created>
         <dc:creator xml:lang="en">Andy Fitzgerald</dc:creator>
         <dc:description xml:lang="en">The UX Methods Knowledge Graph is a combination of the UX Methods Ontology with UX Methods and Web Resources data, brought together to create an interconnected graph of resources.
@@ -24,6 +24,11 @@ Project Goals
         <dc:title>UX Methods KG Methods Data</dc:title>
         <dc:title>UX Methods KG WebResources Data</dc:title>
         <dc:title xml:lang="en">UX Methods Knowledge Graph</dc:title>
+        <owl:versionInfo>Version 1.1 Update:
+- Add short descriptions (&lt;90 char) for all Methods
+- Add attribution (publication, hyperlink) for all Method descriptions
+- Add short descriptions (&lt;90 char) for all Outcomes with descriptions longer than 90 char.
+– Improve Discipline short descriptions</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -501,6 +506,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
         <dc:description>The objectives and problems business stakeholders intend to meet/solve with the product or service that is the focus of work.</dc:description>
         <rdfs:label>Business Goals</rdfs:label>
+        <shortDescription>The problems business stakeholders intend to solve as a result of the work at hand.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -583,7 +589,7 @@ Test your system (tree testing and interactive prototypes are good for this) and
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/VisualDesign"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The coordinated set of colors to be used in interface visual design</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The coordinated set of colors to be used in interface visual design.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Color Palette</rdfs:label>
     </owl:NamedIndividual>
     
@@ -658,7 +664,7 @@ Content strategy methods help you to identify what content already exists, when 
         <dc:publisher>Usability.gov</dc:publisher>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/content-strategy.html</dc:source>
         <rdfs:label>Content Strategy</rdfs:label>
-        <shortDescription>Focuses on the planning, creation, delivery, and governance of content.</shortDescription>
+        <shortDescription>Planning for the creation, delivery, and governance of content.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -669,8 +675,9 @@ Content strategy methods help you to identify what content already exists, when 
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The arrangementand, number, and hierarchy of categories used to classify content and resources</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The arrangement, number, and hierarchy of categories used to classify content and resources.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Structure</rdfs:label>
+        <shortDescription>The arrangement and structure of categories used to classify content and resources.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -806,7 +813,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <dc:publisher>Usability.gov</dc:publisher>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/information-architecture.html</dc:source>
         <rdfs:label>Information Architecture</rdfs:label>
-        <shortDescription>Focuses on organizing, structuring, and labeling content for findability.</shortDescription>
+        <shortDescription>Organizing, structuring, and labeling content for findability and use.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -818,7 +825,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
         <focusOf rdf:resource="https://www.uxmethods.org/VisualDesign"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The page level prioritization of information</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The page level prioritization of information.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Hierarchy</rdfs:label>
     </owl:NamedIndividual>
     
@@ -836,7 +843,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <dc:publisher>Usability.gov</dc:publisher>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/interaction-design.html</dc:source>
         <rdfs:label>Interaction Design</rdfs:label>
-        <shortDescription>Focuses on creating engaging interfaces with well thought out behaviors.</shortDescription>
+        <shortDescription>Creating the intentional patterns of use that support goal oriented behavior.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -847,8 +854,9 @@ After individual evaluations, gather people to discuss what they found and prior
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InteractionDesign"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A repeatable set of behaviors for engaging with content and/or functionality in a given interface</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A repeatable set of behaviors for engaging with content and/or functionality in a given interface.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Pattern</rdfs:label>
+        <shortDescription>A repeatable set of behaviors for content and functionality in a given interface.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -878,7 +886,7 @@ If there are other products they use or your product doesn&apos;t have constrain
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of labels used to represent a collection of content and functionality</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of labels used to represent a collection of content and functionality.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Labeling Scheme</rdfs:label>
     </owl:NamedIndividual>
     
@@ -891,7 +899,7 @@ If there are other products they use or your product doesn&apos;t have constrain
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The user&apos;s conceptualization about how a system or service works.</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The user&apos;s conceptualization of how a system or service works.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mental Model</rdfs:label>
     </owl:NamedIndividual>
     
@@ -904,7 +912,7 @@ If there are other products they use or your product doesn&apos;t have constrain
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The collection of metadata elements used to describe a collection of content and functionality</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The structure of data elements used to describe a collection of content and functionality.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metadata Scheme</rdfs:label>
     </owl:NamedIndividual>
     
@@ -938,8 +946,9 @@ Test and iterate</steps>
         <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into users&apos; ability to easily and effectively locate content via navigation affordances</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into users&apos; ability to easily and effectively locate content via navigation affordances.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Navigation Effectiveness</rdfs:label>
+        <shortDescription>Insight into users&apos; ability to locate content via navigation affordances.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -950,8 +959,9 @@ Test and iterate</steps>
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of patterns, structures, and supported behaviors that afford users to opportunity to move between content and interface elements</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of patterns, structures, and supported behaviors that afford users to opportunity to move between content and interface elements.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Navigation Model</rdfs:label>
+        <shortDescription>The patterns of links that let users move between content and interface elements.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1012,7 +1022,7 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A visual or schematic representation of a website&apos;s categories, structure, and navigation</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A visual or schematic representation of a website&apos;s categories, structure, and navigation.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site Map</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1061,8 +1071,9 @@ Document and analyze responses. Try organizing your research findings into categ
         <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into the rate at which and ease with which users are able to complete a concrete task or set of tasks</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into the rate at which and ease with which users are able to complete a concrete task or set of tasks.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task Completion Insight</rdfs:label>
+        <shortDescription>Insight into how easy it is for users to accomplish defined tasks.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1072,8 +1083,9 @@ Document and analyze responses. Try organizing your research findings into categ
     <owl:NamedIndividual rdf:about="https://www.uxmethods.org/TechnicalConstraints">
         <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The engineering and development limitations that must be taken into account when formulating a design solution</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The engineering and development limitations that must be taken into account when formulating a design solution.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical Constraints</rdfs:label>
+        <shortDescription>The implementation limitations that a design solution must be able to accommodate.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1098,7 +1110,7 @@ Document and analyze responses. Try organizing your research findings into categ
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Solution"/>
         <focusOf rdf:resource="https://www.uxmethods.org/VisualDesign"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Font choice and combination recommendations for text presentation and typographic scale</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Font choice and combination recommendations for the display of text.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Typography</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1117,7 +1129,7 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
         <dc:publisher>Usability.gov</dc:publisher>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/usability-evaluation.html</dc:source>
         <rdfs:label>Usability Evaluation</rdfs:label>
-        <shortDescription>Focuses on how well users can learn and use a product to achieve their goals.</shortDescription>
+        <shortDescription>Measuring how well users can learn and use a product to achieve their goals.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1130,7 +1142,7 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
         <focusOf rdf:resource="https://www.uxmethods.org/InteractionDesign"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into how users interact with an interface, service, or product</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into how users interact with an interface, service, or product.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Behavior</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1145,7 +1157,7 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
         <focusOf rdf:resource="https://www.uxmethods.org/InteractionDesign"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The objectives users hope to meet or problems they hope to solve in using an interface</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The objectives users hope to meet or problems they hope to solve in using an interface.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Goals</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1159,12 +1171,12 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
         <focusesOn rdf:resource="https://www.uxmethods.org/MentalModel"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserBehavior"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description xml:lang="en">User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies.  Mike Kuniaysky further notes that it is \“the process of understanding the impact of design on an audience.\&quot;
+        <dc:description xml:lang="en">User research focuses on understanding user behaviors, needs, and motivations through observation techniques, task analysis, and other feedback methodologies. Mike Kuniavsky further notes that it is “the process of understanding the impact of design on an audience.&quot;
 Which user research methods you can or should perform will depend on the type of site, system or app you are developing, your timeline, and your environment.</dc:description>
         <dc:publisher>Usability.gov</dc:publisher>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/user-research.html</dc:source>
         <rdfs:label>User Research</rdfs:label>
-        <shortDescription>Focuses on an empirical understanding user behaviors, needs, and motivations.</shortDescription>
+        <shortDescription>Creating an empirical understanding of user behaviors, needs, and motivations.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1175,8 +1187,9 @@ Which user research methods you can or should perform will depend on the type of
         <rdf:type rdf:resource="https://www.uxmethods.org/Insight"/>
         <rdf:type rdf:resource="https://www.uxmethods.org/Outcome"/>
         <focusOf rdf:resource="https://www.uxmethods.org/UsabilityEvaluation"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree to which users feel they are able to effectively and easily meet their needs with a given interface</dc:description>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree to which users feel they are able to effectively and easily meet their needs with a given interface.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Satisfaction</rdfs:label>
+        <shortDescription>A measure of users&apos; perception of a tool&apos;s effectiveness and ease of use.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1192,7 +1205,7 @@ Which user research methods you can or should perform will depend on the type of
         <dc:publisher>Usability.gov</dc:publisher>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/visual-design.html</dc:source>
         <rdfs:label>Visual Design</rdfs:label>
-        <shortDescription>Focuses on the aesthetics of a site, including images, colors, and fonts.</shortDescription>
+        <shortDescription>Communicating the aesthetics of a site, including images, colors, and fonts.</shortDescription>
     </owl:NamedIndividual>
     
 
