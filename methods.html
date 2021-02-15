@@ -4,23 +4,8 @@ rdf_prefix_path: "_data/prefixes.sparql"
 ---
 <section>
 <h1 class="no-eyebrow">UX Methods A-Z</h1>
-{% assign methods = site.pages | where: "template", "method" | sort: 'name' %}
-<ul class="method-cards">
-{% for resource in methods %}
-  <li class="method-card">
-    <a href="/{{ resource.rdf.page_url }}.html">
-      <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
-      <p>{{ resource | rdf_property: 'dc:description' | truncate: 90 }}</p>
-      {% assign produces = resource | rdf_property: ':produces', nil, true %}
-      <ul>
-      {% for outcome in produces limit: 2 %}
-        <li class="tag">{{ outcome | rdf_property: 'rdfs:label' }}</li>
-      {% endfor %}
-    </ul>
-    </a>
-  </li>
-{% endfor %}
-</ul>
+{% assign card_content = site.pages | where: "template", "method" | sort: 'name' %}
+{%- include method-card.html -%}
 </section>
 <section class="contribute">
   <h2>See Something Missing?</h2>

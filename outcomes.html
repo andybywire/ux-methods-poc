@@ -10,7 +10,12 @@ rdf_prefix_path: "_data/prefixes.sparql"
   <li class="method-card outcome">
     <a href="/{{ resource.rdf.page_url }}.html">
       <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
-      <p>{{ resource | rdf_property: 'dc:description' | truncate: 90 }}</p>
+      {% assign shortD = resource | rdf_property: ':shortDescription' %}
+      {% if shortD != nil %}
+      <p>{{ resource | rdf_property: ':shortDescription' }}</p>
+      {% else %}
+      <p>{{ resource | rdf_property: 'dc:description' }}</p>
+      {% endif %}
     </a>
   </li>
 {% endfor %}

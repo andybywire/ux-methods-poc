@@ -1,14 +1,18 @@
 <ul class="method-cards">
 {% for resource in card_content %}
   <li class="method-card">
+    {%- if resource.render_path != nil %}
     <a href="/{{ resource.render_path }}">
+    {%- else %}
+    <a href="/{{ resource.rdf.page_url }}.html">
+    {%- endif %}
       <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
       <p>{{ resource | rdf_property: ':shortDescription' }}</p>
-      {% assign produces = resource | rdf_property: ':produces', nil, true %}
+      {%- assign produces = resource | rdf_property: ':produces', nil, true %}
       <ul>
-      {% for outcome in produces limit: 2 %}
+      {%- for outcome in produces limit: 2 %}
         <li class="tag">{{ outcome | rdf_property: 'rdfs:label' }}</li>
-      {% endfor %}
+      {%- endfor %}
     </ul>
     </a>
   </li>
