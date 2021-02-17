@@ -10,7 +10,7 @@
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
         appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.description.substring(0, 100) + '...</p></li>';
+        appendString += '<p>' + item.shortDescription + '</p></li>';
       }
       appendString += '<div class="close-icon"><a href="/"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z" fill="#F9FAFB"/></svg></a></div>';
       searchResults.innerHTML = appendString;
@@ -47,20 +47,22 @@
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      this.field('author');
       this.field('description');
-      this.field('category');
-      this.field('content');
+      this.field('shortDescription');
+      this.field('steps');
+      this.field('type');
+      //this.field('content');
     });
 
     for (var key in window.store) { // Add the data to lunr
       idx.add({
         'id': key,
         'title': window.store[key].title,
-        'author': window.store[key].author,
         'description': window.store[key].description,
-        'category': window.store[key].category,
-        'content': window.store[key].content
+        'shortDescription': window.store[key].shortDescription,
+        'steps': window.store[key].steps,
+        'type': window.store[key].type
+        // 'content': window.store[key].content
       });
 
       var results = idx.search(searchTerm); // Get lunr to perform a search

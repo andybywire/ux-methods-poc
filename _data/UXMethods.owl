@@ -586,6 +586,7 @@ Test your system (tree testing and interactive prototypes are good for this) and
         <focusOf rdf:resource="https://www.uxmethods.org/VisualDesign"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The coordinated set of colors to be used in interface visual design.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Color Palette</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The coordinated set of colors to be used in interface visual design.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -645,6 +646,7 @@ For every piece of content they might come across on that task flow, note who wr
         <focusOf rdf:resource="https://www.uxmethods.org/ContentStrategy"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into the quality, content, and scope of existing content.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Insight</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into the quality, content, and scope of existing content.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -838,6 +840,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <focusOf rdf:resource="https://www.uxmethods.org/VisualDesign"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The page level prioritization of information.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Hierarchy</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The page level prioritization of information.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -894,6 +897,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of labels used to represent a collection of content and functionality.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Labeling Scheme</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of labels used to represent a collection of content and functionality.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -907,6 +911,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The user&apos;s conceptualization of how a system or service works.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mental Model</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The user&apos;s conceptualization of how a system or service works.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -920,6 +925,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The structure of data elements used to describe a collection of content and functionality.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metadata Scheme</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The structure of data elements used to describe a collection of content and functionality.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1025,6 +1031,7 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <focusOf rdf:resource="https://www.uxmethods.org/InformationArchitecture"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A visual or schematic representation of a website&apos;s categories, structure, and navigation.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site Map</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A visual or schematic representation of a website&apos;s categories, structure, and navigation.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1125,6 +1132,7 @@ Iterate. Making changes in style out of the context of layout takes less time an
         <focusOf rdf:resource="https://www.uxmethods.org/VisualDesign"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Font choice and combination recommendations for the display of text.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Typography</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Font choice and combination recommendations for the display of text.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1157,6 +1165,7 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
         <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into how users interact with an interface, service, or product.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Behavior</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into how users interact with an interface, service, or product.</shortDescription>
     </owl:NamedIndividual>
     
 
@@ -1172,6 +1181,7 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
         <focusOf rdf:resource="https://www.uxmethods.org/UserResearch"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The objectives users hope to meet or problems they hope to solve in using an interface.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Goals</rdfs:label>
+        <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The objectives users hope to meet or problems they hope to solve in using an interface.</shortDescription>
     </owl:NamedIndividual>
     
 
