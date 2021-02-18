@@ -135,6 +135,17 @@ rdf_prefix_path: "_data/prefixes.sparql"
   </main>
   {%- include footer.html -%}
 </body>
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register('/serviceworker.js')
+      .then( function (registration) {
+        console.log('Service worker registered with scope:', registration.scope);
+      })
+      .catch( function (error) {
+        console.log('Service worker registration error:', error);
+      });
+    }
+  </script> 
 <script src="/js/app.js"></script>
 </html>
 
