@@ -56,6 +56,13 @@ p {
     font-size: small;
     color: $gray-text-dark-bg;
     margin-bottom: 0;
+    a, a:visited {
+      color: $gray-text-dark-bg;;
+    }
+    a:hover {
+      color: $primary-text-link;
+      transition: color 0.25s ease-out;
+    }
   }
   a, a:visited {
     // color: $primary-text-link;
