@@ -13,14 +13,14 @@ rdf_prefix_path: "_data/prefixes.sparql"
 
   <nav>
     <a href="/" class="title">{{ site.title }}</a>
-    <button id="openMenu" type="button" >{% include svg/menu.svg %}</button>
-    <!-- look into ARIA for these buttons/toggles -->
-    <!-- aria-label="Open site menu" aria-expanded="false" aria-controls="offCanvas" -->
+    <button id="openMenu" aria-label="Open site menu" type="button" >{% include svg/menu.svg %}</button>
     <div id="globalNav" class="sidenav"> 
-      <button id="closeMenu" class="closebtn" type="button">{% include svg/close.svg %}</button>
+      <button id="closeMenu" aria-label="Close site menu" class="closebtn" type="button">{% include svg/close.svg %}</button>
+      <!-- Would this benefit from having aria-controls="offCanvas"? TBD -->
       <ul id="navint">
         <li class="search"><a href="/index.html#search-box">{% include svg/search.svg %}Search</a></li>
         <li class="dropdown-toggle">UX Disciplines<span>{% include svg/chevron_down.svg %}</span></li>
+          <!-- look into ARIA for these controls — aria-expanded="false" -->
           <ul class="submenu">
             {% assign uxm-discipline = site.pages | where: "template", "discipline" | sort: 'name' %}
             {% for resource in uxm-discipline %}
