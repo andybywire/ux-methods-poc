@@ -3,9 +3,11 @@
 // Method cards
 ul.method-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax($card-min,3fr));
   grid-gap: 2rem;
   padding: 0;
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(auto-fill,minmax($card-min,3fr));
+  }
   h3 {
     line-height: 24px;
     margin: 0;
