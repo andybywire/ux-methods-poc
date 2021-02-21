@@ -176,6 +176,9 @@ main.home {
   }
 }
 main.discipline {
+  img {
+    max-width: 100%;
+  }
   @media (max-width: map-get($breakpoints, medium) - 1) {
     section:first-of-type {
       padding: 0;
@@ -197,6 +200,7 @@ main.discipline {
     }
     img {
       border-radius: 2px;
+      //margin-top: 1.5rem;
     }
   }
 
