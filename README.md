@@ -1,6 +1,9 @@
-# UX Methods Knowledge Graph
-
-![UX Methods.org](https://user-images.githubusercontent.com/3710835/109103540-ebc0d580-76df-11eb-948d-4c1bf3615e5e.png)
+<h1 align="center">
+<img src="https://user-images.githubusercontent.com/3710835/109103540-ebc0d580-76df-11eb-948d-4c1bf3615e5e.png" alt="UX Methods.org wordmark">
+</h1>
+<h3 align="center">
+An Open Source Jamstack Knowledge Graph
+ </h2>
 
 [UX Methods](https://www.uxmethods.org/) is a collaborative, lightweight Jamstack knowledge graph. It is built with Jekyll and powered by a purpose-built UX Methods Ontology via the [Jekyll-RDF](https://github.com/AKSW/jekyll-rdf) plugin. Its goal is to document and interconnect the practices and techniques of user experience design. It is built with open source tools and technologies, and is designed to evolve and scale over time.
 
