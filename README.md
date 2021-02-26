@@ -3,14 +3,14 @@
 </h1>
 <h3 align="center">
 An Open Source Jamstack Knowledge Graph
- </h2>
+</h3>
 
 <p align="center">
 	<strong>
 		<a href="https://www.uxmethods.org/">Website</a>
 		•
 		<a href="https://github.com/andybywire/ux-methods/tree/main/_data/etl#competency-questions--sparql-test-queries">Competency Questions</a>
-  •
+  		•
 		<a href="https://github.com/andybywire/ux-methods/tree/main/_data/etl#the-ux-methods-ontology">Ontology</a>
 		•
 		<a href="https://github.com/andybywire/ux-methods/tree/main/_data/etl#ux-methods-knowledge-graph-extracttransformload-etl-pipleline">Data Pipeline</a>
@@ -26,6 +26,10 @@ The UX Methods project envisions:
 - **A freely accessible linked open data knowledge base** that accurately describes and communicates the meaningful relationships between user experience design methods. 
 
 - **A user-friendly web interface** that affords a useful, usable access point to the knowledge captured in the UX methods ontology and knowledge base.
+
+<h3 align="center">
+<img width="500" src="https://user-images.githubusercontent.com/3710835/109322819-9a136a80-7807-11eb-9f79-148b8e5d611b.png" alt="Screenshot of UXMethods.org website on desktop and mobile">
+</h3>
 
 ## Tools
 In addition to Jekyll and Jekyll-RDF, this project uses:
