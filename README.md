@@ -5,6 +5,18 @@
 An Open Source Jamstack Knowledge Graph
  </h2>
 
+<p align="center">
+	<strong>
+		<a href="https://www.uxmethods.org/">Website</a>
+		•
+		<a href="https://github.com/andybywire/ux-methods/tree/main/_data/etl#competency-questions--sparql-test-queries">Competency Questions</a>
+  •
+		<a href="https://github.com/andybywire/ux-methods/tree/main/_data/etl#the-ux-methods-ontology">Ontology</a>
+		•
+		<a href="https://github.com/andybywire/ux-methods/tree/main/_data/etl#ux-methods-knowledge-graph-extracttransformload-etl-pipleline">Data Pipeline</a>
+	</strong>
+</p>
+
 [UX Methods](https://www.uxmethods.org/) is a collaborative, lightweight Jamstack knowledge graph. It is built with Jekyll and powered by a purpose-built UX Methods Ontology via the [Jekyll-RDF](https://github.com/AKSW/jekyll-rdf) plugin. Its goal is to document and interconnect the practices and techniques of user experience design. It is built with open source tools and technologies, and is designed to evolve and scale over time.
 
 The UX Methods project envisions: 
