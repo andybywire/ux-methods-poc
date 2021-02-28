@@ -6,6 +6,6 @@ RewriteEngine On
 #   </FilesMatch>
 # </IfModule>
 
-# ErrorDocument 404 /404/index.html
+ErrorDocument 404 /404/index.html
 
 Redirect 301 /ontology https://github.com/andybywire/ux-methods/tree/main/_data/etl#the-ux-methods-ontology

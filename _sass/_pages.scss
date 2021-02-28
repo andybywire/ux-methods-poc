@@ -23,6 +23,13 @@ main.home {
     @include breakpoint(med-lg) {
       display: block;
     }
+    a {
+      color: $primary;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   .search {
     form {
