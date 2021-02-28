@@ -18,7 +18,7 @@ addEventListener('fetch', fetchEvent => {
   ); // end respondWith
 }); // end addEventListener
 
-const version = 'v0.6'; // set up a way to increment this automatically
+const version = 'v0.7'; // set up a way to increment this automatically
 const staticCacheUXM = version + 'staticfiles';
 
 addEventListener('install', installEvent => {
