@@ -48,7 +48,7 @@ p {
   //font-size: 16px;
   line-height: 1.5;  
   margin-top: 8px;
-  &.display {
+  &.display, &.error {
     font-size: 20px;
     line-height: 1.2;    
   }

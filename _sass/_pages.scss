@@ -23,6 +23,14 @@ main.home {
     @include breakpoint(med-lg) {
       display: block;
     }
+  }
+  p.error {
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    text-align: center;
+    @include breakpoint(med-lg) {
+      width: 45rem;
+    }
     a {
       color: $primary;
       text-decoration: none;
