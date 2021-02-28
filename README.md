@@ -51,25 +51,25 @@ RDF data—which accounts for virtually all website content beyond "About" conte
 
 ![A flow diagram detailing the Capture, Extract/Transform/Load, Semantic Reasoning, Publication, and Iteration phases of the UX Methods Knowledge Graph workflow.](https://github-production-user-asset-6210df.s3.amazonaws.com/3710835/108853526-b0b58980-759b-11eb-9f26-cb9c0bbc09de.png)
 
-The goal of this configuration is to create a model that can be replicated on any (or no) budget, and which requires as little technical skills acquisition as is feasibly possible. As this project grows and evolves, these componenets will undoubtedtly change to accommodate automation, scale, and quality control. The goal at present is to maintain a "simple" version in a 1.0 branch as a reference for those interested in starting a project from a simple basic setup. 
+The goal of this configuration is to create a model that can be replicated on any (or no) budget, and which requires as little technical skills acquisition as is feasibly possible. As this project grows and evolves, these components will undoubtedly change to accommodate automation, scale, and quality control. The goal at present is to maintain a "simple" version in a 1.0 branch as a reference for those interested in starting a project from a simple basic setup. 
 
 ### Extract/Transform/Load
-The Extract/Transform/Load (ETL) pipleline captures and translates tabular data from Google Sheets into RDF using the [Tarqle](http://tarql.github.io/) conversion tool. Tarql runs locally and requires `Java 1.8` or above. Tarqle mappings and details of the pipeline workflow can be found in the [etl folder](/tree/main/_data/etl#ux-methods-knowledge-graph-extracttransformload-etl-pipleline)
+The Extract/Transform/Load (ETL) pipeline captures and translates tabular data from Google Sheets into RDF using the [Tarqle](http://tarql.github.io/) conversion tool. Tarql runs locally and requires `Java 1.8` or above. Tarqle mappings and details of the pipeline workflow can be found in the [etl folder](/tree/main/_data/etl#ux-methods-knowledge-graph-extracttransformload-etl-pipleline)
 
 ### Semantic Reasoning
 To keep the knowledge graph simple and easily reproducible, version 1.0 does *not* rely on a graph database, which means that there is not an active inference engine to run queries against. In order to take advantage of the semantic entailments that make knowledge graphs so useful (like automatic classification and knowledge discovery), the KG data and UX Methods Ontology are processed by Protégé's built in reasoner, and then exported as a flat RDF/XML file, complete with inferences. 
 
-This would not scale to a large data set, but if makes experiementation for a small proof-of-concept—or for learning—less complicated that integrating a server, reasoner, and connected databases. Details of the inferred axiom export process can be found in the [\_data file](https://github.com/andybywire/ux-methods/tree/main/_data). 
+This would not scale to a large data set, but if makes experimentation for a small proof-of-concept—or for learning—less complicated that integrating a server, reasoner, and connected databases. Details of the inferred axiom export process can be found in the [\_data file](https://github.com/andybywire/ux-methods/tree/main/_data). 
 
 ### Publication
-[Jekyll-RDF](https://aksw.org/Projects/JekyllRDF.html) is used to query flat UX Methods KG RDF/XML data and generate methods, disciplines, and resources pages. Data from this RDF/XML file is also used to build site menues, populate the search index, and generate linked data in the form of JSON-LD. While Jekyll is a convenient, well known, and well supported static site generator, there is no fundamental connection between UX Methods KG data and Jekyll that isn't well supported by a wide range of similar tools and technologies.
+[Jekyll-RDF](https://aksw.org/Projects/JekyllRDF.html) is used to query flat UX Methods KG RDF/XML data and generate methods, disciplines, and resources pages. Data from this RDF/XML file is also used to build site menus, populate the search index, and generate linked data in the form of JSON-LD. While Jekyll is a convenient, well known, and well supported static site generator, there is no fundamental connection between UX Methods KG data and Jekyll that isn't well supported by a wide range of similar tools and technologies.
 
 ## Ontology
 The UX Methods Ontology (it's "Knowledge Model") encodes a very simple set of semantic rules about how Methods, Disciplines, and WebResources interact and interrelate. 
 
 ![An object model style diagram describing the simple semantic structure of the UX Methods ontology](https://user-images.githubusercontent.com/3710835/108855859-46521880-759e-11eb-9543-133355ecf478.png)
 
-These rules are more fully annotated and described in the [UX Methods Ontology](https://github.com/andybywire/ux-methods/blob/main/_data/etl/UXMethodsKG.owl), which can be opened and explored direclty in the desktop version of the free ontology editing tool [Protégé](https://protege.stanford.edu/products.php). For more details on the [UX Methods Ontology goals](https://github.com/andybywire/ux-methods/tree/main/_data/etl#project-goals), [development methodology](https://github.com/andybywire/ux-methods/tree/main/_data/etl#ontological-commitments), [competency questions, and SPARQL validation queries](https://github.com/andybywire/ux-methods/tree/main/_data/etl#competency-questions--sparql-test-queries) check out the ontology [description in \_data.](https://github.com/andybywire/ux-methods/tree/main/_data/etl#the-ux-methods-ontology) 
+These rules are more fully annotated and described in the [UX Methods Ontology](https://github.com/andybywire/ux-methods/blob/main/_data/etl/UXMethodsKG.owl), which can be opened and explored directly in the desktop version of the free ontology editing tool [Protégé](https://protege.stanford.edu/products.php). For more details on the [UX Methods Ontology goals](https://github.com/andybywire/ux-methods/tree/main/_data/etl#project-goals), [development methodology](https://github.com/andybywire/ux-methods/tree/main/_data/etl#ontological-commitments), [competency questions, and SPARQL validation queries](https://github.com/andybywire/ux-methods/tree/main/_data/etl#competency-questions--sparql-test-queries) check out the ontology [description in \_data.](https://github.com/andybywire/ux-methods/tree/main/_data/etl#the-ux-methods-ontology) 
 
 ## Additional Tools
 In addition to Jekyll and Jekyll-RDF, this project uses:
@@ -81,7 +81,7 @@ In addition to Jekyll and Jekyll-RDF, this project uses:
 ## Contributing
 Contributions to and suggestions for this project are welcome. To get started with your own local version from which to submit pull requests: 
 
-1. Form and clone this repository. You'll also want to be sure you have [Jekyll](https://jekyllrb.com/) installed on your machine. 
+1. Fork and clone this repository. You'll also want to be sure you have [Jekyll](https://jekyllrb.com/) installed on your machine. 
   
 
 2. Run NPM install in the project file
