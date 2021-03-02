@@ -12,13 +12,13 @@ addEventListener('fetch', fetchEvent => {
       return fetch(request)
       .catch( error => {
         // show the offline page
-        return caches.match('/index.html'); // update to proper offline page
+        return caches.match('/offline/index.html');
       }); // end fetch catch and return
     }) // end match then 
   ); // end respondWith
 }); // end addEventListener
 
-const version = 'v0.7'; // set up a way to increment this automatically
+const version = 'v0.8'; // set up a way to increment this automatically
 const staticCacheUXM = version + 'staticfiles';
 
 addEventListener('install', installEvent => {
@@ -29,9 +29,11 @@ addEventListener('install', installEvent => {
       staticCache.addAll([  // nice to have
         '/js/app.js'
         ]); // end nice to have
-      return staticCache.addAll([ // must have — be sure to add offline page to this list
+      return staticCache.addAll([ // must have
         '/css/style.css',
+        '/offline/index.html',
         '/index.html',
+        '/about/index.html',
         '/manifest.json'
         ]); // end return addAll / must have
       }) // end open caches / then
