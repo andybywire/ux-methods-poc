@@ -17,6 +17,28 @@ function jekyll (gulpCallBack){
     });
 }
 
+// example in https://stackoverflow.com/questions/29511491/running-a-shell-command-from-gulp
+
+// var gulp = require('gulp');
+// var spawn = require('child_process').spawn;
+
+// gulp.task('my-task', function (cb) {
+//   var cmd = spawn('cmd', ['arg1', 'agr2'], {stdio: 'inherit'});
+//   cmd.on('close', function (code) {
+//     console.log('my-task exited with code ' + code);
+//     cb(code);
+//   });
+// });
+
+// Shell test
+// Not yet working. To come back to. -- These commands are now outdated (I've updated $PATH)
+
+function etl(done) {
+  gulp.task('build', shell.task('sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl & sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl'));
+  done();
+}
+
+
 // SASS
  function sass() {
    return gulp.src('_sass/style.scss')
@@ -67,13 +89,6 @@ function watch() {
     ],
     gulp.series(jekyll, reload)
   );
-}
-
-// Shell test
-// Not yet working. To come back to. 
-function etl(done) {
-  gulp.task('build', shell.task('sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl & sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl'));
-  done();
 }
 
 // Export tasks
