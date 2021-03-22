@@ -1,0 +1,185 @@
+@prefix :  <https://www.uxmethods.org/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+
+:WebResources  rdf:type  owl:Ontology ;
+        dc:title  "UX Methods KG WebResources Data" .
+
+:describes  rdf:type  owl:ObjectProperty .
+
+:resourceLocation  rdf:type  owl:DatatypeProperty .
+
+:TheDelicateArtofInterviewingStakeholders_EightShapes
+        rdf:type           :WebResource ;
+        dc:title           "The Delicate Art of Interviewing Stakeholders" ;
+        dc:creator         "Dan Brown" ;
+        dc:publisher       "EightShapes" ;
+        dc:created         "2018-07-11"^^xsd:date ;
+        :resourceLocation  "https://medium.com/eightshapes-llc/the-delicate-art-of-interviewing-stakeholders-d6496443cbec"^^xsd:anyURI ;
+        dc:created         "2018-07-11"^^xsd:date ;
+        :describes         :StakeholderInterviewing .
+
+:ContextualInterviews_InteractionDesignFoundation
+        rdf:type           :WebResource ;
+        dc:title           "Contextual Interviews" ;
+        dc:publisher       "Interaction Design Foundation" ;
+        :resourceLocation  "https://www.interaction-design.org/literature/topics/contextual-interviews"^^xsd:anyURI ;
+        :describes         :ContextualInterviewing .
+
+:BuildandRunPrototypes_IDEO
+        rdf:type           :WebResource ;
+        dc:title           "Build and Run Prototypes" ;
+        dc:publisher       "IDEO" ;
+        :resourceLocation  "https://www.designkit.org/methods/build-run-prototypes"^^xsd:anyURI ;
+        :describes         :Prototyping .
+
+:FirstClickTesting101_OptimalWorkshop
+        rdf:type           :WebResource ;
+        dc:title           "First Click Testing 101" ;
+        dc:publisher       "Optimal Workshop" ;
+        :resourceLocation  "https://www.optimalworkshop.com/learn/101s/first-click-testing/"^^xsd:anyURI ;
+        :describes         :FirstClickTesting .
+
+:WebsiteNavigationPlanningAndImplementing_SmashingMagazine
+        rdf:type           :WebResource ;
+        dc:title           "Website Navigation Planning And Implementing" ;
+        dc:publisher       "Smashing Magazine" ;
+        dc:created         "2011-06-06"^^xsd:date ;
+        :resourceLocation  "https://www.smashingmagazine.com/2011/06/planning-and-implementing-website-navigation/"^^xsd:anyURI ;
+        dc:created         "2011-06-06"^^xsd:date ;
+        :describes         :NavigationDesign .
+
+:PrototypingUserExperience_UXMatters
+        rdf:type           :WebResource ;
+        dc:title           "Prototyping User Experience" ;
+        dc:creator         "Quincy Smith" ;
+        dc:publisher       "UX Matters" ;
+        dc:created         "2019-01-07"^^xsd:date ;
+        :resourceLocation  "https://www.uxmatters.com/mt/archives/2019/01/prototyping-user-experience.php"^^xsd:anyURI ;
+        dc:created         "2019-01-07"^^xsd:date ;
+        :describes         :Prototyping .
+
+<https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus>
+        rdf:type           :WebResource ;
+        dc:title           "The Beginners' Guide to Contextual Interviewing" ;
+        dc:creator         "David Travis" ;
+        dc:publisher       "Userfocus" ;
+        :resourceLocation  "https://www.userfocus.co.uk/articles/the_beginners_guide_to_contextual_interviewing.html"^^xsd:anyURI ;
+        :describes         :ContextualInterviewing .
+
+:FirstClickTesting_UserInterviews
+        rdf:type           :WebResource ;
+        dc:title           "First Click Testing" ;
+        dc:publisher       "User Interviews" ;
+        :resourceLocation  "https://www.userinterviews.com/ux-research-field-guide-chapter/first-click-testing"^^xsd:anyURI ;
+        :describes         :FirstClickTesting .
+
+:AStakeholderInterviewChecklist_BoxesandArrows
+        rdf:type           :WebResource ;
+        dc:title           "A Stakeholder Interview Checklist" ;
+        dc:creator         "Kim Goodwin" ;
+        dc:publisher       "Boxes and Arrows" ;
+        dc:created         "2013-01-08"^^xsd:date ;
+        :resourceLocation  "https://boxesandarrows.com/a-stakeholder-interview-checklist/"^^xsd:anyURI ;
+        dc:created         "2013-01-08"^^xsd:date ;
+        :describes         :StakeholderInterviewing .
+
+:BuildEmpathyWithStakeholderInterviews_Digital.gov
+        rdf:type           :WebResource ;
+        dc:title           "Build Empathy With Stakeholder Interviews" ;
+        dc:creator         "Andrew Maier" ;
+        dc:publisher       "Digital.gov" ;
+        dc:created         "2016-07-01"^^xsd:date ;
+        :resourceLocation  "https://digital.gov/2016/07/01/build-empathy-with-stakeholder-interviews-part-1-preparation/#:~:text=What%20are%20stakeholder%20interviews%3F,in%20all%20shapes%20and%20sizes."^^xsd:anyURI ;
+        dc:created         "2016-07-01"^^xsd:date ;
+        :describes         :StakeholderInterviewing .
+
+<https://www.uxmethods.org/Theultimateguidetostakeholderinterviews%3Aunderstandyourclients_UXCollective>
+        rdf:type           :WebResource ;
+        dc:title           "The ultimate guide to stakeholder interviews: understand your clients" ;
+        dc:creator         "Adam Fard" ;
+        dc:publisher       "UX Collective" ;
+        dc:created         "2019-05-29"^^xsd:date ;
+        :resourceLocation  "https://uxdesign.cc/the-ultimate-guide-to-stakeholder-interviews-understand-your-clients-a3bcf87b6e8b"^^xsd:anyURI ;
+        dc:created         "2019-05-29"^^xsd:date ;
+        :describes         :StakeholderInterviewing .
+
+<https://www.uxmethods.org/CardSorting%3AUncoverUsers%27MentalModelsforBetterInformationArchitecture_NielsenNormanGroup>
+        rdf:type           :WebResource ;
+        dc:title           "Card Sorting: Uncover Users' Mental Models for Better Information Architecture" ;
+        dc:creator         "Katie Sherwin" ;
+        dc:publisher       "Nielsen Norman Group" ;
+        dc:created         "2018-03-18"^^xsd:date ;
+        :resourceLocation  "https://www.nngroup.com/articles/card-sorting-definition/"^^xsd:anyURI ;
+        dc:created         "2018-03-18"^^xsd:date ;
+        :describes         :CardSorting .
+
+:CardSorting101_OptimalWorkshop
+        rdf:type           :WebResource ;
+        dc:title           "Card Sorting 101" ;
+        dc:publisher       "Optimal Workshop" ;
+        :resourceLocation  "https://www.optimalworkshop.com/learn/101s/card-sorting/"^^xsd:anyURI ;
+        :describes         :CardSorting .
+
+:HowtoChooseTopicsforCardSorting_AndyFitzgeraldConsulting
+        rdf:type           :WebResource ;
+        dc:title           "How to Choose Topics for Card Sorting" ;
+        dc:creator         "Andy Fitzgerald" ;
+        dc:publisher       "Andy Fitzgerald Consulting" ;
+        dc:created         "2020-09-17"^^xsd:date ;
+        :resourceLocation  "https://www.andyfitzgeraldconsulting.com/writing/choosing-card-sorting-topics/"^^xsd:anyURI ;
+        dc:created         "2020-09-17"^^xsd:date ;
+        :describes         :CardSorting .
+
+<https://www.uxmethods.org/CardSorting%3AADefinitiveGuide_BoxesandArrows>
+        rdf:type           :WebResource ;
+        dc:title           "Card Sorting: A Definitive Guide" ;
+        dc:creator         "Donna Spencer and Todd Warfel" ;
+        dc:publisher       "Boxes and Arrows" ;
+        dc:created         "2004-04-07"^^xsd:date ;
+        :resourceLocation  "https://boxesandarrows.com/card-sorting-a-definitive-guide/"^^xsd:anyURI ;
+        dc:created         "2004-04-07"^^xsd:date ;
+        :describes         :CardSorting .
+
+:AvoidCategoryNamesThatSuck_NielsenNormanGroup
+        rdf:type           :WebResource ;
+        dc:title           "Avoid Category Names That Suck" ;
+        dc:creator         "Hoa Loranger" ;
+        dc:publisher       "Nielsen Norman Group" ;
+        dc:created         "2013-12-15"^^xsd:date ;
+        :resourceLocation  "https://www.nngroup.com/articles/category-names-suck/"^^xsd:anyURI ;
+        dc:created         "2013-12-15"^^xsd:date ;
+        :describes         :CategoryDesign .
+
+<https://www.uxmethods.org/Classification%2CNavigation%2CandtheSecretLivesofWatermelon_Anthro-Tech>
+        rdf:type           :WebResource ;
+        dc:title           "Classification, Navigation, and the Secret Lives of Watermelon" ;
+        dc:creator         "Andy Fitzgerald" ;
+        dc:publisher       "Anthro-Tech" ;
+        dc:created         "2019-10-28"^^xsd:date ;
+        :resourceLocation  "https://anthro-tech.com/blog/post/classification-navigation-and-the-secret-lives-of-watermelon"^^xsd:anyURI ;
+        dc:created         "2019-10-28"^^xsd:date ;
+        :describes         :CategoryDesign .
+
+:InterviewingUsers_NielsenNormanGroup
+        rdf:type           :WebResource ;
+        dc:title           "Interviewing Users " ;
+        dc:creator         "Jakob Nielsen" ;
+        dc:publisher       "Nielsen Norman Group" ;
+        dc:created         "2010-07-25"^^xsd:date ;
+        :resourceLocation  "https://www.nngroup.com/articles/interviewing-users/"^^xsd:anyURI ;
+        dc:created         "2010-07-25"^^xsd:date ;
+        :describes         :UserInterviewing .
+
+<https://www.uxmethods.org/UserInterviews%3AHow%2CWhen%2CandWhytoConductThem_NielsenNormanGroup>
+        rdf:type           :WebResource ;
+        dc:title           "User Interviews: How, When, and Why to Conduct Them" ;
+        dc:creator         "Kara Pernice" ;
+        dc:publisher       "Nielsen Norman Group" ;
+        dc:created         "2018-10-07"^^xsd:date ;
+        :resourceLocation  "https://www.nngroup.com/articles/user-interviews/"^^xsd:anyURI ;
+        dc:created         "2018-10-07"^^xsd:date ;
+        :describes         :UserInterviewing .

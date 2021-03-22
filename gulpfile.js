@@ -1,6 +1,7 @@
 "use strict";
 // Load plugins
 const gulp = require('gulp');
+const { spawn } = require('child_process');
 const shell = require('gulp-shell');
 const connect = require('gulp-connect-php');
 const gulpSass = require('gulp-sass');
@@ -10,39 +11,19 @@ const browserSync = require('browser-sync');
 
 // Build Jekyll site (but do not compile CSS)
 function jekyll (gulpCallBack){
-    var spawn = require('child_process').spawn;
-    var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
+    const jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
     jekyll.on('exit', function(code) {
         gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
     });
 }
 
-// example in https://stackoverflow.com/questions/29511491/running-a-shell-command-from-gulp
-
-// var gulp = require('gulp');
-// var spawn = require('child_process').spawn;
-
-// gulp.task('my-task', function (cb) {
-//   var cmd = spawn('cmd', ['arg1', 'agr2'], {stdio: 'inherit'});
-//   cmd.on('close', function (code) {
-//     console.log('my-task exited with code ' + code);
-//     cb(code);
-//   });
-// });
-
-// Shell test
-// Not yet working. To come back to. -- These commands are now outdated (I've updated $PATH)
-
-function etl(done) {
-  gulp.task('build', shell.task('sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl & sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl'));
-  done();
-}
-
+// to add: gulp etl, gulp update
+// see child process example in https://stackoverflow.com/questions/29511491/running-a-shell-command-from-gulp
 
 // SASS
  function sass() {
    return gulp.src('_sass/style.scss')
-     .pipe(sourcemaps.init()) 
+     .pipe(sourcemaps.init())
      .pipe(gulpSass({
        outputStyle: 'compressed' // compressed, expanded
      })
@@ -63,7 +44,7 @@ function php() {
         notify: false,
         port: 3333
       });
-  }); 
+  });
 }
 
 // BrowserSync reload
@@ -93,4 +74,3 @@ function watch() {
 
 // Export tasks
 exports.default = gulp.series(jekyll, sass, gulp.parallel(watch, php));
-exports.etl = etl;

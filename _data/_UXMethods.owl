@@ -30,10 +30,10 @@ Project Goals
 - Add short descriptions (&lt;90 char) for all Outcomes with descriptions longer than 90 char.
 – Improve Discipline short descriptions</owl:versionInfo>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -41,58 +41,58 @@ Project Goals
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/created -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/publisher -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-
+    
 
 
     <!-- https://www.uxmethods.org/shortDescription -->
 
     <owl:AnnotationProperty rdf:about="https://www.uxmethods.org/shortDescription"/>
-
+    
 
 
     <!-- https://www.uxmethods.org/steps -->
 
     <owl:AnnotationProperty rdf:about="https://www.uxmethods.org/steps"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -100,16 +100,16 @@ Project Goals
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -117,7 +117,7 @@ Project Goals
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://www.uxmethods.org/describedBy -->
@@ -125,13 +125,13 @@ Project Goals
     <owl:ObjectProperty rdf:about="https://www.uxmethods.org/describedBy">
         <owl:inverseOf rdf:resource="https://www.uxmethods.org/describes"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.uxmethods.org/describes -->
 
     <owl:ObjectProperty rdf:about="https://www.uxmethods.org/describes"/>
-
+    
 
 
     <!-- https://www.uxmethods.org/focusOf -->
@@ -139,13 +139,13 @@ Project Goals
     <owl:ObjectProperty rdf:about="https://www.uxmethods.org/focusOf">
         <owl:inverseOf rdf:resource="https://www.uxmethods.org/focusesOn"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.uxmethods.org/focusesOn -->
 
     <owl:ObjectProperty rdf:about="https://www.uxmethods.org/focusesOn"/>
-
+    
 
 
     <!-- https://www.uxmethods.org/inputProvidedBy -->
@@ -153,7 +153,7 @@ Project Goals
     <owl:ObjectProperty rdf:about="https://www.uxmethods.org/inputProvidedBy">
         <owl:inverseOf rdf:resource="https://www.uxmethods.org/providesInputFor"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.uxmethods.org/produces -->
@@ -162,13 +162,13 @@ Project Goals
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment>Produces is transitive to infer the production relationships of methods to the methods that specialize them. This creates some unwanted &quot;production&quot; relationships, e.g. :OpenCardSorting &quot;produces&quot; :CardSorting. This is not incorrect, but it is probalby almost always extraneous. For this solution, the extra triples need to be filtered out in SPARQL. Consider whether a property chain might be a cleaner solution.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.uxmethods.org/providesInputFor -->
 
     <owl:ObjectProperty rdf:about="https://www.uxmethods.org/providesInputFor"/>
-
+    
 
 
     <!-- https://www.uxmethods.org/specializes -->
@@ -176,10 +176,10 @@ Project Goals
     <owl:ObjectProperty rdf:about="https://www.uxmethods.org/specializes">
         <rdfs:subPropertyOf rdf:resource="https://www.uxmethods.org/produces"/>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -187,16 +187,16 @@ Project Goals
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://www.uxmethods.org/resourceLocation -->
 
     <owl:DatatypeProperty rdf:about="https://www.uxmethods.org/resourceLocation"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -204,7 +204,7 @@ Project Goals
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.w3.org/2002/07/owl#Thing -->
@@ -212,7 +212,7 @@ Project Goals
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
-
+    
 
 
     <!-- https://www.uxmethods.org/ContentStrategyMethod -->
@@ -236,7 +236,7 @@ Project Goals
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/Discipline -->
@@ -245,7 +245,7 @@ Project Goals
         <rdfs:comment xml:lang="en">Disciplines within the field of User experience (UX) focus on creating a deep understanding of users, what they need, what they value, their abilities, and also their limitations. They also takes into account the business goals and objectives of the group managing the project. Finally, UX disciplines promote improving the quality of the user’s interaction with and perceptions of a product and related services. SOURCE: https://www.usability.gov/what-and-why/user-experience.html</rdfs:comment>
         <rdfs:label xml:lang="en">Discipline</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/InformationArchitectureMethod -->
@@ -269,7 +269,7 @@ Project Goals
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/Insight -->
@@ -277,7 +277,7 @@ Project Goals
     <owl:Class rdf:about="https://www.uxmethods.org/Insight">
         <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Outcome"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/InteractionDesignMethod -->
@@ -301,7 +301,7 @@ Project Goals
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/Method -->
@@ -310,7 +310,7 @@ Project Goals
         <rdfs:comment xml:lang="en">A UX method is a pupose-driven activity defined by a set of executable steps. UX methods can be completed within a foreseeable timline and are planned, modified, and executed in order to create specific desired outcomes.</rdfs:comment>
         <rdfs:label xml:lang="en">Method</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/Outcome -->
@@ -318,7 +318,7 @@ Project Goals
     <owl:Class rdf:about="https://www.uxmethods.org/Outcome">
         <rdfs:comment>Outcomes are the work products of Methods. These might be solutions to particular project, in the form of deliverables or artifacts, or insights intended to further work through deeper perspective on and context of a particular design problem. Outcomes are also the focus of disciplines and constitute a key element in how disciplines are defined and connected.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/Solution -->
@@ -326,7 +326,7 @@ Project Goals
     <owl:Class rdf:about="https://www.uxmethods.org/Solution">
         <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Outcome"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/SpecializedMethod -->
@@ -345,7 +345,7 @@ Project Goals
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/UsabilityEvaluationMethod -->
@@ -369,7 +369,7 @@ Project Goals
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/UserResearchMethod -->
@@ -393,7 +393,7 @@ Project Goals
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/VisualDesignMethod -->
@@ -417,7 +417,7 @@ Project Goals
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://www.uxmethods.org/Method"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.uxmethods.org/WebResource -->
@@ -427,10 +427,10 @@ Project Goals
 
 Web Resources are named with a code-based scheme due to the high variability of resource types and related metadata. The scheme currently used is AYYMMDD, where &quot;A&quot; is the first letter of the author last name (if known), or the first letter of publication name, and YYMMDD is the year, month, and date of publication, if known. If the date is not known, resources should be assigned a unique incremental number, starting with 000001.</rdfs:comment>
     </owl:Class>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -438,7 +438,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://www.uxmethods.org/AStakeholderInterviewChecklist_BoxesandArrows -->
@@ -452,7 +452,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <dc:publisher>Boxes and Arrows</dc:publisher>
         <dc:title>A Stakeholder Interview Checklist</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/AvoidCategoryNamesThatSuck_NielsenNormanGroup -->
@@ -466,7 +466,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <dc:publisher>Nielsen Norman Group</dc:publisher>
         <dc:title>Avoid Category Names That Suck</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/BuildEmpathyWithStakeholderInterviews_Digital.gov -->
@@ -480,7 +480,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <dc:publisher>Digital.gov</dc:publisher>
         <dc:title>Build Empathy With Stakeholder Interviews</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/BuildandRunPrototypes_IDEO -->
@@ -492,7 +492,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <dc:publisher>IDEO</dc:publisher>
         <dc:title>Build and Run Prototypes</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/BusinessGoals -->
@@ -508,7 +508,7 @@ Web Resources are named with a code-based scheme due to the high variability of 
         <rdfs:label>Business Goals</rdfs:label>
         <shortDescription>The problems business stakeholders intend to solve as a result of the work at hand.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/CardSorting -->
@@ -537,7 +537,7 @@ Ask users to separate the cards into whatever categories make sense to them.
 Ask users to label those categories.
 Ask users to tell you why they grouped the cards and labeled the categories as they did.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/CardSorting101_OptimalWorkshop -->
@@ -549,7 +549,7 @@ Ask users to tell you why they grouped the cards and labeled the categories as t
         <dc:publisher>Optimal Workshop</dc:publisher>
         <dc:title>Card Sorting 101</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/CategoryDesign -->
@@ -570,12 +570,12 @@ An organizational structure is how you define the relationships between pieces o
         <dc:source>https://www.usability.gov/how-to-and-tools/methods/organization-schemes.html</dc:source>
         <rdfs:label>Category Design</rdfs:label>
         <shortDescription>Creating structures and schemes that make the location and use of content clear.</shortDescription>
-        <steps>Gather data about your users, content, and business context. Conduct a content audit to determine what content you have, run a card sort to learn how your users think about that content, and talk to business stakeholders to understand your organization&apos;s priorities.
+        <steps>Gather data about your users, content, and business context. Conduct a content audit to determine what content you have, run a card sort to learn how your users think about that content, and talk to business stakeholders to understand your organization&apos;s priorities. 
 Draft a classification scheme that balances a usable distribution of your current (and pending) content, user needs, and business goals.
 Label your categories with terms that match user mental models and align with business and brand priorities.
 Test your system (tree testing and interactive prototypes are good for this) and revise your category scheme as needed. </steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/ColorPalette -->
@@ -588,7 +588,7 @@ Test your system (tree testing and interactive prototypes are good for this) and
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Color Palette</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The coordinated set of colors to be used in interface visual design.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/CompetitiveAnalysis -->
@@ -615,7 +615,7 @@ Break down the analysis of each selected competitor into specific focal areas fo
 Use a spreadsheet to capture the evaluation and determine how the targeted services and agencies perform based on the identified heuristics.
 Present the analysis, which should showcase areas of opportunities that you can take advantage of and design patterns you might adopt or avoid.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/ContentAuditing -->
@@ -635,7 +635,7 @@ Identify the main entry points for the user need you’re addressing. This could
 From each entry point, trace the pages and tasks a user moves through until they address their need.
 For every piece of content they might come across on that task flow, note who wrote or created the page (&apos;Author&apos;), who ensures its credibility (&apos;Content owner&apos;), how often or when it was last updated, and qualitative assessment comments of what to change to better address your identified user need.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/ContentInsight -->
@@ -648,7 +648,7 @@ For every piece of content they might come across on that task flow, note who wr
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Insight</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into the quality, content, and scope of existing content.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/ContentStrategy -->
@@ -660,14 +660,14 @@ For every piece of content they might come across on that task flow, note who wr
         <focusesOn rdf:resource="https://www.uxmethods.org/ContentStructure"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/MetadataScheme"/>
         <focusesOn rdf:resource="https://www.uxmethods.org/UserGoals"/>
-        <dc:description xml:lang="en">Content strategy focuses on the planning, creation, delivery, and governance of content. Content not only includes the words on the page but also the images and multimedia that are used. Ensuring that you have useful and usable content that is well structured and easily found is vital to improving the user experience of a website.
+        <dc:description xml:lang="en">Content strategy focuses on the planning, creation, delivery, and governance of content. Content not only includes the words on the page but also the images and multimedia that are used. Ensuring that you have useful and usable content that is well structured and easily found is vital to improving the user experience of a website. 
 Content strategy methods help you to identify what content already exists, when content needs to be improved, and where new content should be created.</dc:description>
         <dc:publisher>Usability.gov</dc:publisher>
         <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.usability.gov/what-and-why/content-strategy.html</dc:source>
         <rdfs:label>Content Strategy</rdfs:label>
         <shortDescription>Planning for the creation, delivery, and governance of content.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/ContentStructure -->
@@ -680,7 +680,7 @@ Content strategy methods help you to identify what content already exists, when 
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content Structure</rdfs:label>
         <shortDescription>The arrangement and structure of categories used to classify content and resources.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/ContextualInterviewing -->
@@ -704,11 +704,11 @@ In a contextual interview, you watch and listen as the user works. You don&apos;
         <shortDescription>Observation of users performing tasks in their own environment. </shortDescription>
         <steps>Introduce yourself and build rapport with the user
 Transition from a traditional interview to a master-apprentice model. Tell the participant that you want to learn by watching and asking questions, as if you were an apprentice learning how to do their job
-Observe. Resist the temptation to continually ask questions. The observation phase is where you should spend the bulk of your time.
+Observe. Resist the temptation to continually ask questions. The observation phase is where you should spend the bulk of your time. 
 Interpret: verify your assumptions and conclusions with the participant.
 Summarize. Immediately at the end of each sessions, write down your immediate thoughts and observations.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/ContextualInterviews_InteractionDesignFoundation -->
@@ -720,7 +720,7 @@ Summarize. Immediately at the end of each sessions, write down your immediate th
         <dc:publisher>Interaction Design Foundation</dc:publisher>
         <dc:title>Contextual Interviews</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/FirstClickTesting -->
@@ -748,7 +748,7 @@ Track each click and time how long it takes the user to make this click.  Taking
 After each task, assess whether the participants feel they were able to find the correct information using a satisfaction or confidence scale.
 Next assess the ease or difficulty of completing each task. Using response scales here will aid analysis as well, but consider free response options as well to provide additional context.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/FirstClickTesting101_OptimalWorkshop -->
@@ -760,7 +760,7 @@ Next assess the ease or difficulty of completing each task. Using response scale
         <dc:publisher>Optimal Workshop</dc:publisher>
         <dc:title>First Click Testing 101</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/FirstClickTesting_UserInterviews -->
@@ -772,7 +772,7 @@ Next assess the ease or difficulty of completing each task. Using response scale
         <dc:publisher>User Interviews</dc:publisher>
         <dc:title>First Click Testing</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/HeuristicEvaluation -->
@@ -789,11 +789,11 @@ A heuristic evaluation should not replace usability testing. Although the heuris
         <rdfs:label>Heuristic Evaluation</rdfs:label>
         <shortDescription>Evaluate a site to indentify usability flaws and other areas for improvement.</shortDescription>
         <steps>Recruit a group of three to five people familiar with evaluation methods. These people are not necessarily designers, but are familiar with common usability best practices. They are usually not users.
-Ask each person to individually create a list of “heuristics” or general usability best practices.
+Ask each person to individually create a list of “heuristics” or general usability best practices. 
 Ask each person to evaluate the website against their list and write down possible problems.
 After individual evaluations, gather people to discuss what they found and prioritize potential problems.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/HowtoChooseTopicsforCardSorting_AndyFitzgeraldConsulting -->
@@ -807,7 +807,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <dc:publisher>Andy Fitzgerald Consulting</dc:publisher>
         <dc:title>How to Choose Topics for Card Sorting</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/InformationArchitecture -->
@@ -828,7 +828,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <rdfs:label>Information Architecture</rdfs:label>
         <shortDescription>Organizing, structuring, and labeling content for findability and use.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/InformationHierarchy -->
@@ -842,7 +842,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Hierarchy</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The page level prioritization of information.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/InteractionDesign -->
@@ -859,7 +859,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <rdfs:label>Interaction Design</rdfs:label>
         <shortDescription>Creating the intentional patterns of use that support goal oriented behavior.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/InteractionPattern -->
@@ -872,7 +872,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Pattern</rdfs:label>
         <shortDescription>A repeatable set of behaviors for content and functionality in a given interface.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/InterviewingUsers_NielsenNormanGroup -->
@@ -886,7 +886,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <dc:publisher>Nielsen Norman Group</dc:publisher>
         <dc:title>Interviewing Users </dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/LabelingScheme -->
@@ -899,7 +899,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Labeling Scheme</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of labels used to represent a collection of content and functionality.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/MentalModel -->
@@ -913,7 +913,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mental Model</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The user&apos;s conceptualization of how a system or service works.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/MetadataScheme -->
@@ -927,7 +927,7 @@ After individual evaluations, gather people to discuss what they found and prior
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metadata Scheme</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The structure of data elements used to describe a collection of content and functionality.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/NavigationDesign -->
@@ -953,7 +953,7 @@ When approaching a design or redesign project, it is important to take a look un
 Determine placement: On which pages should navigation be present? Where should it be placed within the page layout grid (e.g., top, left, right, bottom)?
 Establish patterns: Which navigation design patterns best support findability and discoverability — tabs, megamenus, carousels, accordions, and so on?</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/NavigationEffectiveness -->
@@ -966,7 +966,7 @@ Establish patterns: Which navigation design patterns best support findability an
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Navigation Effectiveness</rdfs:label>
         <shortDescription>Insight into users&apos; ability to locate content via navigation affordances.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/NavigationModel -->
@@ -979,7 +979,7 @@ Establish patterns: Which navigation design patterns best support findability an
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Navigation Model</rdfs:label>
         <shortDescription>The patterns of links that let users move between content and interface elements.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/Prototyping -->
@@ -1001,12 +1001,12 @@ Start by crafting a simple experimental model of your proposed product so you ca
         <dc:source>https://www.interaction-design.org/literature/topics/prototyping</dc:source>
         <rdfs:label>Prototyping</rdfs:label>
         <shortDescription>A draft version of a product that helps you explore its functionality and use. </shortDescription>
-        <steps>Determine what you need your prototype to accomplish. What moments in the experience do you need to gather more information on?
+        <steps>Determine what you need your prototype to accomplish. What moments in the experience do you need to gather more information on? 
 Determine the modality of your prototype. Can you answer your product and experience questions with a simple paper prototype, or do you need to be able to click through scenarios on a device? If the latter, can you click through PDFs or a Figma file, or will you need to mock up your prototype in HTML?
 Determine the fidelity of your prototype based on what you need to learn. Fidelity ranges from low-fidelity (often inexpensive), to high-fidelity, which simulates a greater range of functionality, but often takes more time (and more money).
 Build and run your prototype according to purpose, modality, and fidelity you&apos;ve sketched out.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/PrototypingUserExperience_UXMatters -->
@@ -1020,7 +1020,7 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <dc:publisher>UX Matters</dc:publisher>
         <dc:title>Prototyping User Experience</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/SiteMap -->
@@ -1033,7 +1033,7 @@ Build and run your prototype according to purpose, modality, and fidelity you&ap
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site Map</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A visual or schematic representation of a website&apos;s categories, structure, and navigation.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/StakeholderInterviewing -->
@@ -1057,11 +1057,11 @@ Different stakeholders influence the process differently, and you can’t plan f
         <rdfs:label>Stakeholder Interviewing</rdfs:label>
         <shortDescription>Understanding the perspective and influence of those invested in a project&apos;s success.</shortDescription>
         <steps>Establish goals. What you want to find out from interviewees?
-Identify stakeholders. The number and role of stakeholders will vary depending on the organization. In smaller companies, you may talk to the founder or CEO. In large organizations, department heads (or their proxies) may be who you need.
+Identify stakeholders. The number and role of stakeholders will vary depending on the organization. In smaller companies, you may talk to the founder or CEO. In large organizations, department heads (or their proxies) may be who you need. 
 Prepare questions. Keep them open ended and as a guide to the conversation.
 Document and analyze responses. Try organizing your research findings into categories: Business, Users, Problems, Fears, Motives, Competitive advantages, Solutions, Alternatives, and Unique value propositions.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/StyleTileCreation -->
@@ -1082,7 +1082,7 @@ Interpret what you hear. Aggregate adjectives from the answer process, identify 
 Define a Visual Language. This is the actual process of composing the style tile. Determine themes from the aggregated adjectives and begin to match them up with styles. The Style Tiles give the client a point of reference to determine if you both are on the same page.
 Iterate. Making changes in style out of the context of layout takes less time and allows you to work faster. Presenting multiple tiles gives you information to work with that can influence the evolution of a tile.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/TaskCompletionInsight -->
@@ -1095,7 +1095,7 @@ Iterate. Making changes in style out of the context of layout takes less time an
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task Completion Insight</rdfs:label>
         <shortDescription>Insight into how easy it is for users to accomplish defined tasks.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/TechnicalConstraints -->
@@ -1107,7 +1107,7 @@ Iterate. Making changes in style out of the context of layout takes less time an
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical Constraints</rdfs:label>
         <shortDescription>The implementation limitations that a design solution must be able to accommodate.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/TheDelicateArtofInterviewingStakeholders_EightShapes -->
@@ -1121,7 +1121,7 @@ Iterate. Making changes in style out of the context of layout takes less time an
         <dc:publisher>EightShapes</dc:publisher>
         <dc:title>The Delicate Art of Interviewing Stakeholders</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/Typography -->
@@ -1134,7 +1134,7 @@ Iterate. Making changes in style out of the context of layout takes less time an
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Typography</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Font choice and combination recommendations for the display of text.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/UsabilityEvaluation -->
@@ -1152,7 +1152,7 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
         <rdfs:label>Usability Evaluation</rdfs:label>
         <shortDescription>Measuring how well users can learn and use a product to achieve their goals.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/UserBehavior -->
@@ -1167,7 +1167,7 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Behavior</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insight into how users interact with an interface, service, or product.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/UserGoals -->
@@ -1183,7 +1183,7 @@ Usability Evaluation methods focus on the quality of a user&apos;s experience wh
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Goals</rdfs:label>
         <shortDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The objectives users hope to meet or problems they hope to solve in using an interface.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/UserInterviewing -->
@@ -1208,7 +1208,7 @@ Sit down one-on-one with the participant, or two-on-one with a note-taker or joi
 Follow the conversation where the participant takes it. They will focus on their priorities and interests. Be comfortable with silences, which allow the participant to elaborate. To keep from getting entirely off course, use your interview guide to make sure you cover what you need to. Ask lots of “why is that” and “how do you do that” questions.
 If there are other products they use or your product doesn&apos;t have constraints imposed by prior work, observe the stakeholders using a competing product and consider a comparative analysis.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/UserResearch -->
@@ -1226,7 +1226,7 @@ Which user research methods you can or should perform will depend on the type of
         <rdfs:label>User Research</rdfs:label>
         <shortDescription>Creating an empirical understanding of user behaviors, needs, and motivations.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/UserSatisfaction -->
@@ -1239,7 +1239,7 @@ Which user research methods you can or should perform will depend on the type of
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Satisfaction</rdfs:label>
         <shortDescription>A measure of users&apos; perception of a tool&apos;s effectiveness and ease of use.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/VisualDesign -->
@@ -1255,7 +1255,7 @@ Which user research methods you can or should perform will depend on the type of
         <rdfs:label>Visual Design</rdfs:label>
         <shortDescription>Communicating the aesthetics of a site, including images, colors, and fonts.</shortDescription>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/WebsiteNavigationPlanningAndImplementing_SmashingMagazine -->
@@ -1268,7 +1268,7 @@ Which user research methods you can or should perform will depend on the type of
         <dc:publisher>Smashing Magazine</dc:publisher>
         <dc:title>Website Navigation Planning And Implementing</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/Wireframing -->
@@ -1284,18 +1284,18 @@ Which user research methods you can or should perform will depend on the type of
         <produces rdf:resource="https://www.uxmethods.org/InformationHierarchy"/>
         <produces rdf:resource="https://www.uxmethods.org/InteractionPattern"/>
         <dc:description>Wireframes are basic visual guides in which designers propose elements for screens and webpages and show how experimental solutions would flow for target users. Wireframing is invaluable early in the interaction design process for design teams to explore how concepts accommodate user and business needs.
-Good wireframing is the skill of creating realistic-looking, lean layouts so your team and stakeholders can quickly determine if concepts are worth developing. Wireframing is distinct from prototyping in the sense that prototyping deals more with testing interactivity and, when done at the highest level of fidelity, sophisticated versions that might closely resemble the released products.
+Good wireframing is the skill of creating realistic-looking, lean layouts so your team and stakeholders can quickly determine if concepts are worth developing. Wireframing is distinct from prototyping in the sense that prototyping deals more with testing interactivity and, when done at the highest level of fidelity, sophisticated versions that might closely resemble the released products. 
 Wireframing is similar to prototyping, however, in that you can also do wireframing by hand (e.g. using boxes and lines to represent pictures, text, etc.) or with software and make low- to high-fidelity versions. In low-fidelity wireframing, you use placeholders to mark content and pictures in grayscale. In high-fidelity wireframing, you introduce more realism, including pictures and perhaps even some interactivity. Well-crafted wireframes can far more easily be adapted into prototypes for usability testing.</dc:description>
         <dc:publisher>Interaction Design Foundation</dc:publisher>
         <dc:source>https://www.interaction-design.org/literature/topics/wireframing</dc:source>
         <rdfs:label>Wireframing</rdfs:label>
         <shortDescription>Interface illustration that focuses on prioritization, functionality, and behavior.</shortDescription>
-        <steps>Build preliminary blueprints that show structure, placement, and hierarchy for your product. Steer clear of font choices, color, or other elements that would distract both the researcher and the reviewer.
+        <steps>Build preliminary blueprints that show structure, placement, and hierarchy for your product. Steer clear of font choices, color, or other elements that would distract both the researcher and the reviewer. 
 Use this opportunity to start listing what UX/UI patterns you will need.
 Review your wireframes with specific user scenarios and personas in mind. Can users accomplish their task with the wireframe you are sketching out?
 Use the wireframes to get the team’s feedback on feasibility and structure.</steps>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/CardSorting%3AADefinitiveGuide_BoxesandArrows -->
@@ -1309,7 +1309,7 @@ Use the wireframes to get the team’s feedback on feasibility and structure.</s
         <dc:publisher>Boxes and Arrows</dc:publisher>
         <dc:title>Card Sorting: A Definitive Guide</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/CardSorting%3AUncoverUsers%27MentalModelsforBetterInformationArchitecture_NielsenNormanGroup -->
@@ -1323,7 +1323,7 @@ Use the wireframes to get the team’s feedback on feasibility and structure.</s
         <dc:publisher>Nielsen Norman Group</dc:publisher>
         <dc:title>Card Sorting: Uncover Users&apos; Mental Models for Better Information Architecture</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/Classification%2CNavigation%2CandtheSecretLivesofWatermelon_Anthro-Tech -->
@@ -1337,7 +1337,7 @@ Use the wireframes to get the team’s feedback on feasibility and structure.</s
         <dc:publisher>Anthro-Tech</dc:publisher>
         <dc:title>Classification, Navigation, and the Secret Lives of Watermelon</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/TheBeginners%27GuidetoContextualInterviewing_Userfocus -->
@@ -1350,7 +1350,7 @@ Use the wireframes to get the team’s feedback on feasibility and structure.</s
         <dc:publisher>Userfocus</dc:publisher>
         <dc:title>The Beginners&apos; Guide to Contextual Interviewing</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/Theultimateguidetostakeholderinterviews%3Aunderstandyourclients_UXCollective -->
@@ -1364,7 +1364,7 @@ Use the wireframes to get the team’s feedback on feasibility and structure.</s
         <dc:publisher>UX Collective</dc:publisher>
         <dc:title>The ultimate guide to stakeholder interviews: understand your clients</dc:title>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://www.uxmethods.org/UserInterviews%3AHow%2CWhen%2CandWhytoConductThem_NielsenNormanGroup -->
@@ -1383,3 +1383,4 @@ Use the wireframes to get the team’s feedback on feasibility and structure.</s
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
