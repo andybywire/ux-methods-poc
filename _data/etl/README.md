@@ -1,23 +1,23 @@
 # UX Methods Knowledge Graph Extract/Transform/Load (ETL) Pipleline
 
-The resources collected in the UX Methods Knowledge Graph are connected to the UX Methods Ontology, which describes Disciplines, Outcomes, and the semantics of entity relationships, from two distinct data sources, generated from Google Sheets documents: Methods and WebResources. In order to support the UX Methods static site architecture, the resulting inferred axioms are then exported to a queryable OWL file in \_data. 
+The resources collected in the UX Methods Knowledge Graph are connected to the UX Methods Ontology, which describes Disciplines, Outcomes, and the semantics of entity relationships, from two distinct data sources, generated from Google Sheets documents: Methods and WebResources. In order to support the UX Methods static site architecture, the resulting inferred axioms are then exported to a queryable OWL file in \_data.
 
 - URL of the Google Sheets CSV is in the FROM statement of the Tarql mapping
 - Commands can be run from any terminal location
 
 ### Map All Resource Data Sequentially
 ```
-sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl & sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl
+tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl & tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl
 ```
 
 ### Map "Methods" Data Only
 ```
-sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl
+tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl
 ```
 
 ### Map "WebResources" Data Only
 ```
-sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl
+tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl
 ```
 
 # The UX Methods Ontology
@@ -38,10 +38,10 @@ This commitment is reflected in the ontology via two constructs:
 - An individual-class mirror pattern used to align broad discipline descriptions and related methods
 - A pseudo-hierarchy of method variants via transitive `:produces` property, which allows for "specializations" of methods, but without constraining those methods to a predetermined class hierarchy
 
-## Competency questions & SPARQL test queries 
-[Kendall and McGuinness](https://www.amazon.com/Ontology-Engineering-Elisa-F-Kendall-ebook/dp/B07T189GZZ) highlight the importance of "competency questions," which they refer to as "a set of questions and related answers that a knowledge base or application must be able to answer correctly" (38). Following [Allemang, Hendler, and Gandon's](https://www.amazon.com/Semantic-Web-Working-Ontologist-Effective/dp/1450376142) example of using SPARQL queries to demonstrate the semantics of a model (185), I've included several of the competency questions this knowledge graph seeks to answer, as well as the SPARQL queries that produce the intended results from the test set. 
+## Competency questions & SPARQL test queries
+[Kendall and McGuinness](https://www.amazon.com/Ontology-Engineering-Elisa-F-Kendall-ebook/dp/B07T189GZZ) highlight the importance of "competency questions," which they refer to as "a set of questions and related answers that a knowledge base or application must be able to answer correctly" (38). Following [Allemang, Hendler, and Gandon's](https://www.amazon.com/Semantic-Web-Working-Ontologist-Effective/dp/1450376142) example of using SPARQL queries to demonstrate the semantics of a model (185), I've included several of the competency questions this knowledge graph seeks to answer, as well as the SPARQL queries that produce the intended results from the test set.
 
-Note: These queries were tested in the SPARQL Query and SnapSPARQL tools in Protégé. Due to the different ways they process SPARQL 1.1, queries are not processed identically across both tools. Where applicable, I have noted for which tool a query has been created. 
+Note: These queries were tested in the SPARQL Query and SnapSPARQL tools in Protégé. Due to the different ways they process SPARQL 1.1, queries are not processed identically across both tools. Where applicable, I have noted for which tool a query has been created.
 
 ### What are the UX disciplines, how are they described, and what are the methods used with each of them?
 ```
@@ -97,7 +97,7 @@ WHERE {
 }
 ```
 
-### What would I use card sorting for? What insights does it produce? 
+### What would I use card sorting for? What insights does it produce?
 _Includes "specializations"_
 ```
 PREFIX : <https://www.uxmethods.org/>
@@ -116,18 +116,18 @@ WHERE {
       :CardSorting :produces ?insight . # Match insights that Card Sorting produces
     }
   UNION
-    { 
-      ?variant :specializes :CardSorting ; 
+    {
+      ?variant :specializes :CardSorting ;
        :produces ?insight . #Match insights that specializations of Card Sorting produce
       FILTER (?insight != :CardSorting) # Filter out variant references to Card Sorting method
-    } 
+    }
   ?insight dc:description ?insight_description .
   ?insight rdfs:label ?insightLabel .
-    
-} 
+
+}
 ```
 
-### How do I perform a card sort and what results does it produce? 
+### How do I perform a card sort and what results does it produce?
 ```
 PREFIX : <https://www.uxmethods.org/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -164,4 +164,3 @@ WHERE {
 }
 ```
 _Note: SnapSPARQL is needed to return inferred `:describedBy` results._
-

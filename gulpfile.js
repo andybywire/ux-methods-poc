@@ -2,6 +2,7 @@
 // Load plugins
 const gulp = require('gulp');
 const { spawn } = require('child_process');
+const { exec } = require('child_process');
 const shell = require('gulp-shell');
 const connect = require('gulp-connect-php');
 const gulpSass = require('gulp-sass');
@@ -17,8 +18,21 @@ function jekyll (gulpCallBack){
     });
 }
 
-// to add: gulp etl, gulp update
-// see child process example in https://stackoverflow.com/questions/29511491/running-a-shell-command-from-gulp
+// Build Methods RDF from .gsheet with Methods.sparql
+function methods (gulpCallBack){
+    const methods = exec('tarql ~/repos/uxmd/_data/etl/Methods.sparql > ~/repos/uxmd/_data/etl/Methods.ttl', {stdio: 'inherit'});
+    methods.on('exit', function(code) {
+        gulpCallBack(code === 0 ? null : 'ERROR: Methods Tarql process exited with code: '+code);
+    });
+}
+
+// Build WebResources RDF from .gsheet with WebResources.sparql
+function resources (gulpCallBack){
+    const resources = exec('tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl', {stdio: 'inherit'});
+    resources.on('exit', function(code) {
+        gulpCallBack(code === 0 ? null : 'ERROR: Resources Tarql process exited with code: '+code);
+    });
+}
 
 // SASS
  function sass() {
@@ -74,3 +88,4 @@ function watch() {
 
 // Export tasks
 exports.default = gulp.series(jekyll, sass, gulp.parallel(watch, php));
+exports.etl = gulp.series(methods, resources);
