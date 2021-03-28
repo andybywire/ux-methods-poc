@@ -1,0 +1,18 @@
+{% comment %}
+This is a test query for verifying basic connectivity to an RDF data store. It return a random set of (any) triples, showing that it is possible to retrieve data. 
+{% endcomment %}
+
+{% assign query = '
+  SELECT ?s ?p ?o
+  WHERE {
+      ?s ?p ?o
+ }
+ LIMIT 10
+'%}
+{% assign resultset = page.rdf | sparql_query: query %}
+{% for resource in resultset %}
+  <p>{{ resource.s }}</p>
+  <p>{{ resource.p }}</p>
+  <p>{{ resource.o }}</p>
+  <p>{{ resource.g }}</p>
+{% endfor %}

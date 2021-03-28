@@ -118,7 +118,7 @@ page_class: home
   <article>
     <a href="/about">
       <h3><span>About</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
-      <p>UX Methods is a linked data driven knowledge graph for documenting and interconnecting the techniques and tools of user experience design.</p> 
+      <p>UX Methods is a linked data driven knowledge graph for documenting and interconnecting the techniques and tools of user experience design.</p>
     </a>
     <a href="/about#how-it-works">
       <h3><span>How It Works</span><span class="chevron">{% include svg/chevron_right.svg %}</span></h3>
@@ -147,7 +147,7 @@ page_class: home
                   rdfs:label ?label;
                   :shortDescription ?shortDescription;
                   dc:description ?description;
-                  :steps ?steps. 
+                  :steps ?steps.
           BIND("Method" AS ?type)}
         UNION
         {?iri rdf:type :Outcome ;
@@ -155,7 +155,7 @@ page_class: home
                   :shortDescription ?shortDescription;
                   dc:description ?description.
           BIND("Outcome" AS ?type)}
-      }            
+      }
     '%}
     {% assign index = query | sparql_query %}
 
