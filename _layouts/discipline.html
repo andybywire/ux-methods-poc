@@ -3,17 +3,17 @@ layout: default
 rdf_prefix_path: "_data/prefixes.sparql"
 page_class: discipline
 ---
-{% assign resource = page.rdf | rdf_property: 'rdfs:label' | downcase | slugify %}  
+{% assign resource = page.rdf | rdf_property: 'rdfs:label' | downcase | slugify %}
 <section>
   <article class="resource">
     <picture>
-      <source type="image/jpeg" 
-            srcset="/img/{{ resource }}_215.jpg 215w, 
+      <source type="image/jpeg"
+            srcset="/img/{{ resource }}_215.jpg 215w,
                     /img/{{ resource }}_375.jpg 375w,
                     /img/{{ resource }}_750.jpg 750w"
             sizes="(min-width: 100px) 375px, 100vw">
       <img src="/img/{{ resource }}_375.jpg" alt="">
-    </picture> 
+    </picture>
     <section>
       <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Discipline</span></h1>
       {% assign description_pars = page.rdf | rdf_property: 'dc:description' | newline_to_br | strip_newlines | split: '<br />' %}
@@ -31,10 +31,10 @@ page_class: discipline
     {% assign query = '
       SELECT DISTINCT ?method ?methodLabel ?methodDescription
       WHERE {
-        ?resourceUri :focusesOn ?outcome .            
+        ?resourceUri :focusesOn ?outcome .
         ?method :produces ?outcome ;
                 rdfs:label ?methodLabel ;
-                :shortDescription ?methodDescription.  
+                :shortDescription ?methodDescription.
       }
       ORDER BY ?methodLabel
     '%}

@@ -51,13 +51,13 @@ rdf_prefix_path: "_data/prefixes.sparql"
     </ul>
     {% endif %}
 
-    <!-- Method disciplines -->  
+    <!-- Method disciplines -->
     {% assign query = '
       SELECT DISTINCT ?discipline_label
       WHERE {
         ?resourceUri :produces ?outcome .
          ?discipline :focusesOn ?outcome ;
-                 rdfs:label ?discipline_label .      
+                 rdfs:label ?discipline_label .
       }
       '%}
     {% assign disciplines = page.rdf | sparql_query: query %}
@@ -76,10 +76,10 @@ rdf_prefix_path: "_data/prefixes.sparql"
 <!-- Next steps -->
 {% assign card_content = page.rdf | rdf_property: ':providesInputFor', nil, true %}
 {% if card_content != nil %}
-<section>    
+<section>
   <h2>Next Steps</h2>
   {%- include method-card.html -%}
-</section>    
+</section>
 {% endif %}
 
 <section>
