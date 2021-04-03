@@ -19,7 +19,7 @@
 
 The UX Methods Ontology project aims to create a collaborative, community informed knowledge base that captures the meaningful connections between the methods, tools, and processes used in user experience design practices.
 
-Project Goals
+Project Goals:
 - Create a useful, dynamic, and trustworthy resource for UX techniques, processes, and resources
 - Bring together data from multiple sources and present it holistically through a single, unified interface layer
 - Allow the class structure (and resulting top level categories) to evolve based on content, connections, and evolving knowledge and practices in the broad field of user experience design
@@ -29,7 +29,7 @@ Project Goals
 - Add short descriptions (&lt;90 char) for all Methods
 - Add attribution (publication, hyperlink) for all Method descriptions
 - Add short descriptions (&lt;90 char) for all Outcomes with descriptions longer than 90 char.
-– Improve Discipline short descriptions</owl:versionInfo>
+– Improve Discipline short descriptions.</owl:versionInfo>
     </owl:Ontology>
     
 

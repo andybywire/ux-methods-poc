@@ -2,7 +2,7 @@
 layout: default
 rdf_prefix_path: "_data/prefixes.sparql"
 ---
-<h1>Default RDF Template</h1>
+<h1>RDF Debugging Template</h1>
 
 <h2>Elements on which this page's resource focus</h2>
 <ul>
@@ -48,7 +48,7 @@ WHERE {
               dc:description ?description ;
               rdfs:label ?disciplineLabel .
   ?method :produces ?outcome ;
-          rdfs:label ?methodLabel .  
+          rdfs:label ?methodLabel .
 }
 GROUP BY ?disciplineLabel ?description
 ' %}
@@ -72,5 +72,8 @@ GROUP BY ?disciplineLabel ?description
 
 <hr>
 
-<h2>Page Data</h2> 
+<h2>Page Data</h2>
 <p>{{ page }}</p>
+
+
+{% endif %}
