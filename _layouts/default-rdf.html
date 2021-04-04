@@ -1,7 +1,18 @@
 ---
 layout: default
 rdf_prefix_path: "_data/prefixes.sparql"
+page_class: discipline
 ---
+{% assign resource_class = page.rdf | rdf_property: 'rdf:type'  %}
+{% assign class = resource_class | split: "/" | last %}
+{% if class == "Discipline" %}
+  {% include discipline.html %}
+{% elsif class == "Method" %}
+  {% include method.html %}
+{% elsif class == "Insight" or class == "Solution" or class == "Outcome" %}
+  {% include outcome.html %}
+{% else %}
+
 <h1>RDF Debugging Template</h1>
 
 <h2>Elements on which this page's resource focus</h2>
@@ -74,6 +85,5 @@ GROUP BY ?disciplineLabel ?description
 
 <h2>Page Data</h2>
 <p>{{ page }}</p>
-
 
 {% endif %}

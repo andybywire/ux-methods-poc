@@ -1,0 +1,63 @@
+{% assign resource = page.rdf | rdf_property: 'rdfs:label' | downcase | slugify %}
+<section>
+  <article class="resource">
+    <picture>
+      <source type="image/jpeg"
+            srcset="/img/{{ resource }}_215.jpg 215w,
+                    /img/{{ resource }}_375.jpg 375w,
+                    /img/{{ resource }}_750.jpg 750w"
+            sizes="(min-width: 100px) 375px, 100vw">
+      <img src="/img/{{ resource }}_375.jpg" alt="">
+    </picture>
+    <section>
+      <h1><span>{{ page.rdf | rdf_property: 'rdfs:label' }}</span><span>Discipline</span></h1>
+      {% assign description_pars = page.rdf | rdf_property: 'dc:description' | newline_to_br | strip_newlines | split: '<br />' %}
+      {% for par in description_pars %}
+      <p>{{ par }}</p>
+      {% endfor %}
+      <p class="source"><a href="{{ page.rdf | rdf_property: 'dc:source' }}">{{ page.rdf | rdf_property: 'dc:publisher' }}<span>{% include svg/external_link.svg %}</span></a></p>
+    </section>
+  </article>
+</section>
+
+
+  <section>
+    <h2>{{ page.rdf | rdf_property: 'rdfs:label' }} Methods</h2>
+    {% assign query = '
+      SELECT DISTINCT ?method ?methodLabel ?methodDescription
+      WHERE {
+        ?resourceUri :focusesOn ?outcome .
+        ?method :produces ?outcome ;
+                rdfs:label ?methodLabel ;
+                :shortDescription ?methodDescription.
+      }
+      ORDER BY ?methodLabel
+    '%}
+    {% assign resultset = page.rdf | sparql_query: query %}
+    <ul class="method-cards">
+    {% for resource in resultset %}
+      <li class="method-card">
+        <a href="{{ resource.methodLabel | replace: ' ','' }}.html">
+          <h3>{{ resource.methodLabel }}</h3>
+          <p>{{ resource.methodDescription | truncate: 90 }}</p>
+          {% assign produces = resource.method | rdf_property: ':produces', nil, true %}
+          <ul>
+          {% for outcome in produces limit: 2 %}
+            <li class="tag">{{ outcome | rdf_property: 'rdfs:label' }}</li>
+          {% endfor %}
+        </ul>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  <section>
+    {%- include web-resource-links.html -%}
+  </section>
+
+<!-- Probalby properly a <section>; could also be an <aside> -->
+<section class="contribute">
+  <h2>See Something Missing?</h2>
+  <p class="display">UX Methods is a collaborative effort and is designed to grow with the UX community.</p>
+  <a class="button" href="/submit-method/index.html">Submit a Method</a>
+</section>

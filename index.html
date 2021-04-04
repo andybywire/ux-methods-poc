@@ -21,20 +21,27 @@ page_class: home
 <section class="home-page-nav"> <!-- Home page nav -->
 
   <!-- Disciplines -->
-  {% assign uxm-discipline = site.pages | where: "template", "discipline" | sort: 'name' %}
   <header class="dropdown-toggle first">
     <h2>UX Disciplines</h2>
     <span class="chevron">{% include svg/chevron_down.svg %}</span>
   </header>
+  {% assign query = '
+    SELECT DISTINCT ?discipline ?label ?description
+    WHERE {
+      ?discipline a :Discipline ;
+                  rdfs:label ?label ;
+                  :shortDescription ?description . }
+  '%}
+  {% assign disciplines = query | sparql_query %}
   <ul class="menu discipline-cards">
-  {% for resource in uxm-discipline %}
+  {% for resource in disciplines %}
     <li>
-      <a href="/{{ resource.rdf.page_url }}.html">
-        <div class="discipline-img" style="background-image: url(/img/{{ resource | rdf_property: 'rdfs:label' | downcase | slugify }}_375.jpg);">
+      <a href="/{{ resource.label | replace: ' ','' }}.html">
+        <div class="discipline-img" style="background-image: url(/img/{{ resource.label | downcase | slugify }}_375.jpg);">
         </div>
         <div class="discipline-lede">
-          <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
-          <p>{{ resource | rdf_property: ':shortDescription' | truncate: 80 }}</p>
+          <h3>{{ resource.label }}</h3>
+          <p>{{ resource.description | truncate: 80 }}</p>
         </div>
       </a>
     </li>

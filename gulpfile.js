@@ -36,9 +36,9 @@ function ext_resources (gulpCallBack){
 
 // Load UXM Ontology to Fuseki (replace everything in dataset)
 function load_ontology (gulpCallBack){
-    const ontology = exec('s-put http://localhost:3030/UXM https://www.uxmethods.org/g1 ~/repos/uxmd/_data/etl/UXMethodsKG.owl', {stdio: 'inherit'});
+    const ontology = exec('s-put http://localhost:3030/UXM default ~/repos/uxmd/_data/etl/UXMethods.owl', {stdio: 'inherit'});
     ontology.on('exit', function(code) {
-        gulpCallBack(code === 0 ? null : 'ERROR: Methods SOH process exited with code: '+code);
+        gulpCallBack(code === 0 ? null : 'ERROR: UXM Ontology SOH process exited with code: '+code);
     });
 }
 
@@ -112,7 +112,7 @@ function watch() {
 // Watch ontology
 function watch_data() {
   gulp.watch(
-    "_data/etl/UXMethodsKG.owl",
+    "_data/etl/UXMethods.owl",
     gulp.series(load_ontology, load_methods, load_resources, jekyll, reload)
   );
 }

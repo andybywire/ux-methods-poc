@@ -14,7 +14,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
   <nav>
     <a href="/" class="title">{{ site.title }}</a>
     <button id="openMenu" aria-label="Open site menu" type="button" >{% include svg/menu.svg %}</button>
-    <div id="globalNav" class="sidenav"> 
+    <div id="globalNav" class="sidenav">
       <button id="closeMenu" aria-label="Close site menu" class="closebtn" type="button">{% include svg/close.svg %}</button>
       <!-- Would this benefit from having aria-controls="offCanvas"? TBD -->
       <ul id="navint">
@@ -22,12 +22,19 @@ rdf_prefix_path: "_data/prefixes.sparql"
         <li class="dropdown-toggle">UX Disciplines<span>{% include svg/chevron_down.svg %}</span></li>
           <!-- look into ARIA for these controls — aria-expanded="false" -->
           <ul class="submenu">
-            {% assign uxm-discipline = site.pages | where: "template", "discipline" | sort: 'name' %}
-            {% for resource in uxm-discipline %}
-              <li>
-                <a href="/{{ resource.rdf.page_url }}.html">{{ resource | rdf_property: 'rdfs:label' }}</a>
-              </li>
-            {% endfor %}
+          {% assign query = '
+            SELECT DISTINCT ?discipline ?label
+            WHERE {
+              ?discipline rdf:type :Discipline ;
+                rdfs:label ?label .
+            }
+          '%}
+          {% assign disciplines = query | sparql_query %}
+          {% for resource in disciplines %}
+            <li>
+              <a href="/{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
+            </li>
+          {% endfor %}
           </ul>
         <li class="dropdown-toggle">Top Methods<span>{% include svg/chevron_down.svg %}</span></li>
           <ul class="submenu">
@@ -51,8 +58,6 @@ rdf_prefix_path: "_data/prefixes.sparql"
           </ul>
         <li class="dropdown-toggle">Top Goals & Outcomes<span>{% include svg/chevron_down.svg %}</span></li>
         <ul class="submenu">
-
-
           {% assign query = '
             SELECT DISTINCT ?outcome ?label (COUNT(?methods) AS ?method_count)
             WHERE {
@@ -87,14 +92,14 @@ rdf_prefix_path: "_data/prefixes.sparql"
 
     <!-- Desktop Nav -->
     <!-- Consider implementing a hover approach. Be sure to accommodate touch: https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices/ -->
-    <div class="navbar"> 
+    <div class="navbar">
       <ul>
         <li><span class="wide-dropdown-toggle">UX Disciplines {% include svg/chevron_down.svg %}</span>
           <ul class="submenu">
             <!-- uxm-discipline defined above -->
-            {% for resource in uxm-discipline %}
+            {% for resource in disciplines %}
               <li>
-                <a href="/{{ resource.rdf.page_url }}.html">{{ resource | rdf_property: 'rdfs:label' }}</a>
+                <a href="/{{ resource.label | replace: ' ','' }}.html">{{ resource.label }}</a>
               </li>
             {% endfor %}
           </ul>
@@ -145,8 +150,6 @@ rdf_prefix_path: "_data/prefixes.sparql"
         console.log('Service worker registration error:', error);
       });
     }
-  </script> 
+  </script>
 <script src="/js/app.js"></script>
 </html>
-
-
