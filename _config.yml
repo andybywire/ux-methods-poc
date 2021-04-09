@@ -25,17 +25,10 @@ markdown: kramdown
 
 permalink: /:title/
 
-# UXM (all data) returns inferred Top Goals & Methods, but no Disciplines. Class templates break the build. Goal: get this configuration to work.
-# UXM_no_reasoner (all data) returns disciplines & methods, but no Top Goals. Class templates work.
-# UXM_Inferred returns all an resources with functioning templates, but is not using inference on the server, which means it requires pre-inferencing in Protege.
-
 jekyll_rdf:
     # path: "_data/UXMethods.owl"
     remote:
       endpoint: http://localhost:3030/UXM/sparql
-      # endpoint: "http://localhost:3030/UXM_no_reasoner/sparql"
-      # endpoint: http://localhost:3030/UXM_Inferred/sparql
-    # include_blank: false
     baseiri: "https://www.uxmethods.org/"  # the KG IRI used to generate pages
     default_template: "default-rdf.html"
     restriction: "
@@ -50,7 +43,7 @@ jekyll_rdf:
         {?resourceUri rdf:type :Outcome . }
       }
     "
-    # Something is causing Jekyll to choke on class_template_mappings. May be an infinite loop somewhere? Works with a "pre-reasoned" export, but not Fuseki reasoning. Try cleaning up and fine tuning ontology and data and trying these out again. Perhaps also try different reasoners?
+    # Class template mappings fail with an OWL reasoner active at the endpoint.
     class_template_mappings:
         # "https://www.uxmethods.org/Discipline" : "discipline"
         # "https://www.uxmethods.org/Method" : "method"
