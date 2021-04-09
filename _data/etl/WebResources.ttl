@@ -5,13 +5,6 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc:  <http://purl.org/dc/elements/1.1/> .
 
-:WebResources  rdf:type  owl:Ontology ;
-        dc:title  "UX Methods KG WebResources Data" .
-
-:describes  rdf:type  owl:ObjectProperty .
-
-:resourceLocation  rdf:type  owl:DatatypeProperty .
-
 :TheDelicateArtofInterviewingStakeholders_EightShapes
         rdf:type           :WebResource ;
         dc:title           "The Delicate Art of Interviewing Stakeholders" ;

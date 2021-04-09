@@ -6,16 +6,6 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
-  :WebResources rdf:type owl:Ontology ;
-        dc:title "UX Methods KG WebResources Data" .
-  :describes rdf:type owl:ObjectProperty .
-  :resourceLocation rdf:type owl:DatatypeProperty .
-}
-FROM <https://docs.google.com/spreadsheets/d/19cAHQNoICjCjOOMDMgvBlRRY7c_L5EC0FG8pzqNLkzk/export?format=csv&id=19cAHQNoICjCjOOMDMgvBlRRY7c_L5EC0FG8pzqNLkzk&gid=1896378389> 
-WHERE {}
-LIMIT 1
-
-CONSTRUCT {
   ?URI a :WebResource;
     dc:title ?title;
     dc:creator ?creator;
@@ -24,12 +14,11 @@ CONSTRUCT {
     :resourceLocation ?resourceURL;
     dc:created ?date;
     :describes ?describesIRI.
-} 
+}
+FROM <https://docs.google.com/spreadsheets/d/19cAHQNoICjCjOOMDMgvBlRRY7c_L5EC0FG8pzqNLkzk/export?format=csv&id=19cAHQNoICjCjOOMDMgvBlRRY7c_L5EC0FG8pzqNLkzk&gid=1896378389>
 WHERE {
   BIND (URI(CONCAT('https://www.uxmethods.org/', ?id)) AS ?URI)
   BIND (xsd:anyURI(?url) AS ?resourceURL)
   BIND (xsd:date(?created) AS ?date)
   BIND (URI(CONCAT('https://www.uxmethods.org/', ?describes)) AS ?describesIRI)
 }
-
-# sh ~/tarql/target/appassembler/bin/tarql ~/repos/uxmd/_data/etl/WebResources.sparql > ~/repos/uxmd/_data/etl/WebResources.ttl
