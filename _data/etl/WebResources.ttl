@@ -176,3 +176,23 @@
         :resourceLocation  "https://www.nngroup.com/articles/user-interviews/"^^xsd:anyURI ;
         dc:created         "2018-10-07"^^xsd:date ;
         :describes         :UserInterviewing .
+
+<https://www.uxmethods.org/CompetitiveAnalysis%3AUnderstandingtheMarketContext_BoxesandArrows>
+        rdf:type           :WebResource ;
+        dc:title           "Competitive Analysis: Understanding the Market Context" ;
+        dc:creator         "Jason Withrow" ;
+        dc:publisher       "Boxes and Arrows" ;
+        dc:created         "2006-02-27"^^xsd:date ;
+        :resourceLocation  "https://boxesandarrows.com/competitive-analysis-understanding-the-market-context/"^^xsd:anyURI ;
+        dc:created         "2006-02-27"^^xsd:date ;
+        :describes         :CompetitiveAnalysis .
+
+<https://www.uxmethods.org/ADesigner%E2%80%99sGuidetoCompetitorResearch_WayfairExperienceDesign>
+        rdf:type           :WebResource ;
+        dc:title           "A Designer’s Guide to Competitor Research" ;
+        dc:creator         "Dan Lachapelle" ;
+        dc:publisher       "Wayfair Experience Design" ;
+        dc:created         "2017-10-10"^^xsd:date ;
+        :resourceLocation  "https://medium.com/wayfair-design/a-designers-guide-to-competitor-research-914b0deee25a"^^xsd:anyURI ;
+        dc:created         "2017-10-10"^^xsd:date ;
+        :describes         :CompetitiveAnalysis .
