@@ -1,0 +1,24 @@
+---
+title: Submit a Resource
+---
+<script>
+  const params = new URLSearchParams(location.search);
+  var title = params.get('title') ? params.get('title') : "";
+  var author = params.get('author') ? params.get('author') : "";
+  var publisher = params.get('publisher') ? params.get('publisher') : "";
+  var pubyear = params.get('pubyear') ? params.get('pubyear') : "";
+  var pubmonth = params.get('pubmonth') ? params.get('pubmonth') : "";
+  var pubday = params.get('pubday') ? params.get('pubday') : "";
+  var iframe = document.createElement('iframe');
+  iframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSd67eQkflTSFkdNtCYdUPKVwsMeOY8VCdz6trpdK7ND446Evw/viewform?embedded=true&entry.313650636=" + title + "&entry.1045656060=" + author + "&entry.1853350152=" + publisher + "&entry.1568320193_year=" + pubyear + "&entry.1568320193_month=" + pubmonth + "&entry.1568320193_day=" + pubday;
+  iframe.width = "100%";
+  iframe.height = "1200";
+  iframe.frameBorder = "0";
+  iframe.marginHeight = "0";
+  document.getElementsByTagName("main")[0].appendChild(iframe);
+</script>
+
+<!-- Test URL:
+http://localhost:3333/submit-resource/index.html?title=Design%20Systems&author=The%20Dude&publisher=realwebsite.com&pubyear=2021&pubmonth=04&pubday=25 -->
+
+<!-- Get entry IDs by using the "get pre-filled link" in the Google Forms menu -->
