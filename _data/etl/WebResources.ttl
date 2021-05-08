@@ -196,3 +196,41 @@
         :resourceLocation  "https://medium.com/wayfair-design/a-designers-guide-to-competitor-research-914b0deee25a"^^xsd:anyURI ;
         dc:created         "2017-10-10"^^xsd:date ;
         :describes         :CompetitiveAnalysis .
+
+:DesignSystems101_NeilsenNormanGroup
+        rdf:type           :WebResource ;
+        dc:title           "Design Systems 101" ;
+        dc:creator         "Therese Fessende" ;
+        dc:publisher       "Neilsen Norman Group" ;
+        dc:created         "2021-04-11"^^xsd:date ;
+        :resourceLocation  "https://www.nngroup.com/articles/design-systems-101/"^^xsd:anyURI ;
+        dc:created         "2021-04-11"^^xsd:date ;
+        :describes         :StyleTileCreation .
+
+<https://www.uxmethods.org/UserResearchwithPrototypes%3AAskingtheRightQuestions_Medium>
+        rdf:type           :WebResource ;
+        dc:title           "User Research with Prototypes: Asking the Right Questions" ;
+        dc:creator         "Dan Brown" ;
+        dc:publisher       "Medium" ;
+        dc:created         "2017-05-15"^^xsd:date ;
+        :resourceLocation  "https://medium.com/eightshapes-llc/user-research-with-prototypes-asking-the-right-questions-d38bdaf074bc"^^xsd:anyURI ;
+        dc:created         "2017-05-15"^^xsd:date ;
+        :describes         :Prototyping .
+
+<https://www.uxmethods.org/InformationForaging%3AATheoryofHowPeopleNavigateontheWeb_NielsenNormanGroup>
+        rdf:type           :WebResource ;
+        dc:title           "Information Foraging: A Theory of How People Navigate on the Web" ;
+        dc:creator         "Raluca Budiu" ;
+        dc:publisher       "Nielsen Norman Group" ;
+        dc:created         "2019-11-10"^^xsd:date ;
+        :resourceLocation  "https://www.nngroup.com/articles/information-foraging/"^^xsd:anyURI ;
+        dc:created         "2019-11-10"^^xsd:date ;
+        :describes         :CategoryDesign .
+
+:WebInterfaceHandbook_Imperavi
+        rdf:type           :WebResource ;
+        dc:title           "Web Interface Handbook" ;
+        dc:creator         "Aleksei Baranov" ;
+        dc:publisher       "Imperavi" ;
+        :resourceLocation  "https://imperavi.com/books/web-interface-handbook/"^^xsd:anyURI ;
+        :describes         :NavigationDesign .
