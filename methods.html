@@ -4,7 +4,7 @@ rdf_prefix_path: "_data/prefixes.sparql"
 ---
 <section>
 <h1 class="no-eyebrow">UX Methods A-Z</h1>
-{% assign card_content = site.pages | where: "template", "method" | sort: 'name' %}
+{% assign card_content = site.pages | sort: 'name' %}
 {%- include method-card.html -%}
 </section>
 <section class="contribute">

@@ -4,20 +4,24 @@ rdf_prefix_path: "_data/prefixes.sparql"
 ---
 <section>
 <h1 class="no-eyebrow">UX Method Outcomes A-Z</h1>
-{% assign outcomes = site.pages | where: "template", "outcome" | sort: 'name' %}
+{% assign outcomes = site.pages | sort: 'name' %}
 <ul class="method-cards">
 {% for resource in outcomes %}
-  <li class="method-card outcome">
-    <a href="/{{ resource.rdf.page_url }}.html">
-      <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
-      {% assign shortD = resource | rdf_property: ':shortDescription' %}
-      {% if shortD != nil %}
-      <p>{{ resource | rdf_property: ':shortDescription' }}</p>
-      {% else %}
-      <p>{{ resource | rdf_property: 'dc:description' }}</p>
-      {% endif %}
-    </a>
-  </li>
+  {% assign resource_class = resource.rdf | rdf_property: 'rdf:type'  %}
+  {% assign class = resource_class | split: "/" | last %}
+  {% if class == "Insight" or class == "Solution" or class == "Outcome" %}
+    <li class="method-card outcome">
+      <a href="/{{ resource.rdf.page_url }}.html">
+        <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
+        {% assign shortD = resource | rdf_property: ':shortDescription' %}
+        {% if shortD != nil %}
+        <p>{{ resource | rdf_property: ':shortDescription' }}</p>
+        {% else %}
+        <p>{{ resource | rdf_property: 'dc:description' }}</p>
+        {% endif %}
+      </a>
+    </li>
+  {% endif %}
 {% endfor %}
 </ul>
 </section>

@@ -13,7 +13,26 @@
   {% if card_content != nil %}
   <h2>Methods</h2>
   <p>UX Methods that target {{ page.rdf | rdf_property: 'rdfs:label' }} include:</p>
-  {%- include method-card.html -%}
+  <ul class="method-cards">
+  {% for resource in card_content %}
+      <li class="method-card">
+        {%- if resource.render_path != nil %}
+        <a href="/{{ resource.render_path }}">
+        {%- else %}
+        <a href="/{{ resource.rdf.page_url }}.html">
+        {%- endif %}
+          <h3>{{ resource | rdf_property: 'rdfs:label' }}</h3>
+          <p>{{ resource | rdf_property: ':shortDescription' }}</p>
+          {%- assign produces = resource | rdf_property: ':produces', nil, true %}
+          <ul>
+          {%- for outcome in produces limit: 2 %}
+            <li class="tag">{{ outcome | rdf_property: 'rdfs:label' }}</li>
+          {%- endfor %}
+        </ul>
+        </a>
+      </li>
+  {% endfor %}
+  </ul>
   {% endif %}
 </section>
 
