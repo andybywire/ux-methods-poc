@@ -1,3 +1,7 @@
+## This repository is no longer under active development.
+This is the Proof of Concept version of UX Methods, retained here for reference. For the current version of this project, please the [active UX Methods repository](https://github.com/andybywire/ux-methods).
+
+---
 <h1 align="center">
 <img src="https://user-images.githubusercontent.com/3710835/109103540-ebc0d580-76df-11eb-948d-4c1bf3615e5e.png" alt="UX Methods.org wordmark">
 </h1>
